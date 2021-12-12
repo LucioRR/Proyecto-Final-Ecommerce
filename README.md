@@ -16,6 +16,13 @@ Clase media/alta
 Mujeres independientes
 Todo Argentina
 
+
+Sitios de referencia:
+1) https://www.just-marie.nl/
+2) https://www.atodfashion.com.au/
+
+
+
 Saúl Belbey:
 Tengo 33 años, hace 6 que soy asesor político en la municipalidad de Resistencia, en el 2021 empecé a estudiar ene le informatorio como un hobby y al día de hoy quiero dedicarme por completo al desarrollo.
 
