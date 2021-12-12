@@ -18,3 +18,6 @@ Todo Argentina
 
 Saúl Belbey:
 Tengo 33 años, hace 6 que soy asesor político en la municipalidad de Resistencia, en el 2021 empecé a estudiar ene le informatorio como un hobby y al día de hoy quiero dedicarme por completo al desarrollo.
+
+Noelia S. Del Castillo:
+Me llamo Noelia, estudié Profesorado en Ciencias Químicas y del Ambiente en la Universidad Nacional del Nordeste y hace 6 años me dedico a la docencia en la Provincia de Corrientes. Este año empecé a interesarme por la programación, y mi objetivo a futuro es poder articular el proceso de enseñanza-aprendizaje de una Ciencia muy abstracta como la Química, con el desarrollo de herramientas digitales que facilitan este proceso.
