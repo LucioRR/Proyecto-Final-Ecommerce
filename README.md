@@ -18,11 +18,11 @@ El sitio web va destinado:
 
 
 Sitios de referencia:
-1) https://www.just-marie.nl/
+1) https://veganessentials.com/
+El sitio web de Vegan Essentials es un excelente ejemplo a seguir para una amplia gama de productos. El claro sistema de categorización y etiquetado permite a los usuarios encontrar fácilmente los artículos deseados.
 
-
-2) https://www.atodfashion.com.au/
-
+2) https://www.mercadolibre.com.ar/
+Nos sirvió de referencia por su estructura clara, de manejo intuitivo. Y para acelerar la experiencia de compra, la utilización del motor de búsqueda en el sitio para buscar los artículos deseados. 
 
 3) https://www.puppis.com.ar/
 Sitio web premiado en el cual nos inspiramos por la forma en que presentan los productos en el Home, agrupando los mismos por categorías como "Promociones", "Más vendidos", etc. Tiene una excelente navegabilidad y muestra información pertinente de cada artículo para mejorar la experiencia de usuario durante la búsqueda.
@@ -32,6 +32,7 @@ Sitio web en el cual tomamos de modelo la navegabilidad que otorgaba el navbar f
 
 5) https://meibi.mx/
 Sitio web premiado con una excelente navegabilidad, la forma en que agrupa los productos y denomina a sus categorías nos parece muy creativa. Tomamos como inspiración la forma en que detalla los artículos: presentaciòn con varias imágenes, descripciones, opiniones de clientes, puntuación. Además nos sirvió de modelo la forma en que presenta el footer, con una invitación a suscribirse incluída.
+
 
 
 Saúl Belbey:
