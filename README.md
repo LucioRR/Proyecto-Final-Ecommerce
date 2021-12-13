@@ -36,10 +36,13 @@ Sitio web premiado con una excelente navegabilidad, la forma en que agrupa los p
 
 
 Saúl Belbey:
-Tengo 33 años, hace 6 que soy asesor político en la municipalidad de Resistencia, en el 2021 empecé a estudiar ene le informatorio como un hobby y al día de hoy quiero dedicarme por completo al desarrollo.
+Tengo 33 años, hace 6 que soy asesor político en la municipalidad de Resistencia, en el 2021 empecé a estudiar en el informatorio como un hobby y al día de hoy quiero dedicarme por completo al desarrollo.
 
 Noelia S. Del Castillo:
 Me llamo Noelia, estudié Profesorado en Ciencias Químicas y del Ambiente en la Universidad Nacional del Nordeste y hace 6 años me dedico a la docencia en la Provincia de Corrientes. Este año empecé a interesarme por la programación, y mi objetivo a futuro es poder articular el proceso de enseñanza-aprendizaje de una Ciencia muy abstracta como la Química, con el desarrollo de herramientas digitales que facilitan este proceso.
 
 Lucio Rivarola: 
 Soy lic. en psicología, orientado al área laboral y organizacional. Comencé a estudiar programación de forma autoadministrada y luego con varios programas de capacitación, con el objetivo de complementar mi tarea de recruiting, pero actualmente considero factible la posibilidad de encarar una carrera en paralelo enfocado al desarrollo.
+
+Lucila A. Urinovsky:
+Tengo 23 años y soy Lic. en Nutrición, actualmente trabajo haciendo consultorio. Este año me dieron ganas de estudiar algo más en paralelo a mi profesión, tenía que ser algo que pueda hacerlo de manera online y programación era una de las posibilidades. Por esas casualidades me enteré de la beca de digital asi que me inscribí.
