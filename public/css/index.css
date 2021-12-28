@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'Century';
+    src: url("../fonts/century/century.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Museo-Sans';
+    src: url("../fonts/museo/museo-sans-100.otf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Montserrt Light';
+    src: url("../fonts/montserrat/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url("../fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'The Loved';
+    src: url("../fonts/theloved/theloved/Theloved.otf") format("truetype");
+}
+
+:root{
+    --chocolate: #663333; 
+    --camel: #cb997e; 
+    --piel: #ddbea9; 
+    --rosaViejo: #d0ada7; 
+    --verde: #b7b7a4; 
+    --celeste: #e2eafc;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat Regular';
+}
+
+/* ------- HEADER ------- */
+
+header {
+    width: 100vw;
+}
+
+/* NOVEDADES */
+
+.novedades{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content:space-around;
+    padding: 5px;
+    font-size: 12px;
+    height: 48px;
+}
+
+.tituloNovedades{
+    font-size: 14px;
+}
+
+.novedades div{
+    text-align: center;
+    align-self: center;
+}
+
+.novedades svg{
+    align-self: center;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+#menuDesplegable{
+    display: none;
+}
+
+.navbar label{
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+.navbar label svg{
+    width: 30px;
+    height: 30px;
+}
+
+.navbar label:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.menu{
+    position: absolute;
+    margin-left: -70vw;
+    transition: all 0.5s;
+    background-color:white;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.menu li{
+    border-top: 1px solid black;
+}
+
+.menu li:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+#menuDesplegable:checked ~ .menu{
+    margin: 0;
+    margin-top: 9%;
+}
+
+.logo{
+    height: 30px;
+    align-self: center;
+}
+
+.logo svg{
+    height: 80%;
+}
+
+.iconosMenuPeq{
+    display: flex;
+    align-self: center;
+}
+
+.iconosMenuPeq svg{
+    color: black;
+    width: 30px; 
+    height:30px;
+    margin-right: 10px;
+}
+
+
+
+/* ------- FOOTER ------- */
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+.separadorFooter{
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--camel);
+    padding: 10px;
+}
+
+.logoFooter svg{
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+
+.frase{
+    align-self: center;
+}
+
+.frase p{
+    font-family: 'The Loved';
+    font-size: 32px;
+}
+
+
+
+.contactanos svg{
+    width: 30px;
+    height: 30px;
+    color: black;
+}
+
+@media (min-width: 769px) {
+
+    /* ------- HEADER ------- */
+
+    /* NAVBAR */
+
+    .navbar label{
+        display: none;
+    }
+
+    .menu{
+        position: inherit;
+        margin-left: auto;
+    }
+
+    .menu li{
+        border-right: 1px solid white;
+        border-top: none;
+        display: block;
+    }
+
+    .menu ul {
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+    }
+
+
+    .iconosMenuPeq{
+        display: none;
+    }
+
+    .logo{
+        display: none;
+    }
+}
