@@ -105,6 +105,7 @@ header {
     margin-left: -70vw;
     transition: all 0.5s;
     background-color:white;
+    display: flex;
 }
 
 .menu ul{
@@ -131,7 +132,14 @@ header {
 
 #menuDesplegable:checked ~ .menu{
     margin: 0;
-    margin-top: 9%;
+}
+
+.cerrar {
+    padding: 10px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .logo{
@@ -162,7 +170,7 @@ header {
 footer{
     position: absolute;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 .separadorFooter{
@@ -188,12 +196,66 @@ footer{
     font-size: 32px;
 }
 
+.navegacion, .contactanos{
+    padding:1rem;
+    border-bottom: 0.5px solid black;
+}
 
+.navegacion h4, .contactanos h4{
+    margin-bottom: 1rem;
+}
+
+.navegacion ul, .contactanos ul{
+    list-style: none;
+}
+
+.navegacion li, .contactanos li{
+    margin-top: 0.5rem;
+}
+
+.navegacion a, .contactanos a{
+    text-decoration: none;
+    color: black;
+    
+}
 
 .contactanos svg{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     color: black;
+    margin-top: 5px;
+}
+
+.st13 {
+    fill: var(--camel) !important;
+}
+
+.redesSociales{
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom:15px;
+}
+
+.redesSociales a{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.instagramFooter, .facebookFooter {
+    height: 20px;
+   }
+   
+
+.instagramFooter svg, .facebookFooter svg{
+    color: black;
+    width: 20px;
+    height: 20px;
 }
 
 @media (min-width: 769px) {
