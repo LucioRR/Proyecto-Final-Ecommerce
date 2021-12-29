@@ -164,6 +164,35 @@ header {
 }
 
 
+/* ------- MAIN ------- */
+
+/* ARTICLE */
+
+.producto{
+    width: 90%;
+    border: 2px solid grey;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+.seccionImagen{
+    width: 90%;
+    background-image: url(../images/sueter.jpg);
+    height:auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.corazon svg {
+    width:30px;
+}
+
+.corazonRosa{
+    fill: black;
+}
+
 
 /* ------- FOOTER ------- */
 
