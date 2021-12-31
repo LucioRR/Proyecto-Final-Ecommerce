@@ -79,11 +79,16 @@ header {
     border-bottom: 1px solid black;
 }
 
+.navbar *{
+    text-transform: uppercase;
+}
+
 #menuDesplegable{
     display: none;
 }
 
-.navbar label{
+.bi { 
+    cursor: pointer;
     display: block;
     width: 30px;
     height: 30px;
@@ -100,56 +105,89 @@ header {
     background-color: rgba(0,0,0,0.1);
 }
 
-.menu{
-    position: absolute;
-    margin-left: -70vw;
-    transition: all 0.5s;
-    z-index: 9999999;
+/* MENU */
+
+.barraIzquierda{
     display: flex;
+    flex-direction:row;
 }
 
-.menu ul{
-    list-style: none;
+#menuGeneral{
+    display: none;
+}
+
+.barraMenu{
+    top: 0;
+    width: 85%;
+    height: 100%;
     display: flex;
+    position: fixed;
+    z-index: 100000000000;
+    background-color: white;
+    box-shadow: 10px 0 10px rgb(0 0 0 / 20%);
+    transition: all 1s ease;
+    right: 110vw;
     flex-direction: column;
-    background-color:white;
 }
 
-.menu li{
-    border-top: 1px solid black;
+.barraMenuVisible{
+    right: auto;
 }
 
-.menu li:hover{
-    background-color: rgba(0,0,0,0.1);
+.cruzMenu{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center ;
+    background-color: white; 
+    box-shadow: -10px 0 10px rgb(0 0 0 / 20%);
+    position: fixed;
+    border-radius: 100%;
+    top: 14px;
+    margin-right: 110vw;
+    transition: all 0.3s;
+    right: 5%;
 }
 
-.menu li a{
+.cruzMenuVisible{
+    margin-right: 0;
+}
+
+.ul-menu {
     display: block;
-    padding: 15px 20px;
-    color: black;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.navegacionHeader {
+    display: list-item;
+    list-style: none;
+    border-bottom: 1px solid black;
+}
+
+.item-menu {
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    line-height: 50px;
+    padding: 0 10px;
+    position: relative;
     text-decoration: none;
-}
-
-#menuDesplegable:checked ~ .menu{
-    margin: 0;
-}
-
-.cerrar {
-    padding: 10px;
-    color: black;
-    border: 1px solid black;
-    border-radius: 50%;
     cursor: pointer;
-    background-color:white;
+    color: black;
+    font-weight: bolder;
+    font-size: medium;
 }
 
 .logo{
     height: 30px;
     align-self: center;
+    display: flex;
 }
 
 .logo svg{
     height: 80%;
+    align-self: center;
 }
 
 .iconosMenuPeq{
@@ -164,6 +202,134 @@ header {
     margin-right: 10px;
 }
 
+.search {
+    align-self: center;
+}
+
+.bag path{
+    fill: black;
+}
+
+/* BARRA LATERAL DEL CARRITO Y BUSCADOR */
+
+#cerrarCarrito, #cerrarBuscador {
+    display: none;
+}
+
+.cruzCarrito{
+    padding: 5px;
+    display: none;
+    justify-content: center;
+    align-content: center ;
+    background-color: white; 
+    box-shadow: -10px 0 10px rgb(0 0 0 / 20%);
+    position: fixed;
+    border-radius: 100%;
+    top: 14px;
+    margin-left: 100vw;
+    transition: all 0.3s;
+}
+
+.barraCarrito{
+    top: 0;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 100000000000;
+    background-color: white;
+    right: 0;
+    box-shadow: -10px 0 10px rgb(0 0 0 / 20%);
+    transition: all 0.8s;
+    left: 100vw;
+    flex-direction: column;
+}
+
+.cruzAbierta{
+    margin-left: 15px;
+    display: flex;
+    transition: all 0.8s;
+}
+
+.carritoAbierto{
+    left: auto;
+    transition: all 0.8s;
+}
+
+.barraCarrito h2{
+    text-align: center;
+    width: 100%;
+    justify-self: center;
+    padding: 15px;
+    background-color: var(--camel);
+    display: none;
+}
+
+.compra, .buscar, .carritoVacioVisible, .sinComprasVisible, .buscadorVisible{
+    display: block !important;
+    transition: all 0.8s;
+}
+
+.carritoVacio{
+    margin: 30px auto;
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+.carritoVacio svg{
+    width: 100%;
+    height: 100%;
+}
+
+.sinCompras{
+    width: 60%;
+    margin: 0px auto;
+    text-align: center;
+    display: none;
+}
+
+.buscador{
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    min-inline-size: min-content;
+    display: none;
+    border-bottom: solid 1px #cccccc;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.formularioBuscador{
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    float: left;
+    height: 30px;
+    border: none;
+    outline: none;
+    display: block;
+    font-size: 14px;
+    cursor: text;
+    appearance: auto;
+}
+
+.btn-buscar{
+    padding: 0;
+    width: 20px;
+    height: 30px;
+    float: right;
+    border: none;
+    font-size: 0;
+    outline: none;
+    display: block;
+    background: transparent;
+    background-image: url(../images/icono-search.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+}
 
 /* ------- MAIN ------- */
 
@@ -287,6 +453,10 @@ footer{
     align-self: center;
 }
 
+.st13 {
+    fill: var(--camel) !important;
+}
+
 .frase{
     align-self: center;
 }
@@ -297,26 +467,37 @@ footer{
 }
 
 .navegacion, .contactanos{
-    padding:1rem;
     border-bottom: 0.5px solid black;
 }
 
 .navegacion h4, .contactanos h4{
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    padding-left: 1rem;
 }
 
-.navegacion ul, .contactanos ul{
+.ulFooter{
     list-style: none;
 }
 
-.navegacion li, .contactanos li{
-    margin-top: 0.5rem;
+.navegacionFooter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    padding: 0;
+    border-bottom: 1px solid #e6e6e8;
 }
 
-.navegacion a, .contactanos a{
+.navegacionFooter a{
+    display: inline-block;
+    width: 100%;
+    color: #777;
+    line-height: 56px;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
     text-decoration: none;
-    color: black;
-    
+    padding-left: 1rem;
 }
 
 .contactanos svg{
@@ -324,10 +505,6 @@ footer{
     height: 20px;
     color: black;
     margin-top: 5px;
-}
-
-.st13 {
-    fill: var(--camel) !important;
 }
 
 .redesSociales{

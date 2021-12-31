@@ -34,24 +34,34 @@
 
         <!-- NAV BAR -->
         <div class="navbar">
-            <input type="checkbox" name="menuDesplegable" id="menuDesplegable">
-            <label for="menuDesplegable"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                </svg></label>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">Bikinis</a></li>
-                    <li><a href="#">Primeras Pieles</a></li>
-                    <li><a href="#">Segundas Pieles</a></li>
-                    <li><a href="#">Marcas</a></li>
-                    <li><a href="#">Make Up</a></li>
-                </ul>
-                <label for="menuDesplegable">
-                    <p class="cerrar">X</p>
+            <div class="barraIzquierda">
+                <input type="checkbox" name="menuGeneral" id="menuGeneral">
+                <label for="menuGeneral">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
                 </label>
-            </nav>
+                <div class="barraMenu" id="barraMenu">
+                    <nav class="menu">
+                        <ul class="ul-menu">
+                            <li class="navegacionHeader"><a href="#" class="item-menu">Bikinis</a></li>
+                            <li class="navegacionHeader"><a href="#" class="item-menu">Primeras Pieles</a></li>
+                            <li class="navegacionHeader"><a href="#" class="item-menu">Segundas Pieles</a></li>
+                            <li class="navegacionHeader"><a href="#" class="item-menu">Marcas</a></li>
+                            <li class="navegacionHeader"><a href="#" class="item-menu">Make Up</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <label for="menuGeneral" class="cruzMenu" id="cruzMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                        fill="#000000">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                    </svg>
+                </label>
+            </div>
             <div class="logo">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 949.2 130.3"
@@ -220,27 +230,62 @@
             </div>
             <div class="iconosMenuPeq">
                 <div class="search">
-                    <a href="#">
+                    <label for="cerrarBuscador">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-search" viewBox="0 0 16 16">
                             <path
                                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                         </svg>
-                    </a>
+                    </label>
                 </div>
                 <div class="bag">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-bag" viewBox="0 0 16 16">
+                    <label for="cerrarCarrito">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" class="bi bi-bag"
+                            viewBox="0 0 16 16">
                             <path
                                 d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
                         </svg>
-                    </a>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="barraDerecha">
+            <input type="checkbox" name="cerrarCarrito" id="cerrarCarrito">
+            <label for="cerrarCarrito" class="cruzCarrito" id="cruzCarrito">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                </svg>
+            </label>
+            <input type="checkbox" name="cerrarBuscador" id="cerrarBuscador">
+            <label for="cerrarBuscador" class="cruzCarrito" id="cruzBuscador">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                </svg>
+            </label>
+            <div class="barraCarrito" id="barraCarrito">
+                <h2 class='' id="compra">MI COMPRA</h2>
+                <h2 class='' id="buscar">BUSCAR</h2>
+                <div class="carritoVacio" id="carritoVacio">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-x" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M6.146 8.146a.5.5 0 0 1 .708 0L8 9.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 10l1.147 1.146a.5.5 0 0 1-.708.708L8 10.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 10 6.146 8.854a.5.5 0 0 1 0-.708z" />
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                </div>
+                <p class="sinCompras" id="sinCompras">Aún no agregaste productos a tu bolsa de compras.</p>
+                <div class="buscador" id="buscador">
+                    <input type="search" class="formularioBuscador" size="20" placeholder="Buscar" autocomplete="off"
+                        role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                    <input id=lupaBuscador" type=button value="buscar" class="btn-buscar">
                 </div>
             </div>
         </div>
     </header>
-
+    
     <main>
         <section class="seccionProductos">
             <article class="producto">
@@ -720,18 +765,18 @@
 
         <div class="navegacion">
             <h4>NAEGACIÓN</h4>
-            <ul>
-                <li><a href="#">Bikinis</a></li>
-                <li><a href="#">Primeras Pieles</a></li>
-                <li><a href="#">Segundas Pieles</a></li>
-                <li><a href="#">Marcas</a></li>
-                <li><a href="#">Make Up</a></li>
+            <ul class="ulFooter">
+                <li class="navegacionFooter"><a href="#">Bikinis</a></li>
+                <li class="navegacionFooter"><a href="#">Primeras Pieles</a></li>
+                <li class="navegacionFooter"><a href="#">Segundas Pieles</a></li>
+                <li class="navegacionFooter"><a href="#">Marcas</a></li>
+                <li class="navegacionFooter"><a href="#">Make Up</a></li>
             </ul>
         </div>
         <div class="contactanos">
             <h4>CONTACTANOS</h4>
-            <ul>
-                <li><a href="#">
+            <ul class="ulFooter">
+                <li class="navegacionFooter"><a href="#">
                         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="whatsapp"
                             class="svg-inline--fa fa-whatsapp fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512">
@@ -740,7 +785,7 @@
                             </path>
                         </svg>
                         WhatsApp: 3624 123456 </a></li>
-                <li><a href="#">
+                <li class="navegacionFooter"><a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
                             fill="#000000">
                             <path d="M0 0h24v24H0V0z" fill="none" />
@@ -748,7 +793,7 @@
                                 d="M12 1.95c-5.52 0-10 4.48-10 10s4.48 10 10 10h5v-2h-5c-4.34 0-8-3.66-8-8s3.66-8 8-8 8 3.66 8 8v1.43c0 .79-.71 1.57-1.5 1.57s-1.5-.78-1.5-1.57v-1.43c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5c1.38 0 2.64-.56 3.54-1.47.65.89 1.77 1.47 2.96 1.47 1.97 0 3.5-1.6 3.5-3.57v-1.43c0-5.52-4.48-10-10-10zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" />
                         </svg>
                         Mail: contacto@mariacielo.com.ar</a></li>
-                <li><a href="#">
+                <li class="navegacionFooter"><a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
                             fill="#000000">
                             <path d="M0 0h24v24H0V0z" fill="none" />
@@ -780,7 +825,26 @@
             </a>
         </div>
     </footer>
+
+
     <!-- ----------- SCRIPT MANEJO DEL DOM --------- -->
+
+    <!-- JS CERRAR EL MENU -->
+    <script>
+        const checkMenu = document.getElementById('menuGeneral');
+        const cruzMenu = document.getElementById('cruzMenu');
+        const barraMenu = document.getElementById('barraMenu');
+
+        checkMenu.addEventListener('change', function () {
+            if (checkMenu.checked) {
+                cruzMenu.classList.add('cruzMenuVisible');
+                barraMenu.classList.add('barraMenuVisible');
+            } else {
+                cruzMenu.classList.remove('cruzMenuVisible');
+                barraMenu.classList.remove('barraMenuVisible');
+            }
+        })
+    </script>
 
     <!-- JS MODIFICATION DEL CORAZÓN -->
     <script>
@@ -796,7 +860,53 @@
                 corazon.classList.add('st16');
             }
         });
+    </script>
 
+    <!-- JS CERRAR CARRITO Y BUSCADOR -->
+
+    <script>
+        const cerrarCarrito = document.getElementById('cerrarCarrito');
+        const checkbuscador = document.getElementById('cerrarBuscador');
+        const barraCarrito = document.getElementById('barraCarrito');
+
+        checkbuscador.addEventListener('change', function () {
+            const buscar = document.getElementById('buscar');
+            const cruzBuscador = document.getElementById('cruzBuscador');
+            const buscador = document.getElementById('buscador');
+
+            if (checkbuscador.checked) {
+                cruzBuscador.classList.add('cruzAbierta');
+                barraCarrito.classList.add('carritoAbierto');
+                buscar.classList.add('buscar');
+                buscador.classList.add('buscadorVisible');
+            } else {
+                cruzBuscador.classList.remove('cruzAbierta');
+                barraCarrito.classList.remove('carritoAbierto');
+                buscar.classList.remove('buscar');
+                buscador.classList.remove('buscadorVisible');
+            }
+        });
+
+        cerrarCarrito.addEventListener('change', function () {
+            const cruz = document.getElementById('cruzCarrito');
+            const compra = document.getElementById('compra');
+            const carritoVacio = document.getElementById('carritoVacio');
+            const sinCompras = document.getElementById('sinCompras');
+
+            if (cerrarCarrito.checked) {
+                cruz.classList.add('cruzAbierta');
+                barraCarrito.classList.add('carritoAbierto');
+                compra.classList.add('compra');
+                carritoVacio.classList.add('carritoVacioVisible');
+                sinCompras.classList.add('sinComprasVisible');
+            } else {
+                cruz.classList.remove('cruzAbierta');
+                barraCarrito.classList.remove('carritoAbierto');
+                compra.classList.remove('compra');
+                carritoVacio.classList.remove('carritoVacioVisible');
+                sinCompras.classList.remove('sinComprasVisible');
+            }
+        });
     </script>
 
 </body>
