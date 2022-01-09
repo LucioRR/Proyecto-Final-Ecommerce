@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>María Cielo</title>
+    <!-- NORMALIZE CSS -->
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <!-- CSS GENERAL -->
+    <link rel="stylesheet" href="static/css/index.css">
+    <!-- CSS PARTICULAR -->
+    <link rel="stylesheet" href="static/css/productDetail.css">
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <section class="navDetail">
+        <h1>/- NAV BAR -/</h1>
+    </section>
+
+    <!-- Imagenes Portatil -->
+    <section class="contenedorPrincipal">
+        <div class="imagenes">
+            <div class="principal">
+                <img src="static/images/detalleBikiniMC1.jpg" alt="frontal">
+            </div>
+            <div class="alternativas">
+                <img src="static/images/detalleBikiniMC3.jpg" alt="reverso">
+                <img src="static/images/detalleBikiniMC2.jpg" alt="fotoproducto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Imagenes Slider Mobile -->
+    <section class="seccionSlider">
+        <!-- image slider start -->
+        <div class="slideer">
+            <div class="slidees">
+                <!-- radio button start -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <!-- radio button end -->
+                <!-- slide image start-->
+                <div class="slidee first">
+                    <img src="static/images/detalleBikiniMC1.jpg" alt="">
+                </div>
+                <div class="slidee">
+                    <img src="static/images/detalleBikiniMC3.jpg" alt="">
+                </div>
+                <div class="slidee">
+                    <img src="static/images/detalleBikiniMC2.jpg" alt="">
+                </div>
+                <!-- slide image end-->
+                <!-- automatic navigation start -->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+                <!-- automatic navigation end -->
+            </div>
+            <!-- manual navigation start-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+            <!-- manual navigation end-->
+        </div>
+        <!-- image slider end -->
+    </section>
+    
+    <!-- DETALLES -->
+    <section class="contenedorDetalles">
+        <div class="categorias">
+            <p><a href="#">Inicio</a> - <a href="#">Bikinis</a> - Amely | Cookie</p>
+        </div>
+        <div class="tituloProducto">
+           <h2>Bikini Amely | <span style="color: rosybrown">Cookie</span></h2> 
+        </div>
+        <div class="precio">
+            <h1>$7.200</h1>
+        </div>
+        <div class="pagos">
+            <p>
+                <span style="font-size: 1.5em; color: rosybrown;"><i class="fas fa-credit-card"></i></span>
+                <span style="color: rosybrown">3 cuotas sin interes de</span>
+                $2.400
+            </p>
+            <p>
+                <span style="font-size: 1.5em; color: rosybrown;"><i class="fas fa-money-bill-wave"></i></span>
+                <span style="color: rosybrown">10% de descuento</span>
+                pagando con transferencia bancaria.
+            </p>
+            <p><a href="#" style="color: rosybrown">Ver más detalles</a></p>
+        </div>
+        <div class="elecciones">
+            <div class=color>
+                <p>COLOR:</p>
+                <input type="color" value="#ddbea9">
+            </div>
+            <div class="talle">
+                <p>TALLE:</p>
+                <select name="eleccionTalle">
+                    <option value="ochoCinco" selected>85</option>
+                    <option value="nueveCero">90</option>
+                    <option value="nueveCinco">95</option>
+                    <option value="cien">100</option>
+                </select>
+            </div>  
+        </div>
+        <div class="botonAgregar">
+            <button type="submit">Agregar al Carrito</button>
+        </div>
+    </section>
+    <section class="descripcion">
+        <h2>Descripción:</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores iste laudantium provident mollitia veniam perspiciatis suscipit hic ratione dicta quae reiciendis architecto rem, natus ullam facere nihil eligendi porro qui fuga labore harum libero doloribus.</p>
+    </section>
+    <section class="footerDetail">
+        <h1>/- FOOTER -/</h1>
+    </section>
+</body>
+</html>
