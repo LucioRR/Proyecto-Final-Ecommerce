@@ -1,0 +1,64 @@
+main {
+    margin: 40px auto;
+    max-width: 80%;
+  }
+  
+main h4{
+    margin-bottom: 20px;
+    text-align:center;
+}
+
+.formulario {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  .registro-inicio {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+  }
+
+  .botones {
+    display: flex;
+    flex-direction: row;
+  }
+    
+  input, button {
+    max-width: 100%;
+    padding: 9px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: 1.5px solid rgba(182, 182, 182, 0.376);
+  }
+
+  .botones .buttoon {
+    width: 50%;
+    background-color: #ddbea9;    
+  }
+
+  .botones a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+  }
+
+  .botones button[type="reset"] {
+    color: white;
+    
+  }
+
+@media (min-width: 769px) {
+
+}
+
+@media (min-width: 460px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}
