@@ -1,0 +1,146 @@
+/* ------- FOOTER ------- */
+
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.separadorFooter{
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--camel);
+    padding: 10px;
+}
+
+.logoFooter svg{
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+
+.st13 {
+    fill: var(--camel) !important;
+}
+
+.frase{
+    align-self: center;
+}
+
+.frase p{
+    font-family: 'The Loved';
+    font-size: 32px;
+}
+
+.navegacion, .contactanos{
+    border-bottom: 0.5px solid black;
+}
+
+.navegacion h4, .contactanos h4{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.ulFooter{
+    list-style: none;
+}
+
+.navegacionFooter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    padding: 0;
+    border-bottom: 1px solid #e6e6e8;
+}
+
+.navegacionFooter a{
+    display: inline-block;
+    width: 100%;
+    color: #777;
+    line-height: 56px;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    text-decoration: none;
+    padding-left: 1rem;
+}
+
+.contactanos svg{
+    width: 20px;
+    height: 20px;
+    color: black;
+    margin-top: 5px;
+}
+
+.redesSociales{
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom:15px;
+}
+
+.redesSociales a{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.instagramFooter, .facebookFooter {
+    height: 20px;
+}
+
+
+.instagramFooter svg, .facebookFooter svg{
+    color: black;
+    width: 20px;
+    height: 20px;
+}
+
+@media (min-width: 361px){
+
+}
+
+@media (min-width: 769px) {
+    footer{
+        display: flex;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        max-width: 960px;
+        overflow: hidden;
+        justify-content: end;
+    }
+
+    .separadorFooter{
+        width: 100%;
+    }
+
+    .frase p {
+        font-size: 35px;
+    }
+
+    .navegacion, .contactanos{
+        width: 45%;
+        border: none;
+
+    }
+
+    .redesSociales{
+        width: 100%;
+        max-width: 960px;
+    }
+
+    .navegacionFooter{
+        border: none;
+    }
+
+    .navegacionFooter a{
+        line-height: 35px;
+        font-size: 13px;
+    }
+}
