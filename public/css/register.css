@@ -51,14 +51,14 @@ main h4{
     
   }
 
-@media (min-width: 769px) {
-
-}
-
-@media (min-width: 460px) {
-
-}
 
 @media (min-width: 1280px) {
+    .formulario {
+        width: 100%;
+    }
 
+    main{
+        margin: 40px auto;
+        max-width: 30%;
+    }
 }
