@@ -111,7 +111,6 @@ footer{
         display: flex;
         margin-top: 40px;
         flex-wrap: wrap;
-        max-width: 960px;
         overflow: hidden;
         justify-content: end;
     }
