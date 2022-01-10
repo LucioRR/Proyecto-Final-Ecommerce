@@ -6,6 +6,7 @@ main {
 main h4{
     margin-bottom: 20px;
     text-align:center;
+    margin-top: 15px;
 }
 
 .formulario {
@@ -50,15 +51,56 @@ main h4{
     color: white;
     
   }
+.regiter{
+    width: 50%;
+
+}
 
 
-@media (min-width: 1280px) {
-    .formulario {
-        width: 100%;
+.contenedorImagenes {
+    display: none;
+  }
+
+  .loguito svg{
+    display: none;
+  }
+
+@media (min-width: 1279px) {
+  .container {
+      display: flex;
+      margin: 50px 0px 0px 10px;
     }
-
-    main{
-        margin: 40px auto;
-        max-width: 30%;
+  .contenedorImagenes {
+      width: 50%;
+      display: flex;
+      padding: 5px;
+      align-items:flex-start;
+      margin-left: 225px
     }
+  .imagen {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: stretch;
+      justify-content: center;
+    }
+  .imagenesPequeñas {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      justify-content:right;
+    }
+  .formulario {
+      width: 100%;
+  }
+  main{
+      max-width: 100%;
+  }
+  .loguito svg{
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 20%;
+  }
+
 }
