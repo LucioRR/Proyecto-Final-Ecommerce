@@ -1,2 +1,104 @@
+*{
+ font-family: "Montserrat regular";
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.container-carrito{
+    margin: 0 auto;
+    display: inline-flex;
+    margin-top: 15px;
+}
+
+.listado-productos{
+    border: 3px solid black;
+    padding: 5px;
+    background-color: #ddbea9;
+}
+
+.listado-productos td {
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.listado-productos tr {
+    vertical-align: middle;
+}
+
+.resumen {
+    border: 3px solid black;
+    margin-left: 50px;
+    background-color: #ddbea9;
+    padding: 5px;
+}
+
+.resumen .elementos-resumen div {
+    border-bottom: 1px solid gray;
+    padding: 15px;
+}
+
+.resumen .btn {
+    background-color:black;
+    color: white;
+    width: 100%;
+    padding: 15px;
+}
+
+.titulo-carrito{
+   font-size: 14px;
+   margin-left: 17.5%;
+}
+
+.titulo-resumen{
+    padding: 15px;
+    border-bottom: 1px solid gray;
+}
+
+.totales {
+    margin-top: 15px;
+}
+
+.totales .subtotal {
+    font-size: medium;
+    display:flex;
+    justify-content: space-between;
+}
+
+.totales .total {
+    font-size: large;
+    font-weight: bold;
+    display:flex;
+    justify-content: space-between;
+}
+
+.opciones-compras {
+    margin: 15px;
+    padding: 5px;
+    color: gray;
+}
+
+.opcion-regalo {
+    border: 3px solid black;
+    padding: 15px;
+    background-color: #ddbea9;
+}
+
+#cantidad {
+    width: 3em;
+}
+
+.item {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+
+
 
 
