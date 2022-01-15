@@ -4,7 +4,7 @@
   "description": "<!-- ¿Qué productos o servicios brindará nuestro sitio? ¿Quién será nuestra audiencia objetivo? ¿Cómo ajustaremos nuestra oferta a ese público? Entregable: Crear archivo README.md en el repositiorio con: ● Una breve descripción de la oferta de productos y/o servicios ofrecidos por su sitio. También agregar una breve descripción del público al que apunta el sitio. ● Una breve descripción de los integrantes del equipo. -->",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon src/app.js -js,mjs,json,ejs,css",
+    "test": "nodemon src/app.js e- js,mjs,json,ejs,css",
     "start": "node src/app.js"
   },
   "repository": {
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/LucioRR/grupo_7_EcommerceCelestial#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.2"
   },
   "devDependencies": {

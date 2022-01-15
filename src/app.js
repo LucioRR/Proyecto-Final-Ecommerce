@@ -1,27 +1,23 @@
-let express = require('express');
-let app = express();
+const express = require('express');
+const app = express();
 const path = require('path');
-app.use('/static', express.static(__dirname + '/public'));
 
-const publicPath = path.resolve(__dirname, './public');
-app.use( express.static(publicPath));
+// Establecimento del puerto
+app.set('port', process.env.PORT || 3000);
 
-app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname, './views/index.html'));
-});
+// Motor de renderizado
+app.set('view engine', 'ejs');
 
-app.get('/producto', function(req, res){
-    res.sendFile(path.join(__dirname, './views/productDetail.html'));
-});
+//Establecer donde está la carpeta views
+app.set('views', path.resolve(__dirname, './views'));
 
-app.get('/carrito', function(req, res){
-    res.sendFile(path.join(__dirname, './views/productCart.html'));
-});
+// Escuchar el puerto
+app.listen(app.get('port'), () => console.log('Servidor levantado en http://localhost:' + app.get('port')));
 
-app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
-});
+//Establecimiento de la carpeta static
+app.use(express.static(path.resolve(__dirname, '../public')));
 
-app.listen(3000, function(){
-    console.log('Servidor Levantado')
-});
+//Uso de rutas
+app.use(require('./routes/main'));
+app.use(require('./routes/product'));
+app.use(require('./routes/user'));
