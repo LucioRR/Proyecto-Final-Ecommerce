@@ -6,7 +6,7 @@ footer{
     width: 100%;
 }
 
-.separadorFooter{
+figure{
     bottom: 0;
     display: flex;
     justify-content: space-around;
@@ -14,64 +14,60 @@ footer{
     padding: 10px;
 }
 
-.logoFooter svg{
+figure img{
     width: 50px;
     height: 50px;
     align-self: center;
 }
 
-.st13 {
-    fill: var(--camel) !important;
-}
 
-.frase{
+figure p{
+    font-family: 'The Loved';
+    font-size: 32px;
     align-self: center;
 }
 
-.frase p{
-    font-family: 'The Loved';
-    font-size: 32px;
-}
-
-.navegacion, .contactanos{
+nav {
     border-bottom: 0.5px solid black;
+    margin-bottom: 30px;
 }
 
-.navegacion h4, .contactanos h4{
+nav h4 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding-left: 1rem;
 }
 
-.ulFooter{
+nav ul{
     list-style: none;
 }
 
-.navegacionFooter{
+nav ul a{
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-transform: uppercase;
     padding: 0;
     border-bottom: 1px solid #e6e6e8;
-}
-
-.navegacionFooter a{
-    display: inline-block;
-    width: 100%;
     color: #777;
     line-height: 56px;
-    text-transform: uppercase;
     letter-spacing: 1px; 
     text-decoration: none;
     padding-left: 1rem;
+    align-items: center;
 }
 
-.contactanos svg{
-    width: 20px;
-    height: 20px;
+
+nav ul a img{
+    width: 30px;
+    height: 30px;
     color: black;
     margin-top: 5px;
+    
+}
+
+nav ul a p{
+    margin-left: 15px;
 }
 
 .redesSociales{
@@ -81,6 +77,7 @@ footer{
     align-items: center;
     justify-content: space-around;
     margin-bottom:15px;
+    border: none;
 }
 
 .redesSociales a{
@@ -88,19 +85,12 @@ footer{
     border: 1px solid black;
     border-radius: 50%;
     text-align: center;
-
-}
-
-.instagramFooter, .facebookFooter {
     height: 20px;
-}
-
-
-.instagramFooter svg, .facebookFooter svg{
     color: black;
     width: 20px;
-    height: 20px;
 }
+
+
 
 @media (min-width: 361px){
 
@@ -112,21 +102,25 @@ footer{
         margin-top: 40px;
         flex-wrap: wrap;
         overflow: hidden;
-        justify-content: end;
+        justify-content: center;
     }
 
-    .separadorFooter{
+    figure {
         width: 100%;
     }
 
-    .frase p {
+    figure p {
         font-size: 35px;
     }
 
-    .navegacion, .contactanos{
-        width: 45%;
+    nav {
+        width: 35%;
         border: none;
 
+    }
+
+    nav ul a{
+        border: none;
     }
 
     .redesSociales{
@@ -138,7 +132,7 @@ footer{
         border: none;
     }
 
-    .navegacionFooter a{
+    .redesSociales a{
         line-height: 35px;
         font-size: 13px;
     }
