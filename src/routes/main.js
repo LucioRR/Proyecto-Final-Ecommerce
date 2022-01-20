@@ -1,8 +1,9 @@
 const {Router} = require('express');
 const router = Router();
-const {index, footer} = require('../controllers/mainController');
+const {index, footer, header} = require('../controllers/mainController');
 
 router.get('/', index)
+router.get('/header', header)
 
 router.get('/footer', footer)
 
