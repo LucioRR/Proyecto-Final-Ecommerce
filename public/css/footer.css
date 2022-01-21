@@ -21,28 +21,28 @@ figure img{
 }
 
 
-figure p{
+figure figcaption{
     font-family: 'The Loved';
     font-size: 32px;
     align-self: center;
 }
 
-nav {
+section {
     border-bottom: 0.5px solid black;
     margin-bottom: 30px;
 }
 
-nav h4 {
+section h4 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding-left: 1rem;
 }
 
-nav ul{
+section nav{
     list-style: none;
 }
 
-nav ul a{
+section nav a{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -55,10 +55,11 @@ nav ul a{
     text-decoration: none;
     padding-left: 1rem;
     align-items: center;
+    margin-left: 1rem;
 }
 
 
-nav ul a img{
+section nav a img{
     width: 30px;
     height: 30px;
     color: black;
@@ -66,7 +67,7 @@ nav ul a img{
     
 }
 
-nav ul a p{
+section nav a p{
     margin-left: 15px;
 }
 
@@ -90,6 +91,10 @@ nav ul a p{
     width: 20px;
 }
 
+.redesSociales a img{
+    height: 100%;
+}
+
 
 
 @media (min-width: 361px){
@@ -109,17 +114,17 @@ nav ul a p{
         width: 100%;
     }
 
-    figure p {
+    figcaption {
         font-size: 35px;
     }
 
-    nav {
+    section {
         width: 35%;
         border: none;
 
     }
 
-    nav ul a{
+    section nav a{
         border: none;
     }
 
