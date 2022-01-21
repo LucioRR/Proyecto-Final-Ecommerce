@@ -5,6 +5,11 @@
     --gris: #b6b6b6;
 }
 
+header{
+    width: 100vw;
+    position: relative;
+}
+
 /* ------- NOTIFICACIONES ------- */
 
 .notificaciones{
@@ -38,6 +43,7 @@
 }
 
 /* ------- NAVEGACION FIJA ------- */
+
 #navbar{
     display: flex;
     height: 50px;
@@ -65,13 +71,10 @@
 .link-logo{
     text-align: center;
     line-height: 0;
+    width: 40%;
 }
 
-.logo{
-    width:70%;
-}
-
-#navbar input{
+#navbar form{
     display: none;
 }
 
@@ -90,7 +93,7 @@
     -webkit-box-shadow: 3px 0px 26px 0px rgb(117, 116, 116);
     -moz-box-shadow: 3px 0px 26px 0px rgb(117, 116, 116);
     box-shadow: 3px 0px 26px 0px rgb(117, 116, 116);
-    
+    z-index: 2;
 }
 
 #menu-desplegable::after{
@@ -125,10 +128,113 @@
     border-bottom: 1px solid var(--camel);
 }
 
+/* ------- BARRA DE BUSQUEDA ------- */
 
+#search, #bag {
+    width: 80vw;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    z-index: -1;
+    -webkit-box-shadow: 3px 0px 26px 0px rgb(117, 116, 116);
+    -moz-box-shadow: 3px 0px 26px 0px rgb(117, 116, 116);
+    box-shadow: 3px 0px 26px 0px rgb(117, 116, 116);
+    transition: all 0.8s ease;
+}
+
+#search:target, #bag:target{
+    opacity: 1;
+    z-index: 2;
+}
+
+#search::after, #bag::after{
+    content: 'x';
+    top: 14px;
+    left: -18%;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--camel);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+#search h2, #bag h2 {
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--camel);
+}
+
+#search form{
+    border-bottom: solid 1px #cccccc;
+    padding-bottom: 2px;
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+#search form input{
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    float: left;
+    height: 30px;
+    border: none;
+    outline: none;
+    display: block;
+    font-size: 14px;
+    cursor: text;
+    appearance: auto;
+}
+
+#search form button {
+    border: none;
+    background: none;
+}
 
 /* ------- CARRITO DE COMPRAS ------- */
 
-#bag{
-    display: none;
+#bag figure{
+    width: 95%;
+    border: 1px solid rgba(182, 182, 182, 0.376);
+    margin: 10px auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#bag figure img{
+    width: 25%;
+    height: 60px;
+}
+
+.contenedorProducto{
+    display: flex;
+    width: 73%;
+    flex-direction: column;
+    padding: 4px;
+    justify-content: center;
+}
+
+.contenedorProducto h3{
+    color: var(--camel);
+    margin-bottom: 7px;
+}
+
+#bag button{
+    width: 95%;
+    margin: 5px auto;
+    display: block;
+    height: 50px;
+    background-color: var(--camel);
+    border-radius: 8px;
+    border: none;
+
 }
