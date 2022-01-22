@@ -1,14 +1,13 @@
-/* NAVBAR */
-.navDetail,
-.footerDetail {
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  background-color: #663333;
-  color: white;
-}
 
-.contenedorImagenes {
+:root{
+  --chocolate: #663333; 
+  --camel: #cb997e; 
+  --piel: #ddbea9; 
+  --rosaViejo: #d0ada7; 
+  --verde: #b7b7a4; 
+  --celeste: #e2eafc;
+}
+.imagenes {
   display: none;
 }
 
@@ -79,28 +78,82 @@
   height: 320px;
   font-size: 0.8em;
 }
+.categorias {
+  display: flex;
+}
+.pagos img {
+  width: 18px;
+  height: 18px;
+}
 .precio {
-  color: #663333;
+  color: var(--chocolate);
 }
 .elecciones {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-evenly;
   margin: 10px;
   font-size: 1.2em;
+}
+.elecciones fieldset{
+  border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.elecciones fieldset label, .elecciones fieldset legend {
+  margin: 8px;
 }
 .botonAgregar {
   display: flex;
   justify-content: center;
 }
 .botonAgregar button {
-  border: 2px solid rosybrown;
-  background-color: rosybrown;
+  border: 2px solid var(--camel);
+  background-color: var(--camel);
   color: white;
   border-radius: 10px;
   padding: 5px;
   margin: 10px;
   box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+}
+#color {
+	display: flex;
+}
+#color li {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0.15rem;
+}
+#color li input {
+	display: none;
+}
+
+#color li label span {
+	border-radius: 2rem;
+}
+input[type="radio"][name="color"]:checked ~ label span {
+	border: 1px solid #000;
+}
+
+input[type="radio"][name="color"][value="chocolate"] ~ label span {
+	background-color: var(--chocolate);
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+}
+input[type="radio"][name="color"][value="verde"] ~ label span {
+	background-color: var(--verde);
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+}
+input[type="radio"][name="color"][value="piel"] ~ label span {
+	background-color: var(--piel);
+	width: 2rem;
+	height: 2rem;
+	display: flex;
 }
 .color{
   text-align: center;
@@ -119,8 +172,14 @@
 .descripcion {
   font-size: 0.8em;
   margin: 10px;
-  color: #663333;
-}
+  color: var(--chocolate);}
+/* summary {
+    list-style: inside disclosure-closed;
+    list-style-position: inside;
+    list-style-image: initial;
+    list-style-type: disclosure-closed;
+} */
+
 .descripcion li {
   margin-top: 5px;
 }
@@ -133,47 +192,39 @@
     display: flex;
     margin: 50px 0px 0px 10px;
   }
-  .contenedorImagenes {
-    width: 50%;
-    display: flex;
-    border: 1.5px solid rgba(182, 182, 182, 0.376);
-    padding: 5px;
-    border-radius: 10px;
-    align-items: center;
-  }
   .imagenes {
-    width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
-  }
-  .imagen {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: stretch;
+    width: 55%;
     justify-content: center;
+    align-items: center;
+    border: 1.5px solid rgba(182, 182, 182, 0.376);
+    border-radius: 10px;
+    padding: 5px;
   }
   .imagenesPequeñas {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 25%;
   }
-  .imagenes img {
-    width: 100%;
-    object-fit: contain;
+  .imagenes img{
+    padding: 5px;
   }
   .imagenPpal {
-    width: 100%;
+    width: 50%;
+    object-fit: contain;
+  }
+  .imagenPpal img {
+    width: 50%;
     object-fit: contain;
   }
   .contenedorDetalles {
     width: 50%;
-    margin-left: 10px;
     height: 420px;
     font-size: 1em;
     border: 1.5px solid rgba(182, 182, 182, 0.376);
     padding: 5px;
     border-radius: 10px;
+    margin-right: 10px;
   }
   .elecciones {
     justify-content: space-around;
