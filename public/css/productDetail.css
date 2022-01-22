@@ -59,7 +59,9 @@
   cursor: pointer;
   transition: 1s;
 }
-
+.manual-btn:checked{
+  background: #663333;
+}
 .manual-btn:not(:last-child) {
   margin-right: 40px;
 }
@@ -80,6 +82,7 @@
 }
 .categorias {
   display: flex;
+  margin: 10px 0px ;
 }
 .pagos img {
   width: 18px;
@@ -87,6 +90,7 @@
 }
 .precio {
   color: var(--chocolate);
+  font-size: 2em;
 }
 .elecciones {
   display: flex;
@@ -101,22 +105,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 40%;
 }
 .elecciones fieldset label, .elecciones fieldset legend {
   margin: 8px;
-}
-.botonAgregar {
-  display: flex;
-  justify-content: center;
-}
-.botonAgregar button {
-  border: 2px solid var(--camel);
-  background-color: var(--camel);
-  color: white;
-  border-radius: 10px;
-  padding: 5px;
-  margin: 10px;
-  box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
 }
 #color {
 	display: flex;
@@ -132,6 +124,7 @@
 
 #color li label span {
 	border-radius: 2rem;
+  cursor: pointer;
 }
 input[type="radio"][name="color"]:checked ~ label span {
 	border: 1px solid #000;
@@ -166,6 +159,25 @@ input[type="radio"][name="color"][value="piel"] ~ label span {
   box-shadow: 1px 1px 2px 1px rgb(0 0 0 / 20%);
   border-radius: 5px;
   }
+  .botonAgregar {
+    display: flex;
+    justify-content: center;
+  }
+  .botonAgregar button {
+    border: 2px solid var(--camel);
+    background-color: var(--camel);
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+    transition:all;
+    cursor: pointer;
+  }
+  .botonAgregar button:hover{
+    background-color: var(--chocolate);
+    border: 2px solid var(--chocolate);
+  }
 
 
 /* DESCRIPCIÓN */
@@ -173,12 +185,9 @@ input[type="radio"][name="color"][value="piel"] ~ label span {
   font-size: 0.8em;
   margin: 10px;
   color: var(--chocolate);}
-/* summary {
-    list-style: inside disclosure-closed;
-    list-style-position: inside;
-    list-style-image: initial;
-    list-style-type: disclosure-closed;
-} */
+.descripcion summary {
+  font-size: 1.2em;
+}
 
 .descripcion li {
   margin-top: 5px;
