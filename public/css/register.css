@@ -7,26 +7,18 @@ main h4{
     margin-bottom: 20px;
     text-align:center;
     margin-top: 15px;
+    font-size: 17px;
 }
 
 .formulario {
     display: flex;
     width: 100%;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-
-  .registro-inicio {
-    display: flex;
-    flex-direction: column;
-    font-size: 13px;
-  }
-
-  .botones {
-    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    font-size: 13px;
+    flex-wrap: wrap;
   }
+
     
   input, button {
     max-width: 100%;
@@ -34,48 +26,38 @@ main h4{
     margin: 10px 5px;
     border-radius: 5px;
     border: 1.5px solid rgba(182, 182, 182, 0.376);
+    width:100%;
   }
 
-  .botones .buttoon {
-    width: 50%;
+  .buttoon {
+    width: 47%;
     background-color: #ddbea9;    
-  }
-
-  .botones a {
-    text-decoration: none;
-    color: white;
+    color:white;
     font-size: 14px;
   }
 
-  .botones button[type="reset"] {
-    color: white;
-    
-  }
-.regiter{
-    width: 50%;
-
-}
-
+  
 
 .contenedorImagenes {
     display: none;
   }
 
-  .loguito svg{
+  .loguito {
     display: none;
   }
 
-@media (min-width: 1279px) {
+@media (min-width: 769px) {
   .container {
       display: flex;
       margin: 50px 0px 0px 10px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
     }
   .contenedorImagenes {
-      width: 50%;
       display: flex;
       padding: 5px;
       align-items:flex-start;
-      margin-left: 225px
+      width: 45%;
     }
   .imagen {
       display: flex;
@@ -83,6 +65,7 @@ main h4{
       align-items: center;
       align-content: stretch;
       justify-content: center;
+      max-width: 100%;
     }
   .imagenesPequeñas {
       display: flex;
@@ -96,11 +79,15 @@ main h4{
   main{
       max-width: 100%;
   }
-  .loguito svg{
+  .loguito {
     display: flex;
     justify-content: center;
-    margin: 40px auto;
-    max-width: 20%;
+    margin: 40px auto;    
+    padding: 0px 35%
   }
 
+  .register {
+    width: 35%;
+   }
+   
 }
