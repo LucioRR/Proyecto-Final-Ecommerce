@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/reset.css">
 
     <!-- CSS GENERAL -->
-    <link rel="stylesheet" href="/css/header-solo.css">
+    <link rel="stylesheet" href="/css/header.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                 <img src="/assets/iconos/flechas/chevron-izq-blca.svg" alt="Desplazamiento Izquierda">
             </a>
             <hgroup>
-                <h2>3 y 6 coutas</h2>
+                <h2>3 y 6 cuotas</h2>
                 <h4>sin interés</h4>
             </hgroup>
             <a href="">
@@ -57,6 +57,9 @@
             <a href="">Segundas Pieles</a>
             <a href="">Marcas</a>
             <a href="">Make Up</a>
+            <a href="#" class="btn-cerrar btn-cerrar-drcha">
+                <img src="/assets/iconos/cerrar/x-bca.svg" alt="Cruz de cierre">
+            </a>
         </nav>
         <section id="search">
             <h2>Busqueda</h2>
@@ -66,33 +69,21 @@
                     <img src="/assets/iconos/search/search.svg" alt="icono Buscador">
                 </button>
             </form>
+            <a href="#" class="btn-cerrar btn-cerrar-izq">
+                <img src="/assets/iconos/cerrar/x-bca.svg" alt="Cruz de cierre">
+            </a>
         </section>
         <section id="bag">
             <h2>Mi Compra</h2>
-            <figure class="resumen-item">
-                <img src="/images/imagen1.jpg" alt="Producto 1">
-                <hgroup class=contenedorProducto>
-                    <h3>Nombre de Producto</h3>
-                    <h4>Precio: $19.99</h4>
-                </hgroup>
-            </figure>
-            <figure class="resumen-item">
-                <img src="/images/imagen2.jpg" alt="Producto 2">
-                <hgroup class=contenedorProducto>
-                    <h3>Nombre de Producto</h3>
-                    <h4>Precio: $19.99</h4>
-                </hgroup>
-            </figure>
-            <figure class="resumen-item">
-                <img src="/images/imagen3.jpg" alt="Producto 3">
-                <hgroup class=contenedorProducto>
-                    <h3>Nombre de Producto</h3>
-                    <h4>Precio: $19.99</h4>
-                </hgroup>
-            </figure>
+            <% for( let i = 0; i < 3; i++ ) { %>
+                <%- include('./includes/prodCarritoLateral.ejs')  %> 
+            <% } %>
             <form action="/productCart">
                 <button type="submit" name="carrito">FINALIZAR COMPRA</button>
             </form>
+            <a href="#" class="btn-cerrar btn-cerrar-izq">
+                <img src="/assets/iconos/cerrar/x-bca.svg" alt="Cruz de cierre">
+            </a>
         </section>
     </header>
 </body>
