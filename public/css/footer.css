@@ -6,7 +6,7 @@ footer{
     width: 100%;
 }
 
-figure{
+.separador-footer{
     bottom: 0;
     display: flex;
     justify-content: space-around;
@@ -14,35 +14,35 @@ figure{
     padding: 10px;
 }
 
-figure img{
+.separador-footer img{
     width: 50px;
     height: 50px;
     align-self: center;
 }
 
 
-figure figcaption{
+.separador-footer figcaption{
     font-family: 'The Loved';
     font-size: 32px;
     align-self: center;
 }
 
-section {
+.secciones-footer {
     border-bottom: 0.5px solid black;
     margin-bottom: 30px;
 }
 
-section h4 {
+.secciones-footer h4 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding-left: 1rem;
 }
 
-section nav{
+.secciones-footer nav{
     list-style: none;
 }
 
-section nav a{
+.secciones-footer nav a{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -59,7 +59,7 @@ section nav a{
 }
 
 
-section nav a img{
+.secciones-footer nav a img{
     width: 30px;
     height: 30px;
     color: black;
@@ -67,7 +67,7 @@ section nav a img{
     
 }
 
-section nav a p{
+.secciones-footer nav a p{
     margin-left: 15px;
 }
 
@@ -96,11 +96,6 @@ section nav a p{
 }
 
 
-
-@media (min-width: 361px){
-
-}
-
 @media (min-width: 769px) {
     footer{
         display: flex;
@@ -110,7 +105,7 @@ section nav a p{
         justify-content: center;
     }
 
-    figure {
+    .separador-footer {
         width: 100%;
     }
 
@@ -118,13 +113,13 @@ section nav a p{
         font-size: 35px;
     }
 
-    section {
+    .secciones-footer {
         width: 35%;
         border: none;
 
     }
 
-    section nav a{
+    .secciones-footer nav a{
         border: none;
     }
 
