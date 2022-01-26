@@ -21,3 +21,4 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 app.use(require('./routes/main'));
 app.use(require('./routes/product'));
 app.use(require('./routes/user'));
+app.use(require('./routes/cart'));
