@@ -1,0 +1,82 @@
+:root{
+    --chocolate: #663333; 
+    --camel: #cb997e; 
+    --piel: #ddbea9; 
+    --rosaViejo: #d0ada7; 
+    --verde: #b7b7a4; 
+    --celeste: #e2eafc;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.newProduct {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    
+}
+.logo{
+    width:350px;
+    margin:25px;
+}
+h1 {
+    font-size:1.5rem;
+    color: var(--chocolate);
+    font-weight: bold;
+}
+#createForm {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border: 1.5px solid rgba(182, 182, 182, 0.376);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow:5px 5px 10px 3px rgb(182 182 182 / 38%);
+}
+#createForm label {
+    font-weight: bold;
+}
+#createForm select {
+    max-width: 100%;
+    width: 310px;
+    margin-bottom: 20px;
+}
+#createForm input {
+    max-width: 100%;
+    width: 300px;
+    margin-bottom: 20px;
+}
+#createForm textarea {
+    max-width: 100%;
+    width: 300px;
+    margin-bottom: 20px;
+}
+#estado{
+    border: none;
+    padding: 0;
+}
+#estado input {
+    width: auto;
+    margin: 10px;
+}
+#guardar {
+        border: 2px solid var(--camel);
+        background-color: var(--camel);
+        color: white;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 10px;
+        box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+        transition:all;
+        cursor: pointer;
+      }
+#guardar:hover{
+        background-color: var(--chocolate);
+        border: 2px solid var(--chocolate);
+      }
