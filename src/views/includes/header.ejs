@@ -60,14 +60,16 @@
     </section>
     <section id="bag">
         <h2>Mi Compra</h2>
-        <% for( let i=0; i < 3; i++ ) { %>
-            <%- include('./includes/prodCarritoLateral.ejs') %>
-                <% } %>
-                    <form action="/productCart">
-                        <button type="submit" name="carrito">FINALIZAR COMPRA</button>
-                    </form>
-                    <a href="#" class="btn-cerrar btn-cerrar-izq">
-                        <img src="/assets/iconos/cerrar/x-bca.svg" alt="Cruz de cierre">
-                    </a>
+        <section class="articulos-carrito">
+            <% for( let i=0; i < 5; i++ ) { %>
+                <%- include('./includes/prodCarritoLateral.ejs') %>
+                    <% } %>
+        </section>
+        <form action="/productCart">
+            <button type="submit" name="carrito">FINALIZAR COMPRA</button>
+        </form>
+        <a href="#" class="btn-cerrar btn-cerrar-izq">
+            <img src="/assets/iconos/cerrar/x-bca.svg" alt="Cruz de cierre">
+        </a>
     </section>
 </header>
