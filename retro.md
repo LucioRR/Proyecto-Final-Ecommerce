@@ -11,3 +11,23 @@ Seguir haciendo:
 
 Dejar de hacer:
 •	Centralizar las tareas mas complejas en una sola persona.
+
+
+Retrospectiva Sprint 2:
+
+¿Qué deberíamos empezar a hacer en el siguiente sprint?
+* Mantener reuniones con mayor frecuencia para conocer el estado del trabajo de los compañeros.
+* Solicitar ayuda a los compañeros cuando hay inconvenientes que no podemos resolver individualmente.
+* Poner fechas límites a las tareas e identificar los responsables de cada una en Trello.
+* Redistribuir tareas que no se puedan cumplir a tiempo.
+
+¿Qué deberíamos seguir haciendo?:
+* Aceptar las responsabilidades de las tareas y el compromiso de resolverlas a tiempo.
+* Compartir entre todos la visión de cuales deberían ser las funcionalidades del ecommerce a futuro.
+* Lograr un concenso en cuanto al diseño y presentación de las vistas.
+* Aceptar las críticas y recomendaciones de los compañeros.
+
+¿Qué deberíamos dejar de hacer?:
+* Mantenernos incomunicados con los compañeros sobre cuales son los inconvenientes que estamos teniendo.
+* No ser sinceros sobre lo que pensamos del proyecto.
+* Postergar la distribución de las tareas y la actualización de Trello.
