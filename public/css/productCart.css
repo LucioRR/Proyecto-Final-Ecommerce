@@ -2,6 +2,23 @@
  font-family: "Montserrat regular";
 }
 
+.titulo-carrito{
+    font-size: 24px;
+    display:flex;
+    margin: 10px;
+    justify-content: start;
+    align-items: center;
+}
+
+.titulo-carrito img{
+    height: 30px;
+    width: 30px;
+}
+ 
+.titulo-carrito figcaption{
+    margin-left: 10px;
+}
+ 
 .container {
     display: flex;
     justify-content: space-between;
@@ -13,15 +30,10 @@
 
 .tabla-productos{
     width: 95%;
-    border: 2px solid black;
+    border: 1.8px solid black;
     padding: 5px;
     background-color: #ddbea9;
 }
-
-#aros{
-    width: 60px;
-    height: 60px;
-} 
 
 .tabla-productos td , .tabla-productos tr{
     padding: 5px;
@@ -29,13 +41,35 @@
     text-align: center;
 }
 
+#aros{
+    width: 60px;
+    height: 60px;
+} 
+
+#cantidad {
+    width: 3em;
+}
+
 section img{
     width: 16px;
     height: 16px;
 }
 
+.opciones-compras {
+    margin: 15px;
+    padding: 5px;
+    color: gray;
+}
+
+.opcion-regalo {
+    border: 1.8px solid black;
+    padding: 5px;
+    background-color: #ddbea9;
+    width: 95%;
+}
+
 .resumen {
-    border: 2px solid black;
+    border: 1.8px solid black;
     background-color: #ddbea9;
     padding: 5px;
     width: 95%;
@@ -72,45 +106,6 @@ section img{
     color: white;
     width: 100%;
     padding: 15px;
-}
-
-.titulo-carrito{
-   font-size: 24px;
-   display:flex;
-   margin: 10px;
-   justify-content: start;
-   align-items: center;
-}
-
-.titulo-carrito figcaption{
-    margin-left: 10px;
-}
-
-.titulo-carrito img{
-    height: 30px;
-    width: 30px;
-}
-
-.titulo-resumen{
-    padding: 15px;
-    border-bottom: 1px solid gray;
-}
-
-.opciones-compras {
-    margin: 15px;
-    padding: 5px;
-    color: gray;
-}
-
-.opcion-regalo {
-    border: 2px solid black;
-    padding: 15px;
-    background-color: #ddbea9;
-    width: 95%;
-}
-
-#cantidad {
-    width: 3em;
 }
 
 .item {
