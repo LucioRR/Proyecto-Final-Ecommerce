@@ -30,6 +30,7 @@
     --rosaViejo: #d0ada7; 
     --verde: #b7b7a4; 
     --celeste: #e2eafc;
+    --gris: #b6b6b6;
 }
 
 *{
@@ -84,7 +85,7 @@ a{
 }
 
 .manual-btn{
-    border: 2px solid #663333;
+    border: 2px solid var(--chocolate);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -96,7 +97,7 @@ a{
 }
 
 .manual-btn:hover{
-    background: #663333;
+    background: var(--chocolate);
 }
 
 #radio1:checked ~ .first{
@@ -126,7 +127,7 @@ a{
 }
 
 .navigation-auto div{
-    border: 2px solid #663333;
+    border: 2px solid var(--chocolate);
     padding:5px;
     border-radius: 10px;
     transition: 1s;
@@ -137,39 +138,42 @@ a{
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1{
-    background: #663333;
+    background: var(--chocolate);
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2{
-    background: #663333;
+    background: var(--chocolate);
 }
 
 #radio3:checked ~ .navigation-auto .auto-btn3{
-    background: #663333;
+    background: var(--chocolate);
 }
 
 #radio4:checked ~ .navigation-auto .auto-btn4{
-    background: #663333;
+    background: var(--chocolate);
 }
 
 /* SECCIONES */
 
-.titulo-seccion{
-    text-align: center;
-    text-transform: uppercase;
-    background-color: var(--camel);
+.uniteInst{
     width: 100%;
-    padding: 10px;
-    box-shadow: 0px 4px 8px 0px rgba(112,104,104,0.8);
-    -webkit-box-shadow: 0px 4px 8px 0px rgba(112,104,104,0.8);
-    -moz-box-shadow: 0px 4px 8px 0px rgba(112,104,104,0.8);
-    position: relative;
-    z-index: 1;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+.titulo-seccion{
+    width: 100%;
+    font-size: 39px;
+    text-shadow: -1px 0 var(--camel), 0 1px var(--camel), 1px 0 var(--camel), 0 -1px var(--camel);
+    color: white;
+    margin-bottom: 10px;
 }
 
 .ofertas-vos, .los-queres{
-    margin-top: 10px;
+    margin-top: 20px;
     overflow: hidden;
+    text-align: center;
 }
 
 .lanzamientos{
@@ -178,186 +182,42 @@ a{
     font-weight: lighter;
 }
 
-.separador-img {
-    width: 95%;
-    margin-top: 40px;
-}
-
-.linea-productos{
+.seccion-productos {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
-    overflow: hidden;
     position: relative;
 }
+
+
 /* SEPARADORES */
 
 .separador{
-    width: 100%;
+    width: 95%;
     text-align: center;
-    margin-top: 10px;
     margin-bottom: 10px;
 }
 
-/* ARTICLE */
-
-.producto{
-    width: 70%;
-    border: 1px solid rgba(182, 182, 182, 0.376);
-    text-align: center;
-    border-radius: 15px;
+/* UNITE INSTAGRAM */
+.uniteInst h2{
+    margin: 10px;
+    color: var(--gris);
 }
 
-.producto1{
-    position: absolute;
-    left: -62%;
-    width: 70%;
-    border: 1.5px solid rgba(182, 182, 182, 0.376);
-    text-align: center;
-    border-radius: 15px;
-}
-
-.producto3{
-    position: absolute;
-    right: -62%;
-    width: 70%;
-    border: 1.5px solid rgba(182, 182, 182, 0.376);
-    text-align: center;
-    border-radius: 15px;
-}
-
-.titulo-tarjeta{
-    padding: 10px 0;
-    display: block;
+.uniteInst a{
     background-color: var(--camel);
-    border-radius: 15px 15px 0px 0px;
+    padding: 6px;
     color: white;
-    font-weight: bolder;
-    text-transform: uppercase;
-}
-
-.imagen-corazon{
-    display: relative;
-}
-
-.img-producto{
-    width: 100%;
-    height: 70vw;
-    object-fit: scale-down;
-    margin-top: 5px;
-}
-
-
-.corazon{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 10%;
-    left: 75%;
-}
-
-.st16{
-    fill: var(--piel) !important;
-    stroke: var(--chocolate) !important;
-}
-
-.corazon-vacio {
-    fill: white !important;
-}
-
-.marca-producto{
-    font-weight: bolder;
-    letter-spacing: 2.9px;
-    margin-top: 10px;
-    font-size: 13px;
-    text-transform: uppercase;
-}
-
-.nombre-producto{
-    margin-top: 10px;
-    font-weight: 100;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 13px;
-}
-
-.precio-producto{
-    margin-top: 20px;
-    font-weight: bolder;
-    font-size: 13px;
-}
-
-.coutas-producto {
-    color: var(--chocolate);
-    margin-top: 5px;
-    letter-spacing: 1.5px;
-    font-size: 11px;
-}
-
-.coutas-producto span {
-    font-weight: bolder;
-}
-
-.btn-comprar{
-    border: 0;
-    cursor: pointer;
-    color: #fff;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.57px;
-    background-color: var(--camel);
-    border-radius: 34px;
-    height: 38px;
     display: flex;
-    align-content: center;
-    width: 130px;
-    padding: 0 0 0;
-    margin: 20px auto;
+    width: 35%;
     justify-content: space-around;
+    border-radius: 6px;
+    align-items: center;
+    margin: 0 auto;
 }
 
-.btn-comprar p{
-    align-self: center;
-    font-weight: bolder;
-}
-
-.carrito{
-    align-self: center;
-    width: 20px;
-    height: 20px;
-}
-
-/* LANZAMIENTOS */
-
-.titulo-especial {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    width:100%;
-}
-
-.subtitulo-especial {
-    margin-top: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    width:100%;
-}
-
-.productos-chicos{
-    display: flex;
-    justify-content:space-evenly;
-    margin-top: 10px;
-}
-
-.btn-comprar p{
-    align-self: center;
-    font-weight: bolder;
-}
-
-.carrito{
-    align-self: center;
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    margin-left: -20px;
+.uniteInst a img{
+    width: 16px;
 }
 
 /* LANZAMIENTOS */
@@ -374,72 +234,17 @@ a{
     letter-spacing: 1px;
     width:95%;
     line-height: 30px;
-    margin: 10px auto 0;
+    margin: 10px auto;
 }
 
-.productos-chicos{
-    display: flex;
-    justify-content:space-around;
-    margin-top: 10px;
+.chico{
+    opacity: 1 !important;
+    width: 47%;
+    min-width: 45% !important;
 }
 
-.imagen-corazon-chicos{
-    position: relative;
-}
-
-.producto-mitad{
-    width: 45%;
-    border: 1px solid rgba(182, 182, 182, 0.376);
-    text-align: center;
-    border-radius: 15px;
-}
-
-.mitad-oculta{
-    display: none;
-}
-
-.img-producto-chico{
-    width: 100%;
-    height: 45vw;
-    object-fit: scale-down;
-    margin-top: 5px;
-}
-
-.corazon-chico{
-    position: absolute;
-    top: 10%;
-    left: 80%;
-    width: 25px;
-    height: 25px;
-}
-
-.img-producto-chico{
-    width: 100%;
-    height: 48vw;
-    object-fit: scale-down;
-    margin-top: 5px;
-}
-
-.corazon-chico{
-    position: absolute;
-    top: 10%;
-    left: 80%;
-    width: 25px;
-    height: 25px;
-}
-
-.nombre-producto-chico{
-    margin-top: 10px;
-    font-weight: 100;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 11px;
-}
-
-.precio-producto-chico{
-    margin-top: 10px;
-    font-weight: bolder;
-    font-size: 11px;
+.chico figure{
+    height: 65vw !important;
 }
 
 /* LOS MAS VENDIDOS */

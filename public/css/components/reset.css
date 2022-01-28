@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Montserrat Light';
-    src: url("../fonts/montserrat/Montserrat-Light.ttf") format("truetype");
+    src: url("../../fonts/montserrat/Montserrat-Light.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'Montserrat Regular';
-    src: url("../fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
+    src: url("../../fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
 }
 
 body {

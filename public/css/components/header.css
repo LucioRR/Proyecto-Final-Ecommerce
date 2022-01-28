@@ -11,6 +11,7 @@
 body{
     font-family: 'Montserrat Regular';
 }
+
 header{
     width: 100vw;
     position: relative;
@@ -159,7 +160,7 @@ header{
     width: 80vw;
     min-height: 100vh;
     background-color: white;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     opacity: 0;
@@ -213,6 +214,10 @@ header{
 }
 
 /* ------- CARRITO DE COMPRAS ------- */
+
+.articulos-carrito{
+    overflow-y: scroll;
+}
 
 .producto-carrito{
     width: 95%;
