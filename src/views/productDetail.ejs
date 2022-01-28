@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>María Cielo</title>
-    <!-- NORMALIZE CSS -->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <!-- CSS RESET -->
-    <link rel="stylesheet" href="/css/reset.css">
-    <!-- CSS GENERAL -->
-    <link rel="stylesheet" href="/css/index.css">
+    <%- include('./includes/head.ejs') %>
     <!-- CSS PARTICULAR -->
     <link rel="stylesheet" href="/css/productDetail.css">
-    <!-- ICONOS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-
 </head>
 <body>
     <!-- Header -->
-
+    <%- include('./includes/header.ejs')  %> 
     <!-- Main -->
     <main>
         <section class="container">
             <!-- Imagenes Portatil -->
                 <section class="imagenes">
                     <figure class="imagenesPequeñas">
-                        <img src="/images/detalleBikiniMC3.jpg" alt="reverso">
-                        <img src="/images/detalleBikiniMC1.jpg" alt="frontal">
+                        <img src="/assets/images/detalleBikiniMC3.jpg" alt="reverso">
+                        <img src="/assets/images/detalleBikiniMC1.jpg" alt="frontal">
                     </figure>
-                    <img class="imagenPpal" src="/images/detalleBikiniMC2.jpg" alt="fotoproducto">
+                    <img class="imagenPpal" src="/assets/images/detalleBikiniMC2.jpg" alt="fotoproducto">
                 </section>
 
             <!-- Imagenes Slider Mobile -->
@@ -44,13 +32,13 @@
                         <!-- radio button end -->
                         <!-- slide image start-->
                         <figure class="slidee first">
-                            <img src="/images/detalleBikiniMC1.jpg" alt="">
+                            <img src="/assets/images/detalleBikiniMC1.jpg" alt="">
                         </figure>
                         <figure class="slidee">
-                            <img src="/images/detalleBikiniMC3.jpg" alt="">
+                            <img src="/assets/images/detalleBikiniMC3.jpg" alt="">
                         </figure>
                         <figure class="slidee">
-                            <img src="/images/detalleBikiniMC2.jpg" alt="">
+                            <img src="/assets/images/detalleBikiniMC2.jpg" alt="">
                         </figure>
                         <!-- slide image end-->
                     </form>
@@ -74,12 +62,12 @@
                     <h1 class="precio">$7.200 <span style="font-size: 0.4em; color: black; text-decoration:line-through;">$8.000</span></h1>
                 <hgroup class="pagos">
                     <h2>
-                        <img src="assets/iconos/pago/credit-card-fill.svg" alt="Medio de pago">
+                        <img src="/assets/iconos/pago/credit-card-fill.svg" alt="Medio de pago">
                         <span style="color: rosybrown">3 cuotas sin interes de</span>
                         $2.400
                     </h2>
                     <h2>
-                        <img src="assets/iconos/pago/money-bill-wave-solid.svg" alt="Medio de pago">
+                        <img src="/assets/iconos/pago/money-bill-wave-solid.svg" alt="Medio de pago">
                         <span style="color: rosybrown">10% de descuento</span>
                         pagando con transferencia bancaria.
                     </h2>
@@ -134,6 +122,6 @@
         </details>
     </main>
     <!-- Footer -->
-
+    <%- include('./includes/footer.ejs') %>
 </body>
 </html>
