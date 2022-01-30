@@ -189,6 +189,9 @@ a{
     position: relative;
 }
 
+.los-mas-vendidos{
+    text-align: center;
+}
 
 /* SEPARADORES */
 
@@ -214,6 +217,7 @@ a{
     border-radius: 6px;
     align-items: center;
     margin: 0 auto;
+    max-width: 170px;
 }
 
 .uniteInst a img{
@@ -247,26 +251,7 @@ a{
     height: 65vw !important;
 }
 
-/* LOS MAS VENDIDOS */
-
-.los-mas-vendidos{
-    text-align: center;
-}
-
-.ver-mas{
-    width: 125px;
-    line-height: 40px;
-    border-radius: 20px;
-    border: 1.5px solid rgba(182, 182, 182, 0.376);
-    background-color: #fff;
-    font-size: 13px;
-    text-transform: uppercase;
-    display: inline-block;
-    cursor: pointer;
-    margin: 10px 0;
-}
-
-.producto-oculto{
+.prodcuto-oculto{
     display: none;
 }
 
@@ -325,83 +310,49 @@ a{
         display: none;
     }
 
-    .ofertas-vos, .los-queres{
+    .ofertas-vos, .los-queres, .los-mas-vendidos{
         display: flex;
-        overflow: hidden;
-        flex-wrap: nowrap;
-        margin-top: 40px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
-    .separador{
-        width: 50%;
-        margin: 0;
-        align-self: center;
-    }
-
-    .separador-img {
-        margin: 0;
-    }
-    
-    .linea-productos{
-        width: 50%;
-        justify-content: space-around;
-    }
-
-    .producto1{
-        position: sticky;
-        width:45%;
-    }
-
-    .producto{
-        width: 45%;
-    }
-
-    .producto3{
-        display: none;
-    }
-
-    .img-producto{
-        height: 13vw;
-    }
-
-    .imagen-corazon {
-        position: relative;
-    }
-
-    .corazon{
-        top: 13%;
-    }
-
-    .separador-lo-queres{
-        order: 2
-    }
-
-    .mitad-oculta, .producto-oculto{
-        display: inline-block;
-    }
-
-    .producto-mitad{
-        width: 22%;
-    }
-
-    .img-producto-chico {
-        height: 13vw;
-    }
-    
-    .productos-chicos {
-        justify-content:space-evenly;
-    }
-
-    .img-summer-sale{
-        display: none;
-    }
-
-    .linea-summer{
+    .titulo-seccion {
+        order: -1;
         width: 100%;
     }
 
-    .producto-summer{
-        width: 23%;
+    .separador{
+        width: 45%;
+    }
+
+    .seccion-productos{
+        width: 45%;
+        z-index: -1;
+    }
+
+    .prod-1{
+        display: none;
+    }
+
+    .producto{
+        min-width: auto !important;
+        opacity: 1 !important;
+    }
+
+    .producto figure {
+        height: 21vw !important;
+    }
+
+    .prodcuto-oculto{
+        display: block;
+    }
+
+    .los-queres img {
+        order: 10;
+    }
+
+    .lanzamientos section {
+        width: 100% !important;
     }
 
     .beneficios{

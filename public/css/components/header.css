@@ -109,6 +109,7 @@ header{
     -moz-box-shadow: 3px 0px 26px 0px rgb(117, 116, 116);
     box-shadow: 3px 0px 26px 0px rgb(117, 116, 116);
     z-index: 2;
+    max-width: 300px;
 }
 
 #menu-desplegable:target{
@@ -169,6 +170,7 @@ header{
     -moz-box-shadow: 3px 0px 26px 0px rgb(117, 116, 116);
     box-shadow: 3px 0px 26px 0px rgb(117, 116, 116);
     transition: all 0.8s ease;
+    max-width: 300px;
 }
 
 #search:target, #bag:target{
@@ -281,14 +283,21 @@ header{
 }
 
 #bag button{
-    width: 95%;
+    width: 20%;
     margin: 5px auto;
     display: block;
     height: 50px;
     background-color: var(--camel);
     border-radius: 8px;
     border: none;
+    position: fixed;
+    bottom: 60px;
+    right: 16%;
+    color: white;
+    font-weight: bold;
+    min-width: 200px;
 }
+
 
 @media (min-width: 769px) {
 
@@ -359,6 +368,7 @@ header{
         justify-content: space-around;
         border-top: 1px solid var(--camel);
         border-bottom: 1px solid var(--camel);
+        max-width: none;
     }
     
     .btns-usuario {
@@ -374,5 +384,9 @@ header{
         background-color: var(--camel);
         cursor: pointer;
         color: white;
+    }
+
+    .btn-cerrar-drcha{
+        display: none !important;
     }
 }
