@@ -1,101 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria Cielo</title>
+    <%- include('./includes/head.ejs') %>
 
-
-    <!-- NORMALIZE CSS -->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="css/reset.css">
-
-    <!-- CSS PARTICULAR -->
-    <link rel="stylesheet" href="css/productCart.css">
-
-    <!-- ICONOS DE FONTAWESOME-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        <!-- CSS PARTICULAR -->
+        <link rel="stylesheet" href="css/productCart.css">
 </head>
 
 <body>
+    <!-- Header -->
+    <%- include('./includes/header.ejs') %>
+        <!-- Main -->
+        <main>
+            <figure class="titulo-carrito">
+                <img src="/assets/iconos/bag/bag.svg">
+                <figcaption> Mi carrito </figcaption>
+            </figure>
+            <section class="contenedor">
+                <article class="container">
+                    <table class="tabla-productos" frame=hsides ruler=rows>
+                        <tr>
+                            <th>Producto</th>
+                            <th></th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img id="aros" src="/assets/images/aros-chapita.jpg" alt="Aros chapitas strass">
+                            </td>
+                            <td>Aros strass</td>
+                            <td>
+                                $1500
+                            </td>
+                            <td>
+                                Cantidad
+                                <input type="number" name="cantidad" id="cantidad">
+                            </td>
+                            <td>
+                                $1500
+                            </td>
+                            <td>
+                                <img src="/assets/iconos/delete/trash-alt-solid.svg">
+                            </td>
+                        </tr>
+                    </table>
 
-    <main>
-        <figure class="titulo-carrito">
-            <img src="/assets/iconos/bag/bag.svg">
-            <figcaption> Mi carrito </figcaption>
-        </figure>
-        <section class="container">
-            <table class="tabla-productos" frame=hsides ruler=rows>
-                <tr>
-                    <th>Producto</th>
-                    <th></th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>Subtotal</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>
-                        <img id="aros" src="images/aros-chapita.jpg" alt="Aros chapitas strass">
-                    </td>
-                    <td>Aros strass</td>
-                    <td>
-                        $1500
-                    </td>
-                    <td>
-                        Cantidad
-                        <input type="number" name="cantidad" id="cantidad">
-                    </td>
-                    <td>
-                        $1500
-                    </td>
-                    <td>
-                        <img src="/assets/iconos/delete/trash-alt-solid.svg">
-                    </td>
-                </tr>
-            </table>
+                    <nav class="opciones-compras">
+                        <a href=""><img src="/assets/iconos/flechas/arrow-left-solid.svg">
+                            Seguir comprando</a>
+                    </nav>
+                    <form class="opcion-regalo">
+                        <input type="checkbox">
+                        Lo quiero para regalo! <img src="/assets/iconos/giftcard/gift-solid.svg">
+                    </form>
 
-            <nav class="opciones-compras">
-                <a href=""><img src="/assets/iconos/flechas/arrow-left-solid.svg">
-                    Seguir comprando</a>
-            </nav>
-            <form class="opcion-regalo">
-                <input type="checkbox">
-                Lo quiero para regalo! <img src="/assets/iconos/giftcard/gift-solid.svg">
-            </form>
-            <section class="resumen">
-                <h3>Resumen de compra</h3>
-                <figure class="resumen-item"><img src="/assets/iconos/ticket/ticket-perforated.svg">
-                    <figcaption>¿Tienes un cupón de descuento?</figcaption>
-                </figure>
-                <figure class="resumen-item"><img src="/assets/iconos/giftcard/card_giftcard_black_24dp.svg">
-                    <figcaption>¿Tienes una tarjeta de regalo?</figcaption>
-                </figure>
-                <figure class="resumen-item"><img src="/assets/iconos/envios/truck.svg">
-                    <figcaption>Calcular tiempos & costos de envíos</figcaption>
-                </figure>
-                <article>
-                    <p class="total">Subtotal</p>
-                    <p>$1500</p>
                 </article>
-                <article>
-                    <p class="total">Total</p>
-                    <p>$1500</p>
+                <article class="resumen">
+                    <h3>Resumen de compra</h3>
+                    <figure class="resumen-item"><img src="/assets/iconos/ticket/ticket-perforated.svg">
+                        <figcaption>¿Tienes un cupón de descuento?</figcaption>
+                    </figure>
+                    <figure class="resumen-item"><img src="/assets/iconos/giftcard/card_giftcard_black_24dp.svg">
+                        <figcaption>¿Tienes una tarjeta de regalo?</figcaption>
+                    </figure>
+                    <figure class="resumen-item"><img src="/assets/iconos/envios/truck.svg">
+                        <figcaption>Calcular tiempos & costos de envíos</figcaption>
+                    </figure>
+                    <article>
+                        <p class="total">Subtotal</p>
+                        <p>$1500</p>
+                    </article>
+                    <article>
+                        <p class="total">Total</p>
+                        <p>$1500</p>
+                    </article>
+                    <form>
+                        <button class="btn" type="submit">FINALIZAR COMPRA</button>
+
+                    </form>
+
+
                 </article>
-                <form>
-                    <button class="btn" type="submit" >FINALIZAR COMPRA</button>
-
-                </form>
-
-
             </section>
-        </section>
-    </main>
-
-
+        </main>
+        <!-- Footer -->
+        <%- include('./includes/footer.ejs') %>
 </body>
