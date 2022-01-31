@@ -2,53 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria Cielo</title>
-
+    <%- include('./includes/head.ejs') %>
+    
     <!-- NORMALIZE CSS -->
     <link rel="stylesheet" href="/css/normalize.css">
-
-    <!-- CSS HEADER -->
-    <link rel="stylesheet" href="/css/header.css">
-
-    <!-- CSS FOOTER -->
-    <link rel="stylesheet" href="/css/footer.css">
 
     <!-- CSS PARTICULAR -->
     <link rel="stylesheet" href="/css/register.css">
 
 </head>
 <body>
-    <main>
-        <article class="container">
-            <img class="loguito" src="/assets/iconos/logo/logo-02.svg">
-            <seccion class="contenedorImagenes">
-                    <img class="imagen" src="/images/primer-separador.png" alt=" ">                   
-            </seccion>
-            <seccion class="register">
-                <h4>Regístrate para crear una cuenta</h4>
-                <form class="formulario" action="/" method="POST">
-                        <label for="nombre-apellido"></label>
-                        <input id="nombreApellido" type="text" name="nombre" placeholder="Nombre y apellido">
-                        <label for="email"></label>
-                        <input for="email" type="email" name="email" placeholder="E-mail" required="">
-                        <label for="email_confirm"></label>
-                        <input for="email_confirm" type="email" name="email_confirm" placeholder="Confirmá tu E-mail" required="">
-                        <label for="contraseña"></label>
-                        <input id= "contraseña" type="password" name="password" placeholder="Elegí tu contraseña" required="">
-                        <label for="contraseña_confirmar"></label>
-                        <input id="contraseña_confirmar" type="password" name="password" placeholder="Confirmá tu contraseña">
-                        <button class="buttoon" type="submit">
-                            Registrarme
-                        </button>
-                        <button class="buttoon" type="reset">
-                            Borrar
-                        </button>
-                </form>
-            </seccion>
-        </article>
-    </main>
+    <%- include('./includes/header.ejs') %>
+        <main>
+            <article class="container">
+                <img class="loguito" src="/assets/iconos/logo/logo-02.svg">
+                <seccion class="contenedorImagenes">
+                        <img class="imagen" src="assets/images/primer-separador.png" alt=" ">                   
+                </seccion>
+                <seccion class="register">
+                    <h4>Regístrate para crear una cuenta</h4>
+                    <form class="formulario" action="/" method="POST">
+                            <label for="nombre-apellido"></label>
+                            <input id="nombreApellido" type="text" name="nombre" placeholder="Nombre y apellido">
+                            <label for="email"></label>
+                            <input for="email" type="email" name="email" placeholder="E-mail" required="">
+                            <label for="email_confirm"></label>
+                            <input for="email_confirm" type="email" name="email_confirm" placeholder="Confirmá tu E-mail" required="">
+                            <label for="contraseña"></label>
+                            <input id= "contraseña" type="password" name="password" placeholder="Elegí tu contraseña" required="">
+                            <label for="contraseña_confirmar"></label>
+                            <input id="contraseña_confirmar" type="password" name="password" placeholder="Confirmá tu contraseña">
+                            <button class="buttoon" type="submit">
+                                Registrarme
+                            </button>
+                            <button class="buttoon" type="reset">
+                                Borrar
+                            </button>
+                    </form>
+                </seccion>
+            </article>
+        </main>
+        <%- include('./includes/footer.ejs')  %>
  </body>
  </html>  
