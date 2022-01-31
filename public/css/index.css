@@ -18,11 +18,6 @@
     src: url("../fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
 }
 
-@font-face {
-    font-family: 'The Loved';
-    src: url("../fonts/theloved/theloved/Theloved.otf") format("truetype");
-}
-
 :root{
     --chocolate: #663333; 
     --camel: #cb997e; 

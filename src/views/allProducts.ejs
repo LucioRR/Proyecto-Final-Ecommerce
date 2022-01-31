@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('./includes/head.ejs') %>
+
+        <!-- CSS INDEX -->
+        <link rel="stylesheet" href="/css/allProducts.css">
+
+        <!-- CSS TARJETAS DE PRODUCTO -->
+        <link rel="stylesheet" href="/css/tarjetaProducto.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <%- include ('./includes/header.ejs') %>
+
+        <!-- MAIN -->
+        <main>
+            <nav class="navegacion-productos">
+                <a href="/">HOME</a>
+                <a href="/productos/all" class="ultimo">PRODUCTOS</a>
+            </nav>
+
+            <section class="visualizacion-filtro">
+                <nav class="visializacion">
+                    <a href="#filtro">
+                        <img src="/assets/iconos/visualizacion/columns-gap.svg" alt="Visualizacion en Grilla">
+                    </a>
+                    <a href="#filtro">
+                        <img src="/assets/iconos/visualizacion/crop_portrait_black_24dp.svg"
+                            alt="Visualizacion Individual">
+                    </a>
+                </nav>
+                <a href="#filtro" class="btn-filtro">FILTRAR/ORDENAR</a>
+            </section>
+
+            <section id="filtro">
+                <details>
+                    <summary>Ordenar por</summary>
+                    <form>
+                        <label for="precio-bajo">Precio más bajo</label>
+                        <input type="checkbox" name="precio-bajo" id="precio-bajo">
+
+                        <label for="precio-alto">Precio más alto</label>
+                        <input type="checkbox" name="precio-alto" id="precio-alto">
+
+                        <label for="mas-vendidos">Más vendidos</label>
+                        <input type="checkbox" name="mas-vendidos" id="mas-vendidos">
+
+                        <label for="a-z">A - Z</label>
+                        <input type="checkbox" name="a-z" id="a-z">
+
+                        <label for="z-a">Z - A</label>
+                        <input type="checkbox" name="z-a" id="z-a">
+
+                        <label for="f-lanzamiento">Fecha de lanzamientos</label>
+                        <input type="checkbox" name="f-lanzamiento" id="f-lanzamiento">
+
+                        <label for="mejor-descuento">Mejor descuento</label>
+                        <input type="checkbox" name="mejor-descuento" id="mejor-descuento">
+                    </form>
+                </details>
+                <details>
+                    <summary>Marca</summary>
+                    <form>
+                        <label for="marca-1">Marca 1</label>
+                        <input type="checkbox" name="marca-1" id="marca-1">
+
+                        <label for="marca-2">Marca 2</label>
+                        <input type="checkbox" name="marca-2" id="marca-2">
+
+                        <label for="marca-3">Marca 3</label>
+                        <input type="checkbox" name="marca-3" id="marca-3">
+
+                        <label for="marca-4">Marca 4</label>
+                        <input type="checkbox" name="marca-4" id="marca-4">
+                    </form>
+                </details>
+                <details>
+                    <summary>Precio</summary>
+                    <form>
+                        <label for="0-500">$0 a $500</label>
+                        <input type="checkbox" name="0-500" id="0-500">
+
+                        <label for="501-inf">Mas de $500</label>
+                        <input type="checkbox" name="501-inf" id="501-inf">
+                    </form>
+                </details>
+                <a href="#" class="btn-cerrar btn-cerrar-izq">
+                    <img src="/assets/iconos/cerrar/x-bca.svg" alt="Icono de cerrar">
+                </a>
+            </section>
+
+            <section class="todo-productos">
+
+                <% for( let i = 0; i < 10; i++ ) { %>
+                    <%- include ('./includes/tarjetaProducto.ejs') %>
+                <% } %>
+
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <%- include ('./includes/footer.ejs') %>
+</body>
+
+</html>

@@ -19,6 +19,6 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 
 //Uso de rutas
 app.use(require('./routes/main'));
-app.use(require('./routes/product'));
+app.use('/producto', require('./routes/product'));
 app.use(require('./routes/user'));
 app.use(require('./routes/cart'));

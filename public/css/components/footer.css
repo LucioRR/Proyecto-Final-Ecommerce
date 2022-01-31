@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'The Loved';
+    src: url("../../fonts/theloved/theloved/Theloved.otf") format("truetype");
+}
+
 /* ------- FOOTER ------- */
 
 footer{
