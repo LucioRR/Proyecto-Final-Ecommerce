@@ -1,0 +1,61 @@
+[{
+    "id": 1,
+    "categoria": "Make up",
+    "nombre_producto": "Beef Striploin Aaa",
+    "marca": "Hutchison China MediTech Limited",
+    "descripcion": "pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper",
+    "pricio": "$4.60",
+    "talle": "S",
+    "color": "#74de12",
+    "stock": 46,
+    "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\SecadorOferta.jpg",
+    "estado": true
+  }, {
+    "id": 2,
+    "categoria": "Primeras Pieles",
+    "nombre_producto": "Mackerel Whole Fresh",
+    "marca": "Xilinx, Inc.",
+    "descripcion": "est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere",
+    "pricio": "$4.72",
+    "talle": "2XL",
+    "color": "#d9b455",
+    "stock": 30,
+    "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\DifusorOferta.jpg",
+    "estado": true
+  }, {
+    "id": 3,
+    "categoria": "Make up",
+    "nombre_producto": "Soup - Campbells Beef Stew",
+    "marca": "Huron Consulting Group Inc.",
+    "descripcion": "varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue",
+    "pricio": "$5.60",
+    "talle": "3XL",
+    "color": "#3ad7e4",
+    "stock": 34,
+    "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\SecadorOferta.jpg",
+    "estado": true
+  }, {
+    "id": 4,
+    "categoria": "Primeras Pieles",
+    "nombre_producto": "Wine - Dubouef Macon - Villages",
+    "marca": "China Yuchai International Limited",
+    "descripcion": "augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in",
+    "pricio": "$4.00",
+    "talle": "M",
+    "color": "#2be149",
+    "stock": 53,
+    "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\DifusorOferta.jpg",
+    "estado": false
+  }, {
+    "id": 5,
+    "categoria": "Bikini",
+    "nombre_producto": "Jam - Raspberry,jar",
+    "marca": "BioAmber Inc.",
+    "descripcion": "habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius",
+    "pricio": "$5.92",
+    "talle": "2XL",
+    "color": "#31576a",
+    "stock": 23,
+    "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\SecadorOferta.jpg",
+    "estado": false
+  }]
