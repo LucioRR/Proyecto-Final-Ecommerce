@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": 1,
     "categoria": "Bikini",
     "nombre_producto": "Amely - Cookie",
@@ -10,7 +11,9 @@
     "stock": 46,
     "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\SecadorOferta.jpg",
     "activo": true
-  }, {
+  }, 
+
+  {
     "id": 2,
     "categoria": "Primeras Pieles",
     "nombre_producto": "Mackerel Whole Fresh",
@@ -22,7 +25,9 @@
     "stock": 30,
     "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\DifusorOferta.jpg",
     "activo": true
-  }, {
+  }, 
+
+  {
     "id": 3,
     "categoria": "Make up",
     "nombre_producto": "Soup - Campbells Beef Stew",
@@ -34,7 +39,9 @@
     "stock": 34,
     "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\SecadorOferta.jpg",
     "activo": true
-  }, {
+  },
+  
+  {
     "id": 4,
     "categoria": "Primeras Pieles",
     "nombre_producto": "Wine - Dubouef Macon - Villages",
@@ -46,7 +53,9 @@
     "stock": 53,
     "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\DifusorOferta.jpg",
     "activo": false
-  }, {
+  },
+  
+  {
     "id": 5,
     "categoria": "Bikini",
     "nombre_producto": "Jam - Raspberry,jar",
@@ -58,4 +67,5 @@
     "stock": 23,
     "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\SecadorOferta.jpg",
     "activo": false
-  }]
+  }
+]

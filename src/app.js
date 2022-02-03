@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const method = require('method-override');
 
 // Establecimento del puerto
 app.set('port', process.env.PORT || 3000);
@@ -10,6 +11,12 @@ app.set('view engine', 'ejs');
 
 //Establecer donde está la carpeta views
 app.set('views', path.resolve(__dirname, './views'));
+
+// Configuracion del methodOverride
+app.use(method('m'));
+
+// Procesar los formularios
+app.use(express.urlencoded({ extended: true }));
 
 // Escuchar el puerto
 app.listen(app.get('port'), () => console.log('Servidor levantado en http://localhost:' + app.get('port')));
