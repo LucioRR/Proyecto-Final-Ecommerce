@@ -16,9 +16,10 @@ app.listen(app.get('port'), () => console.log('Servidor levantado en http://loca
 
 //Establecimiento de la carpeta static
 app.use(express.static(path.resolve(__dirname, '../public')));
+app.use(express.json());
 
 //Uso de rutas
 app.use(require('./routes/main'));
-app.use('/producto', require('./routes/product'));
+app.use('/productos', require('./routes/product'));
 app.use(require('./routes/user'));
 app.use(require('./routes/cart'));

@@ -25,12 +25,12 @@
             <option value="makeUp">MAKE UP</option>
             <option value="accesorios">ACCESORIOS</option>
         </select>
-        <label for="pname">Nombre del Producto:</label>
-        <input type="text" id="pname" name="pname">
+        <label for="nombre_producto">Nombre del Producto:</label>
+        <input type="text" id="nombre_producto" name="nombre_producto">
         <label for="marca">Marca:</label>
         <input type="text" id="marca" name="marca">
         <label for="descripcion">Descripción:</label>
-        <textarea name="descripcion" id="descipcion" rows="6"></textarea>
+        <textarea name="descripcion" id="descripcion" rows="6"></textarea>
         <label for="precio">Precio final:</label>
         <input type="text" id="precio" name="precio">
         <label for="talle">Talle:</label>
@@ -40,19 +40,19 @@
             <option value="large"> L </option>
             <option value="unique"> Único </option>
         </select>
-        <label for="pcolor">Color:</label>
-        <input type="color" id="pcolor" name="pcolor">
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color">
         <label for="stock">Stock Disponible:</label>
         <input type="number" id="stock" name="stock" min="0" max="100">
-        <label for="imagenPortada">Elige la Imagen Principal:</label>
-        <input type="file" id="imagenPortada" name="imagenPortada" accept="image/png, image/jpeg">
-        <label for="imagenSecundaria">Elige la Imagen Secundaria:</label>
-        <input type="file" id="imagenSecundaria" name="imagenSecundaria" accept="image/png, image/jpeg">
+        <label for="imagen">Elige la Imagen Principal:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/png, image/jpeg">
+<!--         <label for="imagenSecundaria">Elige la Imagen Secundaria:</label>
+        <input type="file" id="imagenSecundaria" name="imagenSecundaria" accept="image/png, image/jpeg"> -->
         <fieldset id="estado">
             <label for="estado">Estado:</label><br>
             <input type="radio" id="activo" name="activo" value="activo">
             <label for="activo">Activo</label><br>
-            <input type="radio" id="inactivo" name="activo" value="inactivo">
+            <input type="radio" id="inactivo" name="inactivo" value="inactivo">
             <label for="inactivo">Inactivo</label>
         </fieldset><br><br>
         <input type="submit" id="guardar" value="Guardar">

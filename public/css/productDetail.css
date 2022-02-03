@@ -130,21 +130,8 @@
 input[type="radio"][name="color"]:checked ~ label span {
 	border: 1px solid #000;
 }
+input[type="radio"][name="color"][value="color"] ~ label span {
 
-input[type="radio"][name="color"][value="chocolate"] ~ label span {
-	background-color: var(--chocolate);
-	width: 2rem;
-	height: 2rem;
-	display: flex;
-}
-input[type="radio"][name="color"][value="verde"] ~ label span {
-	background-color: var(--verde);
-	width: 2rem;
-	height: 2rem;
-	display: flex;
-}
-input[type="radio"][name="color"][value="piel"] ~ label span {
-	background-color: var(--piel);
 	width: 2rem;
 	height: 2rem;
 	display: flex;
@@ -190,8 +177,10 @@ input[type="radio"][name="color"][value="piel"] ~ label span {
   font-size: 1.2em;
 }
 
-.descripcion li {
+.descripcion p{
   margin-top: 5px;
+  color: #000;
+  padding: 8px;
 }
 
 @media (min-width: 769px) {

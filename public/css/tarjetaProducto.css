@@ -10,8 +10,8 @@
 }
 
 .producto figure {
-    width: 90%;
-    height: 90vw;
+    width: 40%;
+    height: auto;
     border-radius: 20px;
     overflow: hidden;
     margin: 0 auto;

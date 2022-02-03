@@ -57,15 +57,15 @@
             <!-- DETALLES -->
             <section class="contenedorDetalles">
                 <nav class="categorias">
-                    <a href="#">Inicio</a> - <a href="#">Bikinis</a><p> - Amely | Cookie</p>
+                    <a href="../productos">Inicio</a> - <a href="#">Bikinis</a><p> - Amely | Cookie</p>
                 </nav>
-                    <h2 class="tituloProducto">Bikini Amely | <span style="color: rosybrown">Cookie</span></h2>
-                    <h1 class="precio">$7.200 <span style="font-size: 0.4em; color: black; text-decoration:line-through;">$8.000</span></h1>
+                    <h2 class="tituloProducto"> <%= producto_id.nombre_producto %>  </span></h2>
+                    <h1 class="precio"> $ <%= producto_id.precio %> <span style="font-size: 0.4em; color: black; text-decoration:line-through;">$8.000</span></h1>
                 <hgroup class="pagos">
                     <h2>
                         <img src="/assets/iconos/pago/credit-card-fill.svg" alt="Medio de pago">
                         <span style="color: rosybrown">3 cuotas sin interes de</span>
-                        $2.400
+                        $ <%= producto_id.precio/3 %>
                     </h2>
                     <h2>
                         <img src="/assets/iconos/pago/money-bill-wave-solid.svg" alt="Medio de pago">
@@ -79,16 +79,8 @@
                         <legend>COLOR</legend>
                         <ul id="color">
                             <li>
-                                <input type="radio" name="color" id="color-chocolate" value="chocolate">
-                                <label for="color-chocolate"><span></span></label>
-                            </li>
-                            <li>
-                                <input type="radio" name="color" id="color-verde" value="verde">
-                                <label for="color-verde"><span></span></label>
-                            </li>
-                            <li>
-                                <input type="radio" name="color" id="color-piel" value="piel">
-                                <label for="color-piel"><span></span></label>
+                                <input type="radio" name="color" id="color" value="color" >
+                                <label for="color-piel"><span style="background-color: <%= producto_id.color %>"></span></label>
                             </li>
                         </ul>
                     </fieldset>
@@ -111,14 +103,7 @@
         <details class="descripcion">
             <summary>Descripción:</summary>
             <p>
-                Triángulo fijo con breteles regulables y pinza en bajo busto. En la parte trasera es para atar. Está
-                todo forrado para que no se trasluzca nada.
-                Las argollas y reguladores son color plata (no queman al exponerse al sol y no se oxidan al tomar
-                contacto con el agua). Viene con taza soft desmontable!
-                Modelo súper cómodo.
-            </p>
-            <p>
-                Material: lycra opaca nude, 80% poliamida 20% elastano. (Fibra de LYCRA XTRA LIFE ®).
+                <%= producto_id.descripcion %> 
             </p>
         </details>
     </main>

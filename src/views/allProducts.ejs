@@ -93,11 +93,9 @@
             </section>
 
             <section class="todo-productos">
-
-                <% for( let i = 0; i < 10; i++ ) { %>
-                    <%- include ('./includes/tarjetaProducto.ejs') %>
-                <% } %>
-
+                    <% productos.forEach(producto => { %>
+                     <%- include ('./includes/tarjetaProducto.ejs', {producto: producto}) %>
+                    <% }) %>
             </section>
         </main>
 

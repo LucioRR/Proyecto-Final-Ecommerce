@@ -10,15 +10,18 @@
             <img src="/assets/iconos/corazones/corazones-04-rosa.svg" alt="Corazón Favorito">
         </label>
     </form>
-    <hgroup>
-        <h2>MARCA</h2>
-        <h3>Nombre de Producto</h3>
-        <h2>$10.000</h2>
-    </hgroup>
-    <form class="btn-comprar" action="">
-        <button>
-            <img src="/assets/iconos/bag/bag-plus-blco.svg" alt="Icono de Carrito +">
-            COMPRAR
-        </button>
-    </form>
+        <hgroup>
+            
+            <h1> <%= producto.nombre_producto %>  </h1>
+            <label for="precio">Precio:</label>
+            <h2>$ <%= producto.precio %>  </h2>
+            <label for="marca">Marca:</label>
+            <h2> <%= producto.marca %>  </h2>
+        </hgroup>
+        <form class="btn-comprar" action="./productos/<%= producto.id %>">
+            <button>
+                <img src="/assets/iconos/bag/bag-plus-blco.svg" alt="Icono de Carrito +">
+                COMPRAR
+            </button>
+        </form>
 </article>
