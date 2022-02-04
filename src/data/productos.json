@@ -11,8 +11,7 @@
     "stock": 46,
     "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\SecadorOferta.jpg",
     "activo": true
-  }, 
-
+  },
   {
     "id": 2,
     "categoria": "Primeras Pieles",
@@ -25,36 +24,33 @@
     "stock": 30,
     "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\DifusorOferta.jpg",
     "activo": true
-  }, 
-
+  },
   {
     "id": 3,
     "categoria": "Make up",
     "nombre_producto": "Soup - Campbells Beef Stew",
     "marca": "Huron Consulting Group Inc.",
     "descripcion": "varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue",
-    "precio": 5.60,
+    "precio": 5.6,
     "talle": "3XL",
     "color": "#3ad7e4",
     "stock": 34,
     "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\SecadorOferta.jpg",
     "activo": true
   },
-  
   {
     "id": 4,
     "categoria": "Primeras Pieles",
     "nombre_producto": "Wine - Dubouef Macon - Villages",
     "marca": "China Yuchai International Limited",
     "descripcion": "augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in",
-    "precio": 4.00,
+    "precio": 4,
     "talle": "M",
     "color": "#2be149",
     "stock": 53,
     "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\DifusorOferta.jpg",
     "activo": false
   },
-  
   {
     "id": 5,
     "categoria": "Bikini",

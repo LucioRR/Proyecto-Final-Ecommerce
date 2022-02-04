@@ -1,4 +1,5 @@
-const {all, match} = require('../models/product')
+const {all, match, generate, create} = require('../models/product')
+
 const productController = {
     productCart: (req, res) => res.render('product/productCart'),
     productDetail: (req, res) => {
@@ -7,7 +8,12 @@ const productController = {
     },
     productCreate: (req, res) => res.render('product/productCreate'),
     productEdit: (req, res) => res.render('product/productEdit'),
-    productAll: (req, res) => res.render('product/allProducts', {productos: all()})
+    productAll: (req, res) => res.render('product/allProducts', {productos: all()}),
+    productStorage: (req, res) => {
+        const productNew =  generate(req.body)
+        create(productNew);
+        return res.send(productNew)
+    }
 }
 
 
