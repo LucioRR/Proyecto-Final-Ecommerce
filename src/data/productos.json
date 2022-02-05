@@ -6,9 +6,9 @@
     "marca": "Marena",
     "descripcion": "Triángulo fijo con breteles regulables y pinza en bajo busto. En la parte trasera es para atar. Está todo forrado para que no se trasluzca nada. Las argollas y reguladores son color plata (no queman al exponerse al sol y no se oxidan al tomar contacto con el agua). Viene con taza soft desmontable! Modelo súper cómodo. Material: lycra opaca nude, 80% poliamida 20% elastano. (Fibra de LYCRA XTRA LIFE ®).",
     "precio": 7500,
-    "talle": "S",
+    "talle": "medium",
     "color": "#ddbea9",
-    "stock": 46,
+    "stock": "46",
     "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\SecadorOferta.jpg",
     "activo": true
   },

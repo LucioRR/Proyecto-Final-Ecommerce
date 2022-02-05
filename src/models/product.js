@@ -21,7 +21,31 @@ const productModels = {
         let lista= productModels.list().sort((a,b) => a.id < b.id ? -1: a.id > b.id ? 1 : 0)
         lista.push(data),
         productModels.write(lista);
+    },
+    update: data =>{
+        let products= productModels.list().map((product) => {
+            if (product.id==data.id){
+                product.categoria=data.categoria
+                product.nombre_producto=data.pname
+                product.marca=data.marca
+                product.descripcion=data.descripcion
+                product.precio= Number (data.precio)
+                product.talle=data.talle
+                product.color=data.pcolor
+                product.stock=data.stock
+                if (data.activo=='activo'){
+                    product.activo==true
+                }
+                else {
+                    product.false
+                }
+            }
+            return product
+        })
+        productModels.write(products)
     }
+
+
 }
 
 
