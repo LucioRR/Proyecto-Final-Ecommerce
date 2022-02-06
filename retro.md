@@ -31,3 +31,25 @@ Retrospectiva Sprint 2:
 * Mantenernos incomunicados con los compañeros sobre cuales son los inconvenientes que estamos teniendo.
 * No ser sinceros sobre lo que pensamos del proyecto.
 * Postergar la distribución de las tareas y la actualización de Trello.
+
+
+Retrospectiva Sprint 3:
+
+¿Qué deberíamos empezar a hacer en el siguiente sprint?
+
+* Mayor trabajo individual de forma independiente, para optimizar el tiempo a la hora de reunirnos.
+* Delegar tareas cuando hay desbalance en la distribución de las mismas.
+
+
+¿Qué deberíamos seguir haciendo?
+
+* Aceptar las responsabilidades de las tareas y el compromiso de resolverlas a tiempo.
+* Mantener la frecuencia de las reuniones para conocer el estado y avance de las tareas.
+* Lograr un concenso a la hora de tomar decisiones.
+
+¿Qué deberíamos dejar de hacer?
+
+* Centralizar las tareas mas complejas en los mismos integrantes del equipo.
+* No priorizar la realización de una tarea que se encuentra atrasada.
+* No buscar soluciones con tiempo para destrabar el inconveniente que obtaculiza la realización de una tarea.
+* Postergar la distribución de las tareas y la actualización de Trello.

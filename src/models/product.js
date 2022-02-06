@@ -12,10 +12,14 @@ const productModels = {
     match: (propiedad,valor) => productModels.all().find(producto => producto[propiedad] == valor ),
     generate: data => Object({
         id: productModels.list().length > 0 ? productModels.list().sort((a,b) => a.id < b.id ? -1: a.id > b.id ? 1 : 0).pop().id + 1 : 1,
+        category: data.categoria,
         name: data.nombre_producto,
+        marca: data.marca,
         description: data.descripcion,
         price: Number(data.precio),
-        stock: Number(data.stock)
+        talle: data.talle,
+        color: data.color,
+        stock: Number(data.stock)   
     }),
     create: data =>{
         let lista= productModels.list().sort((a,b) => a.id < b.id ? -1: a.id > b.id ? 1 : 0)
