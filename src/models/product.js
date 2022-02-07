@@ -12,14 +12,15 @@ const productModels = {
     match: (propiedad,valor) => productModels.all().find(producto => producto[propiedad] == valor ),
     generate: data => Object({
         id: productModels.list().length > 0 ? productModels.list().sort((a,b) => a.id < b.id ? -1: a.id > b.id ? 1 : 0).pop().id + 1 : 1,
-        category: data.categoria,
-        name: data.nombre_producto,
+        categoria: data.categoria,
+        nombre_producto: data.nombre_producto,
         marca: data.marca,
-        description: data.descripcion,
-        price: Number(data.precio),
+        descripcion: data.descripcion,
+        precio: Number(data.precio),
         talle: data.talle,
         color: data.color,
-        stock: Number(data.stock)   
+        stock: Number(data.stock),
+        activo: data.activo == "activo" ? true : false,
     }),
     create: data =>{
         let lista= productModels.list().sort((a,b) => a.id < b.id ? -1: a.id > b.id ? 1 : 0)
@@ -37,10 +38,8 @@ const productModels = {
                 product.talle = data.talle;
                 product.color = data.pcolor;
                 product.stock = data.stock;
-                console.log(data.activo);
                 if (data.activo == "activo") {
                     product.activo = true;
-                    console.log(data.activo);
                 } else {
                     product.activo = false;
                 }

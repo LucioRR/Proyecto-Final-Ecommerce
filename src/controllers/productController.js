@@ -13,7 +13,7 @@ const productController = {
     productStorage: (req, res) => {
         const productNew =  generate(req.body)
         create(productNew);
-        return res.send(productNew)
+        return res.redirect('/productos/'+productNew.id)
     },
     update: (req, res) => {
         const id = Number(req.params.id);
