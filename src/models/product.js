@@ -28,20 +28,21 @@ const productModels = {
     },
     update: data =>{
         let products= productModels.list().map((product) => {
-            if (product.id==data.id){
-                product.categoria=data.categoria
-                product.nombre_producto=data.pname
-                product.marca=data.marca
-                product.descripcion=data.descripcion
-                product.precio= Number (data.precio)
-                product.talle=data.talle
-                product.color=data.pcolor
-                product.stock=data.stock
-                if (data.activo=='activo'){
-                    product.activo==true
-                }
-                else {
-                    product.false
+            if (product.id == data.id){
+                product.categoria = data.categoria;
+                product.nombre_producto = data.pname;
+                product.marca = data.marca;
+                product.descripcion = data.descripcion;
+                product.precio = Number (data.precio);
+                product.talle = data.talle;
+                product.color = data.pcolor;
+                product.stock = data.stock;
+                console.log(data.activo);
+                if (data.activo == "activo") {
+                    product.activo = true;
+                    console.log(data.activo);
+                } else {
+                    product.activo = false;
                 }
             }
             return product
