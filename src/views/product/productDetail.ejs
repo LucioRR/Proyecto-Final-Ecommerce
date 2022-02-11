@@ -15,8 +15,9 @@
             <!-- Imagenes Portatil -->
                 <section class="imagenes">
                     <figure class="imagenesPequeñas">
-                        <img src="/assets/images/detalleBikiniMC3.jpg" alt="reverso">
-                        <img src="/assets/images/detalleBikiniMC1.jpg" alt="frontal">
+                        <% producto_id.imagen.forEach(element => { %>
+                        <img src="/upload/product/<%= element %>" alt="reverso">
+                        <% }) %>
                     </figure>
                     <img class="imagenPpal" src="/assets/images/detalleBikiniMC2.jpg" alt="fotoproducto">
                 </section>

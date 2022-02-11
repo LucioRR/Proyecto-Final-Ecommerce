@@ -11,6 +11,7 @@ const productController = {
     productEdit: (req, res) => res.render('product/productEdit'),*/
     productAll: (req, res) => res.render('product/allProducts', {productos: all()}),
     productStorage: (req, res) => {
+        req.body.files = req.files;
         const productNew =  generate(req.body)
         create(productNew);
         return res.redirect('/productos/'+productNew.id)
@@ -20,6 +21,7 @@ const productController = {
         res.render('product/productEdit', {product_id: match("id", id)});
     },
     modify: (req, res) => {
+        req.body.files = req.files;
         update(req.body);
         return res.redirect('/productos/' + req.body.id)
     }

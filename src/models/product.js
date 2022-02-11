@@ -20,7 +20,12 @@ const productModels = {
         talle: data.talle,
         color: data.color,
         stock: Number(data.stock),
-        activo: data.activo == "activo" ? true : false,
+/*         imagen: data.files && data.files.length > 0 ? data.files[imagen].map(file => file.filename): null,
+        imagenes: data.files && data.files.length > 0 ? data.files[imagenes].map(file => file.filename): null, */
+        imagen: data.files.imagen,
+        imagenes1: data.files.imagenes[0],
+        imagenes2: data.files.imagenes[0],
+        activo: data.activo == "activo" ? true : false
     }),
     create: data =>{
         let lista= productModels.list().sort((a,b) => a.id < b.id ? -1: a.id > b.id ? 1 : 0)
@@ -38,6 +43,7 @@ const productModels = {
                 product.talle = data.talle;
                 product.color = data.pcolor;
                 product.stock = data.stock;
+                product.imagen = data.files && data.files.length > 0 ? data.files.map(file => file.filename): null;
                 if (data.activo == "activo") {
                     product.activo = true;
                 } else {

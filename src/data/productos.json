@@ -63,5 +63,103 @@
     "stock": 23,
     "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\SecadorOferta.jpg",
     "activo": false
+  },
+  {
+    "id": 6,
+    "categoria": "bikinis",
+    "nombre_producto": "Prueba",
+    "marca": "PRUEBA",
+    "descripcion": "AMSDÑAMSÑD",
+    "precio": 15,
+    "talle": "medium",
+    "color": "#f20d0d",
+    "stock": 2,
+    "activo": true
+  },
+  {
+    "id": 7,
+    "categoria": "bikinis",
+    "nombre_producto": "Prueba",
+    "marca": "Brand",
+    "descripcion": "La description",
+    "precio": 3,
+    "talle": "small",
+    "color": "#944747",
+    "stock": 0,
+    "activo": true
+  },
+  {
+    "id": 8,
+    "categoria": "bikinis",
+    "nombre_producto": "asd",
+    "marca": "sdasda",
+    "descripcion": "asdasd",
+    "precio": 2,
+    "talle": "small",
+    "color": "#000000",
+    "stock": 1,
+    "imagen": [
+      "imagen-1644447928398-.jpg",
+      "imagen-1644447928426-.jpg"
+    ],
+    "activo": true
+  },
+  {
+    "id": 9,
+    "categoria": "bikinis",
+    "nombre_producto": "Prueba",
+    "marca": "Brand",
+    "descripcion": "ada",
+    "precio": 2,
+    "talle": "small",
+    "color": "#000000",
+    "stock": 1,
+    "imagen": null,
+    "imagenes": null,
+    "activo": true
+  },
+  {
+    "id": 10,
+    "categoria": "bikinis",
+    "nombre_producto": "asds",
+    "marca": "asd",
+    "descripcion": "asdasd",
+    "precio": 2,
+    "talle": "small",
+    "color": "#000000",
+    "stock": 1,
+    "imagen": [
+      {
+        "fieldname": "imagen",
+        "originalname": "detalleBikiniMC2.jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "C:\\LUCIO\\DIGITAL HOUSE\\grupo_7_EcommerceCelestial\\upload\\product",
+        "filename": "imagen-1644455496250-.jpg",
+        "path": "C:\\LUCIO\\DIGITAL HOUSE\\grupo_7_EcommerceCelestial\\upload\\product\\imagen-1644455496250-.jpg",
+        "size": 252410
+      }
+    ],
+    "imagenes1": {
+      "fieldname": "imagenes",
+      "originalname": "detalleBikiniMC1.jpg",
+      "encoding": "7bit",
+      "mimetype": "image/jpeg",
+      "destination": "C:\\LUCIO\\DIGITAL HOUSE\\grupo_7_EcommerceCelestial\\upload\\product",
+      "filename": "imagenes-1644455496268-.jpg",
+      "path": "C:\\LUCIO\\DIGITAL HOUSE\\grupo_7_EcommerceCelestial\\upload\\product\\imagenes-1644455496268-.jpg",
+      "size": 140471
+    },
+    "imagenes2": {
+      "fieldname": "imagenes",
+      "originalname": "detalleBikiniMC1.jpg",
+      "encoding": "7bit",
+      "mimetype": "image/jpeg",
+      "destination": "C:\\LUCIO\\DIGITAL HOUSE\\grupo_7_EcommerceCelestial\\upload\\product",
+      "filename": "imagenes-1644455496268-.jpg",
+      "path": "C:\\LUCIO\\DIGITAL HOUSE\\grupo_7_EcommerceCelestial\\upload\\product\\imagenes-1644455496268-.jpg",
+      "size": 140471
+    },
+    "activo": true
   }
 ]

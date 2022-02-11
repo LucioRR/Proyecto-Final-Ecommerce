@@ -9,7 +9,7 @@
     <section class="newProduct">
     <img class="logo" src="/assets/iconos/logo/logo-02.svg " alt="Logo">
     <h1>CREAR PRODUCTO</h1>
-    <form id="createForm" action="/productos/guardar" target="_self" method="post" name="createForm">
+    <form id="createForm" action="/productos/guardar" enctype="multipart/form-data" target="_self" method="post" name="createForm">
         <label for="categoria">Categoría:</label>
         <select id="categoria" name="categoria">
             <option value="bikinis">BIKINIS</option>
@@ -38,9 +38,9 @@
         <label for="stock">Stock Disponible:</label>
         <input type="number" id="stock" name="stock" min="0" max="100">
         <label for="imagen">Elige la Imagen Principal:</label>
-        <input type="file" id="imagen" name="imagen" accept="image/png, image/jpeg">
-<!--         <label for="imagenSecundaria">Elige la Imagen Secundaria:</label>
-        <input type="file" id="imagenSecundaria" name="imagenSecundaria" accept="image/png, image/jpeg"> -->
+        <input type="file"  id="imagen" name="imagen" accept="image/png, image/jpeg">
+        <label for="imagenes">Elige las Imagenes Secundarias:</label>
+        <input type="file"  id="imagenes" name="imagenes" accept="image/png, image/jpeg" multiple>
         <fieldset id="estado">
             <label for="estado">Estado:</label><br>
             <input type="radio" id="activo" name="activo" value="activo">
