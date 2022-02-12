@@ -9,7 +9,9 @@
     "talle": "medium",
     "color": "#ddbea9",
     "stock": "46",
-    "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\SecadorOferta.jpg",
+    "imagen": "imagen-1644629459446-.jpg",
+    "imagenes1": "imagen-1644629459458-.jpg",
+    "imagenes2": "imagen-1644629459476-.jpg",
     "activo": true
   },
   {
@@ -22,7 +24,9 @@
     "talle": "2XL",
     "color": "#d9b455",
     "stock": 30,
-    "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\DifusorOferta.jpg",
+    "imagen": "imagen-1644629459446-.jpg",
+    "imagenes1": "imagen-1644629459458-.jpg",
+    "imagenes2": "imagen-1644629459476-.jpg",
     "activo": true
   },
   {
@@ -35,7 +39,9 @@
     "talle": "3XL",
     "color": "#3ad7e4",
     "stock": 34,
-    "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\SecadorOferta.jpg",
+    "imagen": "imagen-1644629459446-.jpg",
+    "imagenes1": "imagen-1644629459458-.jpg",
+    "imagenes2": "imagen-1644629459476-.jpg",
     "activo": true
   },
   {
@@ -48,7 +54,9 @@
     "talle": "M",
     "color": "#2be149",
     "stock": 53,
-    "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\DifusorOferta.jpg",
+    "imagen": "imagen-1644629459446-.jpg",
+    "imagenes1": "imagen-1644629459458-.jpg",
+    "imagenes2": "imagen-1644629459476-.jpg",
     "activo": false
   },
   {
@@ -61,105 +69,54 @@
     "talle": "2XL",
     "color": "#31576a",
     "stock": 23,
-    "imagen": "C:\\Users\\iván\\Desktop\\Atseupserpractica\\proyecto-integrador\\grupo_5_Lumiere\\public\\img\\SecadorOferta.jpg",
+    "imagen": "imagen-1644629459446-.jpg",
+    "imagenes1": "imagen-1644629459458-.jpg",
+    "imagenes2": "imagen-1644629459476-.jpg",
     "activo": false
   },
   {
     "id": 6,
     "categoria": "bikinis",
-    "nombre_producto": "Prueba",
-    "marca": "PRUEBA",
-    "descripcion": "AMSDÑAMSÑD",
-    "precio": 15,
-    "talle": "medium",
-    "color": "#f20d0d",
-    "stock": 2,
+    "nombre_producto": "Bikini Roja",
+    "marca": "Marena",
+    "descripcion": "sdasndlisandliansdlnasdnasñdn",
+    "precio": 3000,
+    "talle": "small",
+    "color": "#ff0000",
+    "stock": 3,
+    "imagen": "imagen-1644629459446-.jpg",
+    "imagenes1": "imagen-1644629459458-.jpg",
+    "imagenes2": "imagen-1644629459476-.jpg",
     "activo": true
   },
   {
     "id": 7,
     "categoria": "bikinis",
-    "nombre_producto": "Prueba",
-    "marca": "Brand",
-    "descripcion": "La description",
-    "precio": 3,
+    "nombre_producto": "Bikini Amarilla",
+    "marca": "Marena",
+    "descripcion": "sdasndlisandliansdlnasdnasñdn",
+    "precio": 6000,
     "talle": "small",
-    "color": "#944747",
-    "stock": 0,
-    "activo": true
-  },
-  {
-    "id": 8,
-    "categoria": "bikinis",
-    "nombre_producto": "asd",
-    "marca": "sdasda",
-    "descripcion": "asdasd",
-    "precio": 2,
-    "talle": "small",
-    "color": "#000000",
-    "stock": 1,
-    "imagen": [
-      "imagen-1644447928398-.jpg",
-      "imagen-1644447928426-.jpg"
-    ],
-    "activo": true
-  },
-  {
-    "id": 9,
-    "categoria": "bikinis",
-    "nombre_producto": "Prueba",
-    "marca": "Brand",
-    "descripcion": "ada",
-    "precio": 2,
-    "talle": "small",
-    "color": "#000000",
-    "stock": 1,
-    "imagen": null,
-    "imagenes": null,
+    "color": "#fff700",
+    "stock": 3,
+    "imagen": "imagen-1644629566202-.jpg",
+    "imagenes1": "imagen-1644629566211-.jpg",
+    "imagenes2": "imagen-1644629566227-.jpg",
     "activo": true
   },
   {
     "id": 10,
     "categoria": "bikinis",
-    "nombre_producto": "asds",
-    "marca": "asd",
-    "descripcion": "asdasd",
-    "precio": 2,
-    "talle": "small",
+    "nombre_producto": "Bikini Negra",
+    "marca": "Marena",
+    "descripcion": "sdasdsdasdasdasd",
+    "precio": 6000,
+    "talle": "medium",
     "color": "#000000",
-    "stock": 1,
-    "imagen": [
-      {
-        "fieldname": "imagen",
-        "originalname": "detalleBikiniMC2.jpg",
-        "encoding": "7bit",
-        "mimetype": "image/jpeg",
-        "destination": "C:\\LUCIO\\DIGITAL HOUSE\\grupo_7_EcommerceCelestial\\upload\\product",
-        "filename": "imagen-1644455496250-.jpg",
-        "path": "C:\\LUCIO\\DIGITAL HOUSE\\grupo_7_EcommerceCelestial\\upload\\product\\imagen-1644455496250-.jpg",
-        "size": 252410
-      }
-    ],
-    "imagenes1": {
-      "fieldname": "imagenes",
-      "originalname": "detalleBikiniMC1.jpg",
-      "encoding": "7bit",
-      "mimetype": "image/jpeg",
-      "destination": "C:\\LUCIO\\DIGITAL HOUSE\\grupo_7_EcommerceCelestial\\upload\\product",
-      "filename": "imagenes-1644455496268-.jpg",
-      "path": "C:\\LUCIO\\DIGITAL HOUSE\\grupo_7_EcommerceCelestial\\upload\\product\\imagenes-1644455496268-.jpg",
-      "size": 140471
-    },
-    "imagenes2": {
-      "fieldname": "imagenes",
-      "originalname": "detalleBikiniMC1.jpg",
-      "encoding": "7bit",
-      "mimetype": "image/jpeg",
-      "destination": "C:\\LUCIO\\DIGITAL HOUSE\\grupo_7_EcommerceCelestial\\upload\\product",
-      "filename": "imagenes-1644455496268-.jpg",
-      "path": "C:\\LUCIO\\DIGITAL HOUSE\\grupo_7_EcommerceCelestial\\upload\\product\\imagenes-1644455496268-.jpg",
-      "size": 140471
-    },
+    "stock": 2,
+    "imagen": "imagen-1644633472017-.jpg",
+    "imagenes1": "imagen-1644633472057-.jpg",
+    "imagenes2": "imagen-1644633472081-.jpg",
     "activo": true
   }
 ]

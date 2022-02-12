@@ -1,7 +1,7 @@
 <article class="producto producto-foco">
     <figure>
-        <a href="/producto">
-            <img src="/assets/images/img2.jpg" alt="Imagen de producto 1">
+        <a href="./<%= producto.id %>">
+            <img src="/product/<%= producto.imagen %>" alt="Imagen de producto 1">
         </a>
     </figure>
     <form class="btn-favorito" action="">
@@ -18,7 +18,7 @@
             <label for="marca">Marca:</label>
             <h2> <%= producto.marca %>  </h2>
         </hgroup>
-        <form class="btn-comprar" action="./productos/<%= producto.id %>">
+        <form class="btn-comprar" action="./<%= producto.id %>">
             <button>
                 <img src="/assets/iconos/bag/bag-plus-blco.svg" alt="Icono de Carrito +">
                 COMPRAR

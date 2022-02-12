@@ -13,10 +13,7 @@ router.get('/', productAll)
 router.get('/crear', productCreate);
 router.get('/editar/:id', update);
 router.put('/update',[upload.any()], modify);
-router.post('/guardar', upload.fields([
-    { name: 'imagen', maxCount: 1 },
-    { name: 'imagenes', maxCount: 2 },
-  ]), productStorage);
+router.post('/guardar', upload.array('imagen'), productStorage);
 router.get('/:id', productDetail);
 
 

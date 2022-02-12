@@ -23,6 +23,7 @@ app.listen(app.get('port'), () => console.log('Servidor levantado en http://loca
 
 //Establecimiento de la carpeta static
 app.use(express.static(path.resolve(__dirname, '../public')));
+app.use(express.static(path.resolve(__dirname, '../upload')));
 app.use(express.json());
 
 //Uso de rutas

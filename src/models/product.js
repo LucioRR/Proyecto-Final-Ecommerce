@@ -22,9 +22,9 @@ const productModels = {
         stock: Number(data.stock),
 /*         imagen: data.files && data.files.length > 0 ? data.files[imagen].map(file => file.filename): null,
         imagenes: data.files && data.files.length > 0 ? data.files[imagenes].map(file => file.filename): null, */
-        imagen: data.files.imagen,
-        imagenes1: data.files.imagenes[0],
-        imagenes2: data.files.imagenes[0],
+        imagen: data.files && data.files.length > 0 ? data.files[0].filename: null,
+        imagenes1: data.files && data.files.length > 0 ? data.files[1].filename: null,
+        imagenes2: data.files && data.files.length > 0 ? data.files[2].filename: null,
         activo: data.activo == "activo" ? true : false
     }),
     create: data =>{
