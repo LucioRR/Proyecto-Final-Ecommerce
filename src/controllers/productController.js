@@ -1,4 +1,4 @@
-const {all, match, generate, create, update} = require('../models/product')
+const {all, match, generate, create, update, trash} = require('../models/product')
 
 const productController = {
     productCart: (req, res) => res.render('product/productCart'),
@@ -24,6 +24,10 @@ const productController = {
         req.body.files = req.files;
         update(req.body);
         return res.redirect('/productos/' + req.body.id)
+    },
+    trash:(req,res) => {
+        trash(req.body.id);
+        return res.redirect('/productos')
     }
 }
 

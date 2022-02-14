@@ -53,6 +53,11 @@
         </fieldset><br><br>
         <input type="submit" id="guardar" value="Guardar">
     </form>
+<form action="/productos/borrar?m=DELETE" method="post">
+    <input type="submit" id="delete" value="delete">
+    <input type="hidden" name="id" value="<%= product_id.id %>">
+</form>
+
 </section>
 </body>
 </html>

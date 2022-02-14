@@ -53,6 +53,10 @@ const productModels = {
             return product
         })
         productModels.write(products)
+    },
+    trash: id => {
+        let productos = productModels.list()
+        productModels.write(productos.filter(producto => producto.id != id));
     }
 
 
