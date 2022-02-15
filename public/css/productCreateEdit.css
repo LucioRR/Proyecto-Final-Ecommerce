@@ -28,7 +28,7 @@ h1 {
     color: var(--chocolate);
     font-weight: bold;
 }
-#createForm {
+#createForm, #deleteForm  {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -39,7 +39,7 @@ h1 {
     padding: 20px;
     box-shadow:5px 5px 10px 3px rgb(182 182 182 / 38%);
 }
-#createForm label {
+#createForm label, #deleteForm label {
     font-weight: bold;
 }
 #createForm select {
@@ -47,7 +47,7 @@ h1 {
     width: 310px;
     margin-bottom: 20px;
 }
-#createForm input {
+#createForm input, #deleteForm input {
     max-width: 100%;
     width: 300px;
     margin-bottom: 20px;
@@ -65,7 +65,7 @@ h1 {
     width: auto;
     margin: 10px;
 }
-#guardar {
+#guardar, #delete {
         border: 2px solid var(--camel);
         background-color: var(--camel);
         color: white;
@@ -75,8 +75,12 @@ h1 {
         box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
         transition:all;
         cursor: pointer;
-      }
+}
 #guardar:hover{
         background-color: var(--chocolate);
         border: 2px solid var(--chocolate);
-      }
+}
+#delete:hover{
+    background-color: red;
+    border: 2px solid red;
+}

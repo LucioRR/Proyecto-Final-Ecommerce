@@ -58,8 +58,6 @@ const productModels = {
         let productos = productModels.list()
         productModels.write(productos.filter(producto => producto.id != id));
     }
-
-
 }
 
 

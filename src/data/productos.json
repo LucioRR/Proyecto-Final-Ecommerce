@@ -15,21 +15,6 @@
     "activo": true
   },
   {
-    "id": 3,
-    "categoria": "Make up",
-    "nombre_producto": "Soup - Campbells Beef Stew",
-    "marca": "Huron Consulting Group Inc.",
-    "descripcion": "varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue",
-    "precio": 5.6,
-    "talle": "3XL",
-    "color": "#3ad7e4",
-    "stock": 34,
-    "imagen": "imagen-1644629459446-.jpg",
-    "imagenes1": "imagen-1644629459458-.jpg",
-    "imagenes2": "imagen-1644629459476-.jpg",
-    "activo": true
-  },
-  {
     "id": 4,
     "categoria": "Primeras Pieles",
     "nombre_producto": "Wine - Dubouef Macon - Villages",
