@@ -32,7 +32,7 @@ Retrospectiva Sprint 2:
 * No ser sinceros sobre lo que pensamos del proyecto.
 * Postergar la distribución de las tareas y la actualización de Trello.
 
-
+------------------------------------------------
 Retrospectiva Sprint 3:
 
 ¿Qué deberíamos empezar a hacer en el siguiente sprint?
@@ -53,3 +53,29 @@ Retrospectiva Sprint 3:
 * No priorizar la realización de una tarea que se encuentra atrasada.
 * No buscar soluciones con tiempo para destrabar el inconveniente que obtaculiza la realización de una tarea.
 * Postergar la distribución de las tareas y la actualización de Trello.
+
+
+----------------------------------------------------------------
+Retrospectiva Sprint 4:
+
+¿Qué deberíamos empezar a hacer en el siguiente sprint?
+
+* Comprometernos más con la responsabilidades para no atrasarnos con nuestras tareas, ni atrasar las tareas de nuestros compañeros.
+* Pedir ayuda cuando la necesitamos, sin tenere verguenzas.
+* Decirnos las cosas de frente para evitar conflictos y resolverlos.
+* Trabajar de a pares para que las tareas más pesadas no recaigan en una sola persona.
+* Enforcarnos extrictamente en lo solicitado por las consignas dadas en el sprint.
+
+
+¿Qué deberíamos seguir haciendo?
+
+* Trabajar en la distribución de las tareas antes de empezar a realizarlas y estar organizados con las responsabilidades individuales y de pares.
+* Reuniones para codear y despejar las dudas.
+* Mantener una comunicacón basada en el respeto de opiniones.
+* Hacer todas las tareas solicitadas en el sprint.
+
+
+¿Qué deberíamos dejar de hacer?
+
+* Procastinar o no avanzar a la velocidad necesaria para el grupo.
+* Pretender hacer o preocuparnos por cuestiones no solicitadas en el sprint.
