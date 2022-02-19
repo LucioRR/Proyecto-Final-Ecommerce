@@ -29,5 +29,5 @@ app.use(express.json());
 //Uso de rutas
 app.use(require('./routes/main'));
 app.use('/productos', require('./routes/product'));
-app.use(require('./routes/user'));
+app.use('/users', require('./routes/user'));
 app.use(require('./routes/cart'));

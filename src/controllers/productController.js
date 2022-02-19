@@ -7,8 +7,6 @@ const productController = {
         res.render('product/productDetail', {producto_id: match("id", id)});
     },
     productCreate: (req, res) => res.render('product/productCreate'),
-    /*
-    productEdit: (req, res) => res.render('product/productEdit'),*/
     productAll: (req, res) => res.render('product/allProducts', {productos: all()}),
     productStorage: (req, res) => {
         req.body.files = req.files;
