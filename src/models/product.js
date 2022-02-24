@@ -7,7 +7,7 @@ const productModels = {
     read: () => readFileSync(productModels.file,"utf-8"),
     list: () => JSON.parse(productModels.read()),
     convert: data => JSON.stringify(data,null,2),
-    write: data => writeFileSync(productModels.file, productModels.convert(data)),
+    write: data => writeFileSync(productModels.file, poductModels.convert(data)),
     all: () => productModels.list().filter(producto => producto.activo !== undefined),
     match: (propiedad,valor) => productModels.all().find(producto => producto[propiedad] == valor ),
     generate: data => Object({

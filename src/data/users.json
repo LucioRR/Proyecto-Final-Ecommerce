@@ -1,72 +1,94 @@
 [
-    {
-        "id": 1,
-        "nombre": "Ariadne",
-        "email": "agumbrell0@indiatimes.com",
-        "password": "9UjJWW5",
-        "avatar": "http://dummyimage.com/237x100.png/cc0000/ffffff"
-    },
-    {
-        "id": 2,
-        "nombre": "Sawyer",
-        "email": "sdyhouse1@google.fr",
-        "password": "g0mWeH1",
-        "avatar": "http://dummyimage.com/175x100.png/ff4444/ffffff"
-    },
-    {
-        "id": 3,
-        "nombre": "Vin",
-        "email": "vchasson2@ocn.ne.jp",
-        "password": "Zd22SR81S",
-        "avatar": "http://dummyimage.com/244x100.png/dddddd/000000"
-    },
-    {
-        "id": 4,
-        "nombre": "Arlana",
-        "email": "ashotbolt3@amazon.co.uk",
-        "password": "DEzgFvLxIADe",
-        "avatar": "http://dummyimage.com/129x100.png/ff4444/ffffff"
-    },
-    {
-        "id": 5,
-        "nombre": "Evangelin",
-        "email": "eocheltree4@domainmarket.com",
-        "password": "5ziEIF",
-        "avatar": "http://dummyimage.com/215x100.png/5fa2dd/ffffff"
-    },
-    {
-        "id": 6,
-        "nombre": "Ulises",
-        "email": "uogeaney5@bloomberg.com",
-        "password": "I9Cm9bFDft",
-        "avatar": "http://dummyimage.com/106x100.png/5fa2dd/ffffff"
-    },
-    {
-        "id": 7,
-        "nombre": "Addia",
-        "email": "astoad6@biblegateway.com",
-        "password": "d0npd5VEPq",
-        "avatar": "http://dummyimage.com/130x100.png/ff4444/ffffff"
-    },
-    {
-        "id": 8,
-        "nombre": "Shurlocke",
-        "email": "sadamoli7@spotify.com",
-        "password": "nzinXHLY4",
-        "avatar": "http://dummyimage.com/240x100.png/dddddd/000000"
-    },
-    {
-        "id": 9,
-        "nombre": "Padget",
-        "email": "ptregent8@macromedia.com",
-        "password": "eDeG48VqiM",
-        "avatar": "http://dummyimage.com/162x100.png/ff4444/ffffff"
-    },
-    {
-        "id": 10,
-        "nombre": "George",
-        "email": "geckersley9@imgur.com",
-        "password": "mAZXeigUxQwx",
-        "avatar": "http://dummyimage.com/213x100.png/cc0000/ffffff"
-    }
+  {
+    "id": 1,
+    "nombre": "Ariadne",
+    "email": "agumbrell0@indiatimes.com",
+    "password": "9UjJWW5",
+    "avatar": "http://dummyimage.com/237x100.png/cc0000/ffffff"
+  },
+  {
+    "id": 2,
+    "nombre": "Sawyer",
+    "email": "sdyhouse1@google.fr",
+    "password": "g0mWeH1",
+    "avatar": "http://dummyimage.com/175x100.png/ff4444/ffffff"
+  },
+  {
+    "id": 3,
+    "nombre": "Vin",
+    "email": "vchasson2@ocn.ne.jp",
+    "password": "Zd22SR81S",
+    "avatar": "http://dummyimage.com/244x100.png/dddddd/000000"
+  },
+  {
+    "id": 4,
+    "nombre": "Arlana",
+    "email": "ashotbolt3@amazon.co.uk",
+    "password": "DEzgFvLxIADe",
+    "avatar": "http://dummyimage.com/129x100.png/ff4444/ffffff"
+  },
+  {
+    "id": 5,
+    "nombre": "Evangelin",
+    "email": "eocheltree4@domainmarket.com",
+    "password": "5ziEIF",
+    "avatar": "http://dummyimage.com/215x100.png/5fa2dd/ffffff"
+  },
+  {
+    "id": 6,
+    "nombre": "Ulises",
+    "email": "uogeaney5@bloomberg.com",
+    "password": "I9Cm9bFDft",
+    "avatar": "http://dummyimage.com/106x100.png/5fa2dd/ffffff"
+  },
+  {
+    "id": 7,
+    "nombre": "Addia",
+    "email": "astoad6@biblegateway.com",
+    "password": "d0npd5VEPq",
+    "avatar": "http://dummyimage.com/130x100.png/ff4444/ffffff"
+  },
+  {
+    "id": 8,
+    "nombre": "Shurlocke",
+    "email": "sadamoli7@spotify.com",
+    "password": "nzinXHLY4",
+    "avatar": "http://dummyimage.com/240x100.png/dddddd/000000"
+  },
+  {
+    "id": 9,
+    "nombre": "Padget",
+    "email": "ptregent8@macromedia.com",
+    "password": "eDeG48VqiM",
+    "avatar": "http://dummyimage.com/162x100.png/ff4444/ffffff"
+  },
+  {
+    "id": 10,
+    "nombre": "George",
+    "email": "geckersley9@imgur.com",
+    "password": "mAZXeigUxQwx",
+    "avatar": "http://dummyimage.com/213x100.png/cc0000/ffffff"
+  },
+  {
+    "id": 11,
+    "name": "Lucio Rivarola",
+    "email": "lucio@gmail.com"
+  },
+  {
+    "id": 12,
+    "nombre": "Lucio Rivarola",
+    "email": "lucio@gmail.com",
+    "email_confirm": "lucio@gmail.com",
+    "password": "lucio1234",
+    "confirm_password": "lucio1234"
+  },
+  {
+    "id": 13,
+    "nombre": "Leonardo Cositorto",
+    "email": "zoe@ponzi.com",
+    "email_confirm": "zoe@ponzi.com",
+    "password": "megustalaplata",
+    "confirm_password": "megustalaplata",
+    "avatar": "avatar-1645666364413-.jpg"
+  }
 ]
