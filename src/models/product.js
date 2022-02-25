@@ -7,7 +7,7 @@ const productModels = {
     read: () => readFileSync(productModels.file,"utf-8"),
     list: () => JSON.parse(productModels.read()),
     convert: data => JSON.stringify(data,null,2),
-    write: data => writeFileSync(productModels.file, poductModels.convert(data)),
+    write: data => writeFileSync(productModels.file, productModels.convert(data)),
     all: () => productModels.list().filter(producto => producto.activo !== undefined),
     match: (propiedad,valor) => productModels.all().find(producto => producto[propiedad] == valor ),
     generate: data => Object({
@@ -43,7 +43,9 @@ const productModels = {
                 product.talle = data.talle;
                 product.color = data.pcolor;
                 product.stock = data.stock;
-                product.imagen = data.files && data.files.length > 0 ? data.files.map(file => file.filename): null;
+                product.imagen = data.files && data.files.length > 0 ? data.files[0].filename: null;
+                product.imagenes1 = data.files && data.files.length > 0 ? data.files[1].filename: null;
+                product.imagenes2 = data.files && data.files.length > 0 ? data.files[2].filename: null;
                 if (data.activo == "activo") {
                     product.activo = true;
                 } else {

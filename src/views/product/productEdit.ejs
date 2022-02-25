@@ -9,7 +9,7 @@
     <section class="newProduct">
     <img class="logo" src="/assets/iconos/logo/logo-02.svg " alt="Logo">
     <h1>EDITAR PRODUCTO</h1>
-    <form id="createForm" action="/productos/update?m=PUT" target="_self" method="post" name="createForm">
+    <form id="createForm" action="/productos/update?m=PUT" target="_self" method="post" name="createForm" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<%= product_id.id %>">
         <label for="categoria">Categoría:</label>
         <select id="categoria" name="categoria">
@@ -40,10 +40,9 @@
         <input type="color" id="pcolor" name="pcolor" value="<%= product_id.color %>">
         <label for="stock">Stock Disponible:</label>
         <input type="number" id="stock" name="stock" min="0" max="100" value="<%= product_id.stock %>">
-        <label for="imagenPortada">Elige la Imagen Principal:</label>
-        <input type="file" id="imagenPortada" name="imagenPortada" accept="image/png, image/jpeg">
-        <label for="imagenSecundaria">Elige la Imagen Secundaria:</label>
-        <input type="file" id="imagenSecundaria" name="imagenSecundaria" accept="image/png, image/jpeg">
+        <label for="imagen">Elige las Imagenes:</label>
+        <input type="file"  id="imagen" name="imagen" accept="image/png, image/jpeg" multiple>        <!-- <label for="imagenSecundaria">Elige la Imagen Secundaria:</label>
+        <input type="file" id="imagenSecundaria" name="imagenSecundaria" accept="image/png, image/jpeg"> -->
         <fieldset id="estado">
             <label for="estado">Estado:</label><br>
             <input type="radio" id="activo" name="activo" value="activo" checked>

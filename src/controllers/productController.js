@@ -12,7 +12,7 @@ const productController = {
         req.body.files = req.files;
         const productNew =  generate(req.body)
         create(productNew);
-        return res.redirect('/productos/'+productNew.id)
+        return res.redirect('/productos/' + productNew.id)
     },
     update: (req, res) => {
         const id = Number(req.params.id);

@@ -12,7 +12,7 @@ const upload = multer({storage: folder('product')});
 router.get('/', productAll)
 router.get('/crear', productCreate);
 router.get('/editar/:id', update);
-router.put('/update',[upload.any()], modify);
+router.put('/update',upload.array('imagen'), modify);
 router.post('/guardar', upload.array('imagen'), productStorage);
 router.get('/:id', productDetail);
 router.delete('/borrar',trash);
