@@ -90,5 +90,23 @@
     "password": "megustalaplata",
     "confirm_password": "megustalaplata",
     "avatar": "avatar-1645666364413-.jpg"
+  },
+  {
+    "id": 14,
+    "nombre": "Lucio",
+    "email": "lucio@gmail.net",
+    "email_confirm": "lucio@gmail.net",
+    "password": "$2a$10$d90qxspSDStlq5Hki9bX3OZBll5uXpgOI/X6emsc58RC86cORTf0S",
+    "confirm_password": "lucio123",
+    "avatar": "avatar-1645913639028-.jpg"
+  },
+  {
+    "id": 15,
+    "nombre": "Lucio",
+    "email": "lucio@hotmail.net",
+    "email_confirm": "lucio@hotmail.net",
+    "password": "$2a$10$DpH724gLDf4ZgQEvYvHom.wO47S3yFiyobaycl45uJ4U.GrgXcSeW",
+    "confirm_password": "123456",
+    "avatar": "avatar-1645913758832-.jpg"
   }
 ]
