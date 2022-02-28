@@ -1,6 +1,7 @@
 const bcryptjs = require('bcryptjs')
 const user = require('../models/user');
 const {validationResult} = require('express-validator'); 
+const { findByField } = require('../models/user');
 
 const userController = {
     register: (req, res) => res.render('users/register'),
@@ -36,7 +37,7 @@ const userController = {
         return res.render('users/login')
     },
     login: (req, res) => res.render('users/login'),
-    profile: (req, res) => res.render('users/userProfile'),
+    profile: (req, res) => res.render('users/userProfile',{user:findByField("id",id)}),
     //edit: (req, res) => res.render('users/userEdit')
 }
 

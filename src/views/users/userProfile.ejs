@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('../includes/head.ejs') %>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 </head>
+
 <body>
-    <h1>ESTE ES EL PERFIL DE USUARIO  </h1>
-    <!-- BOTÓN PARA EDITAR PERFIL -->
+    <!-- Header -->
+    <%- include('../includes/header.ejs') %>
+
+    <!-- CSS PARTICULAR -->
+    <link rel="stylesheet" href="css/userProfile.css">
+        <main>
+            <h1 class="bienvenida">Hola <%= user.fullName %>
+            </h1>
+            <img src="/upload/user<%= user.avatar %> ">
+            <br>
+            <br>
+            <div class="alert alert-succes">
+                <%= user.email %>
+            </div>
+            <form>
+                <button class="btn" type="submit">EDITAR PERFIL</button>
+            </form>
+        </main>
+        <!-- Footer -->
+        <%- include('../includes/footer.ejs') %>
+
 </body>
+
 </html>

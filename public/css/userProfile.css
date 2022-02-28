@@ -1,0 +1,11 @@
+*{
+    font-family: "Montserrat regular";
+}
+
+.btn {
+    background-color:#ddbea9;
+    color: white;
+    border-radius: 6px;
+    width: 100%;
+    padding: 15px;
+}
