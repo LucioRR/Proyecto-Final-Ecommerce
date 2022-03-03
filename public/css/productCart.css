@@ -1,0 +1,158 @@
+*{
+ font-family: "Montserrat regular";
+}
+
+.titulo-carrito{
+    font-size: 24px;
+    display:flex;
+    margin: 10px;
+    justify-content: start;
+    align-items: center;
+}
+
+.titulo-carrito img{
+    height: 30px;
+    width: 30px;
+}
+ 
+.titulo-carrito figcaption{
+    margin-left: 10px;
+}
+
+ 
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabla-productos{
+    width: 95%;
+    border: 1.8px solid #cb997e;
+    padding: 5px;
+}
+
+.tabla-productos td , .tabla-productos tr{
+    padding: 5px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#aros{
+    width: 60px;
+    height: 60px;
+} 
+
+#cantidad {
+    width: 3em;
+}
+
+article img{
+    width: 16px;
+    height: 16px;
+}
+
+.opciones-compras {
+    margin: 15px;
+    padding: 5px;
+    color: gray;
+}
+
+.opcion-regalo {
+    border: 1.8px solid #cb997e;
+    padding: 5px;
+    width: 95%;
+}
+
+.resumen {
+    border: 1.8px solid #cb997e;
+    padding: 5px;
+    width: 95%;
+    margin-top: 10px;
+}
+
+.resumen h3 {
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+.resumen-item {
+    border-bottom: 1px solid gray;
+    padding: 15px;
+    display: flex;
+}
+
+.resumen-item figcaption {
+    margin-left: 10px;
+}
+
+.resumen article {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.resumen article p {
+    margin: 0 10px;
+}
+
+.btn {
+    background-color:#ddbea9;
+    color: white;
+    border-radius: 6px;
+    width: 100%;
+    padding: 15px;
+}
+
+.item {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+
+@media (min-width: 769px) {
+    .container  {
+        flex-direction: column;
+        width: 50%;
+        justify-content: flex-start;
+    }
+    .box {
+            display: flex;
+            justify-content: space-around;
+        
+    }
+    .tabla-productos {
+        order: 1;
+        width: 65%;
+    }
+    .opcion-regalo {
+        width: 65%;
+        order: 3;
+    }
+
+    .opciones-compras {
+        width: 65%;
+        order: 2;
+
+    }
+    .resumen {        
+            width: 30%; 
+            margin-right: 20px;
+            margin-top: 0px;
+        
+    }
+
+    .resumen-item figcaption {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+

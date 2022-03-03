@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../includes/head.ejs') %>
+    <!-- CSS PARTICULAR -->
+    <link rel="stylesheet" href="/css/productDetail.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <%- include('../includes/header.ejs')  %> 
+    <!-- Main -->
+    <main>
+        <section class="container">
+            <!-- Imagenes Portatil -->
+                <section class="imagenes">
+                    <figure class="imagenesPequeñas">
+                        <img src="/product/<%= producto_id.imagenes1 %>" alt="reverso">
+                        <img src="/product/<%= producto_id.imagenes2 %>" alt="reverso">
+                    </figure>
+                    <img class="imagenPpal" src="/product/<%= producto_id.imagen %>" alt="fotoproducto">
+                </section>
+
+            <!-- Imagenes Slider Mobile -->
+            <section class="seccionSlider">
+                <!-- image slider start -->
+                <div class="slideer">
+                    <form class="slidees">
+                        <!-- radio button start -->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <!-- radio button end -->
+                        <!-- slide image start-->
+                        <figure class="slidee first">
+                            <img src="/assets/images/detalleBikiniMC1.jpg" alt="">
+                        </figure>
+                        <figure class="slidee">
+                            <img src="/assets/images/detalleBikiniMC3.jpg" alt="">
+                        </figure>
+                        <figure class="slidee">
+                            <img src="/assets/images/detalleBikiniMC2.jpg" alt="">
+                        </figure>
+                        <!-- slide image end-->
+                    </form>
+                    <!-- manual navigation start-->
+                    <form class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                    </form>
+                    <!-- manual navigation end-->
+                </div>
+                <!-- image slider end -->
+            </section>
+
+            <!-- DETALLES -->
+            <section class="contenedorDetalles">
+                <nav class="categorias">
+                    <a href="../productos">Inicio</a> - <a href="#">Bikinis</a><p> - Amely | Cookie</p>
+                </nav>
+                    <h2 class="tituloProducto"> <%= producto_id.nombre_producto %>  </span></h2>
+                    <h1 class="precio"> $ <%= producto_id.precio %> <span style="font-size: 0.4em; color: black; text-decoration:line-through;">$8.000</span></h1>
+                <hgroup class="pagos">
+                    <h2>
+                        <img src="/assets/iconos/pago/credit-card-fill.svg" alt="Medio de pago">
+                        <span style="color: rosybrown">3 cuotas sin interes de</span>
+                        $ <%= producto_id.precio/3 %>
+                    </h2>
+                    <h2>
+                        <img src="/assets/iconos/pago/money-bill-wave-solid.svg" alt="Medio de pago">
+                        <span style="color: rosybrown">10% de descuento</span>
+                        pagando con transferencia bancaria.
+                    </h2>
+                    <h2><a href="#" style="color: rosybrown">Ver más detalles</a></h2>
+                </hgroup>
+                <form class="elecciones">
+                    <fieldset class=color>
+                        <legend>COLOR</legend>
+                        <ul id="color">
+                            <li>
+                                <input type="radio" name="color" id="color" value="color" >
+                                <label for="color-piel"><span style="background-color: <%= producto_id.color %>"></span></label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="talle">
+                        <label for="talle">TALLE:</label>
+                        <select id="talle" name="eleccionTalle">
+                            <option value="ochoCinco" selected>85</option>
+                            <option value="nueveCero">90</option>
+                            <option value="nueveCinco">95</option>
+                            <option value="cien">100</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="botonAgregar">
+                        <button type="submit">Agregar al Carrito</button>
+                    </fieldset>
+                </form>
+                
+            </section>
+        </section>
+        <details class="descripcion">
+            <summary>Descripción:</summary>
+            <p>
+                <%= producto_id.descripcion %> 
+            </p>
+        </details>
+    </main>
+    <!-- Footer -->
+    <%- include('../includes/footer.ejs') %>
+</body>
+</html>

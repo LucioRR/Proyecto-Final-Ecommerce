@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../includes/head.ejs') %>
+    <!-- CSS PARTICULAR -->
+    <link rel="stylesheet" href="/css/productCreateEdit.css">
+</head>
+<body>
+    <section class="newProduct">
+    <img class="logo" src="/assets/iconos/logo/logo-02.svg " alt="Logo">
+    <h1>EDITAR PRODUCTO</h1>
+    <form id="createForm" action="/productos/update?m=PUT" target="_self" method="post" name="createForm" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<%= product_id.id %>">
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" name="categoria">
+            <option value="<%= product_id.categoria %>" selected><%= product_id.categoria %></option>
+            <option value="bikinis">BIKINIS</option>
+            <option value="primerasPieles">PRIMERAS PIELES</option>
+            <option value="segundasPieles">SEGUNDAS PIELES</option>
+            <option value="makeUp">MAKE UP</option>
+            <option value="accesorios">ACCESORIOS</option>
+        </select>
+        <label for="pname">Nombre del Producto:</label>
+        <input type="text" id="pname" name="pname" value="<%= product_id.nombre_producto %>">
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca" value="<%= product_id.marca %>">
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion" id="descipcion" rows="6"><%= product_id.descripcion %></textarea>
+        <label for="precio">Precio final:</label>
+        <input type="text" id="precio" name="precio" value="<%= product_id.precio %>">
+        <label for="talle">Talle:</label>
+        <select name="talle" id="talle">
+            <option value="<%= product_id.talle %>" selected><%= product_id.talle %></option>
+            <option value="small"> S </option>
+            <option value="medium"> M </option>
+            <option value="large"> L </option>
+            <option value="unique"> Único </option>
+        </select>
+        <label for="pcolor">Color:</label>
+        <input type="color" id="pcolor" name="pcolor" value="<%= product_id.color %>">
+        <label for="stock">Stock Disponible:</label>
+        <input type="number" id="stock" name="stock" min="0" max="100" value="<%= product_id.stock %>">
+        <label for="imagen">Elige las Imagenes:</label>
+        <input type="file"  id="imagen" name="imagen" accept="image/png, image/jpeg" multiple>        <!-- <label for="imagenSecundaria">Elige la Imagen Secundaria:</label>
+        <input type="file" id="imagenSecundaria" name="imagenSecundaria" accept="image/png, image/jpeg"> -->
+        <fieldset id="estado">
+            <label for="estado">Estado:</label><br>
+            <input type="radio" id="activo" name="activo" value="activo" checked>
+            <label for="activo">Activo</label><br>
+            <input type="radio" id="inactivo" name="activo" value="inactivo">
+            <label for="inactivo">Inactivo</label>
+        </fieldset><br><br>
+        <input type="submit" id="guardar" value="Guardar">
+</form>
+<form action="/productos/borrar?m=DELETE" method="post" id="deleteForm">
+    <label for="delete">¿Desea eliminar este producto?</label>
+    <input type="submit" id="delete" value="Eliminar">
+    <input type="hidden" name="id" value="<%= product_id.id %>">
+</form>
+</section>
+</body>
+</html>

@@ -1,0 +1,93 @@
+main {
+    margin: 40px auto;
+    max-width: 80%;
+  }
+  
+main h4{
+    margin-bottom: 20px;
+    text-align:center;
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.formulario {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+
+    
+  input, button {
+    max-width: 100%;
+    padding: 9px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: 1.5px solid rgba(182, 182, 182, 0.376);
+    width:100%;
+  }
+
+  .buttoon {
+    width: 47%;
+    background-color: #ddbea9;    
+    color:white;
+    font-size: 14px;
+  }
+
+  
+
+.contenedorImagenes {
+    display: none;
+  }
+
+  .loguito {
+    display: none;
+  }
+
+@media (min-width: 769px) {
+  .container {
+      display: flex;
+      margin: 50px 0px 0px 10px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  .contenedorImagenes {
+      display: flex;
+      padding: 5px;
+      align-items:flex-start;
+      width: 45%;
+    }
+  .imagen {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: stretch;
+      justify-content: center;
+      max-width: 100%;
+    }
+  .imagenesPequeñas {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      justify-content:right;
+    }
+  .formulario {
+      width: 100%;
+  }
+  main{
+      max-width: 100%;
+  }
+  .loguito {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;    
+    padding: 0px 35%
+  }
+
+  .register {
+    width: 35%;
+   }
+   
+}

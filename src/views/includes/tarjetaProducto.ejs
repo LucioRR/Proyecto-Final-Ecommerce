@@ -1,0 +1,27 @@
+<article class="producto producto-foco">
+    <figure>
+        <a href="./<%= producto.id %>">
+            <img src="/product/<%= producto.imagen %>" alt="Imagen de producto 1">
+        </a>
+    </figure>
+    <form class="btn-favorito" action="">
+        <input type="checkbox" name="favorito" id="favorito" value="true">
+        <label for="favorito">
+            <img src="/assets/iconos/corazones/corazones-04-rosa.svg" alt="Corazón Favorito">
+        </label>
+    </form>
+        <hgroup>
+            
+            <h1> <%= producto.nombre_producto %>  </h1>
+            <label for="precio">Precio:</label>
+            <h2>$ <%= producto.precio %>  </h2>
+            <label for="marca">Marca:</label>
+            <h2> <%= producto.marca %>  </h2>
+        </hgroup>
+        <form class="btn-comprar" action="./<%= producto.id %>">
+            <button>
+                <img src="/assets/iconos/bag/bag-plus-blco.svg" alt="Icono de Carrito +">
+                COMPRAR
+            </button>
+        </form>
+</article>

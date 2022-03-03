@@ -1,0 +1,356 @@
+@font-face {
+    font-family: 'Century';
+    src: url("../fonts/century/century.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Museo-Sans';
+    src: url("../fonts/museo/museo-sans-100.otf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Montserrt Light';
+    src: url("../fonts/montserrat/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url("../fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+
+:root{
+    --chocolate: #663333; 
+    --camel: #cb997e; 
+    --piel: #ddbea9; 
+    --rosaViejo: #d0ada7; 
+    --verde: #b7b7a4; 
+    --celeste: #e2eafc;
+    --gris: #b6b6b6;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat Regular';
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* ------- MAIN ------- */
+
+
+/* SLIDER */
+
+
+.slider{
+    overflow: hidden;
+    width:100vw;
+}
+
+.slides{
+    width: 500%;
+    display: flex;
+}
+
+.slides input{
+    display:none;
+}
+
+.slide{
+    width:20%;
+    transition:2s;
+}
+
+.slide img{
+    height: 100vw;
+    object-fit: 16/9;
+}
+
+/* css para navegacion manual */
+
+.navigation-manual{
+    position: absolute;
+    width: 100vw;
+    margin-top: -40px;
+    display: flex;
+    justify-content:center;
+}
+
+.manual-btn{
+    border: 2px solid var(--chocolate);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background: var(--chocolate);
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+/* css para navegacion automatica */
+
+.navigation-auto{
+    position: absolute;
+    display: none;
+    width: 800px;
+    justify-content:center;
+    margin-top:460px;
+}
+
+.navigation-auto div{
+    border: 2px solid var(--chocolate);
+    padding:5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right:40px; 
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: var(--chocolate);
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: var(--chocolate);
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: var(--chocolate);
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: var(--chocolate);
+}
+
+/* SECCIONES */
+
+.uniteInst{
+    width: 100%;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+.titulo-seccion{
+    width: 100%;
+    font-size: 39px;
+    text-shadow: -1px 0 var(--camel), 0 1px var(--camel), 1px 0 var(--camel), 0 -1px var(--camel);
+    color: white;
+    margin-bottom: 10px;
+}
+
+.ofertas-vos, .los-queres{
+    margin-top: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.lanzamientos{
+    margin: 50px auto 20px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.seccion-productos {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+}
+
+.los-mas-vendidos{
+    text-align: center;
+}
+
+/* SEPARADORES */
+
+.separador{
+    width: 95%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* UNITE INSTAGRAM */
+.uniteInst h2{
+    margin: 10px;
+    color: var(--gris);
+}
+
+.uniteInst a{
+    background-color: var(--camel);
+    padding: 6px;
+    color: white;
+    display: flex;
+    width: 35%;
+    justify-content: space-around;
+    border-radius: 6px;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 170px;
+}
+
+.uniteInst a img{
+    width: 16px;
+}
+
+/* LANZAMIENTOS */
+
+.titulo-especial {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width:100%;
+}
+
+.subtitulo-especial {
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width:95%;
+    line-height: 30px;
+    margin: 10px auto;
+}
+
+.chico{
+    opacity: 1 !important;
+    width: 47%;
+    min-width: 45% !important;
+}
+
+.chico figure{
+    height: 65vw !important;
+}
+
+.prodcuto-oculto{
+    display: none;
+}
+
+/* BENEFICIOS */
+
+.beneficios{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 40px;
+}
+
+.envios-pais, .tarjeta-credito, .retirar-local{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.icono-beneficio{
+    margin: 0 auto 0;
+    width: 40px;
+    height: 40px;
+    color: #777;
+}
+
+.beneficios p{
+    text-transform: uppercase;
+    width: 50%;
+    margin: 0px auto;
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+@media (min-width: 361px){
+
+}
+
+@media (min-width: 769px) {
+
+    /* SLIDER */
+
+    .slide img {
+        height: 100vw;
+        object-fit: cover;
+    }
+    
+    .slider {
+        height: 30vw;
+    }
+    
+    .navigation-manual {
+        display: none;
+    }
+
+    .ofertas-vos, .los-queres, .los-mas-vendidos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .titulo-seccion {
+        order: -1;
+        width: 100%;
+    }
+
+    .separador{
+        width: 45%;
+    }
+
+    .seccion-productos{
+        width: 45%;
+        z-index: -1;
+    }
+
+    .prod-1{
+        display: none;
+    }
+
+    .producto{
+        min-width: auto !important;
+        opacity: 1 !important;
+    }
+
+    .producto figure {
+        height: 21vw !important;
+    }
+
+    .prodcuto-oculto{
+        display: block;
+    }
+
+    .los-queres img {
+        order: 10;
+    }
+
+    .lanzamientos section {
+        width: 100% !important;
+    }
+
+    .beneficios{
+        flex-direction: row;
+    }
+}

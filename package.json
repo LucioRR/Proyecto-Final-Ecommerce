@@ -1,0 +1,33 @@
+{
+  "name": "celestial",
+  "version": "1.0.0",
+  "description": "<!-- ¿Qué productos o servicios brindará nuestro sitio? ¿Quién será nuestra audiencia objetivo? ¿Cómo ajustaremos nuestra oferta a ese público? Entregable: Crear archivo README.md en el repositiorio con: ● Una breve descripción de la oferta de productos y/o servicios ofrecidos por su sitio. También agregar una breve descripción del público al que apunta el sitio. ● Una breve descripción de los integrantes del equipo. -->",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon src/app.js -e js,mjs,json,ejs,css",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucioRR/grupo_7_EcommerceCelestial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucioRR/grupo_7_EcommerceCelestial/issues"
+  },
+  "homepage": "https://github.com/LucioRR/grupo_7_EcommerceCelestial#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parse": "^0.4.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.14.0",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

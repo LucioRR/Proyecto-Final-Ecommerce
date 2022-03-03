@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../includes/head.ejs') %>
+
+        <!-- CSS PARTICULAR -->
+        <link rel="stylesheet" href="css/productCart.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <%- include('../includes/header.ejs') %>
+        <!-- Main -->
+        <main>
+            <figure class="titulo-carrito">
+                <img src="/assets/iconos/bag/bag.svg">
+                <figcaption> Mi carrito </figcaption>
+            </figure>
+            <section class="box">
+                <article class="container">
+                    <table class="tabla-productos" frame=hsides ruler=rows>
+                        <tr>
+                            <th>Producto</th>
+                            <th></th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img id="aros" src="/assets/images/aros-chapita.jpg" alt="Aros chapitas strass">
+                            </td>
+                            <td>Aros strass</td>
+                            <td>
+                                $1500
+                            </td>
+                            <td>
+                                Cantidad
+                                <input type="number" name="cantidad" id="cantidad">
+                            </td>
+                            <td>
+                                $1500
+                            </td>
+                            <td>
+                                <img src="/assets/iconos/delete/trash-alt-solid.svg">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <nav class="opciones-compras">
+                        <a href=""><img src="/assets/iconos/flechas/arrow-left-solid.svg">
+                            Seguir comprando</a>
+                    </nav>
+                    <form class="opcion-regalo">
+                        <input type="checkbox">
+                        Lo quiero para regalo! <img src="/assets/iconos/giftcard/gift-solid.svg">
+                    </form>
+
+                </article>
+                <article class="resumen">
+                    <h3>Resumen de compra</h3>
+                    <figure class="resumen-item"><img src="/assets/iconos/ticket/ticket-perforated.svg">
+                        <figcaption>¿Tienes un cupón de descuento?</figcaption>
+                    </figure>
+                    <figure class="resumen-item"><img src="/assets/iconos/giftcard/card_giftcard_black_24dp.svg">
+                        <figcaption>¿Tienes una tarjeta de regalo?</figcaption>
+                    </figure>
+                    <figure class="resumen-item"><img src="/assets/iconos/envios/truck.svg">
+                        <figcaption>Calcular tiempos & costos de envíos</figcaption>
+                    </figure>
+                    <article>
+                        <p class="total">Subtotal</p>
+                        <p>$1500</p>
+                    </article>
+                    <article>
+                        <p class="total">Total</p>
+                        <p>$1500</p>
+                    </article>
+                    <form>
+                        <button class="btn" type="submit">FINALIZAR COMPRA</button>
+
+                    </form>
+
+
+                </article>
+            </section>
+        </main>
+        <!-- Footer -->
+        <%- include('../includes/footer.ejs') %>
+</body>

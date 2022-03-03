@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'The Loved';
+    src: url("../../fonts/theloved/theloved/Theloved.otf") format("truetype");
+}
+
+/* ------- FOOTER ------- */
+
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.separador-footer{
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--camel);
+    padding: 10px;
+}
+
+.separador-footer img{
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+
+
+.separador-footer figcaption{
+    font-family: 'The Loved';
+    font-size: 32px;
+    align-self: center;
+}
+
+.secciones-footer {
+    border-bottom: 0.5px solid black;
+    margin-bottom: 30px;
+}
+
+.secciones-footer h4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.secciones-footer nav{
+    list-style: none;
+}
+
+.secciones-footer nav a{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    padding: 0;
+    border-bottom: 1px solid #e6e6e8;
+    color: #777;
+    line-height: 56px;
+    letter-spacing: 1px; 
+    text-decoration: none;
+    padding-left: 1rem;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+
+.secciones-footer nav a img{
+    width: 30px;
+    height: 30px;
+    color: black;
+    margin-top: 5px;
+    
+}
+
+.secciones-footer nav a p{
+    margin-left: 15px;
+}
+
+.redesSociales{
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom:15px;
+    border: none;
+}
+
+.redesSociales a{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    height: 20px;
+    color: black;
+    width: 20px;
+}
+
+.redesSociales a img{
+    height: 100%;
+}
+
+
+@media (min-width: 769px) {
+    footer{
+        display: flex;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    .separador-footer {
+        width: 100%;
+    }
+
+    figcaption {
+        font-size: 35px;
+    }
+
+    .secciones-footer {
+        width: 35%;
+        border: none;
+
+    }
+
+    .secciones-footer nav a{
+        border: none;
+    }
+
+    .redesSociales{
+        width: 100%;
+        max-width: 960px;
+    }
+
+    .navegacionFooter{
+        border: none;
+    }
+
+    .redesSociales a{
+        line-height: 35px;
+        font-size: 13px;
+    }
+}

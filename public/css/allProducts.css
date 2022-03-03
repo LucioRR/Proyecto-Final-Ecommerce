@@ -1,0 +1,91 @@
+
+/* NAVEGACION ENTRE CATEGORIAS */
+.navegacion-productos{
+    width: 100%;
+    margin: 20px 0 20px 10px;
+}
+
+.navegacion-productos a::after{
+    content: " /";
+}
+
+.ultimo::after{
+    content: none !important;
+}
+
+/* VISUALIZACION Y FILTROS */
+
+.visualizacion-filtro{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px 10px;
+}
+
+.visializacion {
+    width:20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.visializacion a img{
+    width: 20px;
+    height: 20px;
+}
+
+.btn-filtro{
+    border: 1px solid var(--gris);
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: var(--camel);
+}
+
+/* BARRA DE FILTROS */
+
+#filtro{
+    width: 80vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    z-index: -1;
+    -webkit-box-shadow: 3px 0px 26px 0px rgb(117, 116, 116);
+    -moz-box-shadow: 3px 0px 26px 0px rgb(117, 116, 116);
+    box-shadow: 3px 0px 26px 0px rgb(117, 116, 116);
+    transition: all 0.8s ease;
+    max-width: 300px;
+}
+
+#filtro:target{
+    opacity: 1;
+    z-index: 2;
+}
+
+#filtro details{
+    border-bottom: 1px solid var(--gris);
+    transition: all 0.8s ease;
+}
+
+#filtro summary {
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 12px 10px;
+}
+
+#filtro form {
+    display: flex;
+    flex-direction: column;
+}
+
+#filtro form input {
+    display: none;
+}
+
+#filtro form label {
+    padding: 12px 20px;
+}
+
