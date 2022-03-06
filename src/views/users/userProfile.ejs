@@ -16,9 +16,9 @@
     <!-- CSS PARTICULAR -->
     <link rel="stylesheet" href="css/userProfile.css">
         <main>
-            <h1 class="bienvenida">Hola <%= user.fullName %>
+            <h1 class="bienvenida">Hola <%= user.nombre %>
             </h1>
-            <img src="/upload/user<%= user.avatar %> ">
+            <img src="/user/<%= user.avatar %>">
             <br>
             <br>
             <div class="alert alert-succes">

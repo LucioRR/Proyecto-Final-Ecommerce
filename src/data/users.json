@@ -108,14 +108,5 @@
     "password": "$2a$10$DpH724gLDf4ZgQEvYvHom.wO47S3yFiyobaycl45uJ4U.GrgXcSeW",
     "confirm_password": "123456",
     "avatar": "avatar-1645913758832-.jpg"
-  },
-  {
-    "id": 16,
-    "nombre": "Noelia ",
-    "email": "noelia@gmail.com",
-    "email_confirm": "noelia@gmail.com",
-    "password": "$2a$10$g4uyjGGxj/pvDdaoqbtt4u0w4PHbYTj4Cb2jQom4XgZM1P3joLi82",
-    "confirm_password": "1234",
-    "avatar": "avatar-1646493164966-.jpg"
   }
 ]
