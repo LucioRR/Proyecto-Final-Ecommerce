@@ -35,17 +35,17 @@ module.exports = (sequelize, DataTypes) => {
    
 
    Stock.associate = function(models){
-        Stock.hasMany(models.Product, {
+        Stock.belongsTo(models.Product, {
             as: 'products',
             foreignKey: 'stock'
             });
 
-        Stock.hasMany(models.Color, {
+        Stock.belongsTo(models.Color, {
             as: 'color',
             foreignKey: 'Stock'
             });
 
-        Stock.hasMany(models.Size, {
+        Stock.belongsTo(models.Size, {
             as: 'size',
             foreignKey: 'Stock'
         });
