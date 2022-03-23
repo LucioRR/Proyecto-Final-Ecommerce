@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     let cols = {
         id: {
             type: DataTypes.INTEGER,
-            primarykey: true,
+            primaryKey: true,
             autoIncrement: true
         },
         email: {
@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
 
     User.associate = function(models) {
         User.belongsTo(models.Image, {    
-        as: 'avatar', 
+        as: 'avatar_id', 
         foreignKey: 'avatar',
         })
 

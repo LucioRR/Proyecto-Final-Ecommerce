@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     let cols = {
         id: {
             type: DataTypes.INTEGER,
-            primarykey: true,
+            primaryKey: true,
             autoIncrement: true,
         },
         size: {
@@ -36,18 +36,18 @@ module.exports = (sequelize, DataTypes) => {
 
    Stock.associate = function(models){
         Stock.belongsTo(models.Product, {
-            as: 'products',
-            foreignKey: 'stock'
+            as: 'product_id',
+            foreignKey: 'product'
             });
 
         Stock.belongsTo(models.Color, {
-            as: 'color',
-            foreignKey: 'Stock'
+            as: 'color_id',
+            foreignKey: 'color'
             });
 
         Stock.belongsTo(models.Size, {
-            as: 'size',
-            foreignKey: 'Stock'
+            as: 'size_id',
+            foreignKey: 'size'
         });
     }
 

@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     let cols = {
         id: {
         type: DataTypes.INTEGER,
-        primarykey: true,
+        primaryKey: true,
         autoIncrement: true,
     },
         name: {
@@ -26,6 +26,5 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'category'
         });
     }
-    I
     return Category;
 }    
