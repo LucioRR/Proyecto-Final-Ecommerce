@@ -32,9 +32,7 @@ module.exports = (sequelize, DataTypes) => {
 
     const Stock = sequelize.define(alias, cols, config);
 
-   
-
-   Stock.associate = function(models){
+    Stock.associate = function(models){
         Stock.belongsTo(models.Product, {
             as: 'product_id',
             foreignKey: 'product'

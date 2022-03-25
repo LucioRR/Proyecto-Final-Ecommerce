@@ -1,6 +1,58 @@
 // const {all, match, generate, create, update, trash} = require('../models/product')
-const {Product} = require('../database/models')
+const {Product, Brand} = require('../database/models')
 
+
+module.exports = {
+    productAll: async (req, res) => {
+        try {
+            const products = await Product.findAll({include: {all: true}});
+            const brand = await Brand.findAll({include: {all: true}});
+            res.send(products);
+        }
+        catch (error) {
+            res.status(500).send({message: error.message});
+        }
+    },
+    productCreate: (req, res) => res.render('product/productCreate'),
+
+    productStorage: async (req, res) => {
+        
+        const sizeData = req.body.talle
+        try {
+            let marcaEncontrada = await Brand.findAll({ where : {
+                name: req.body.marca,
+                }
+            });
+
+            // res.send(marcaEncontrada);
+
+            if (marcaEncontrada.length == 0) {
+                marcaEncontrada = await Brand.create({name: req.body.marca})
+            }
+
+            let marcaDefinida = JSON.parse(marcaEncontrada, null, 2);
+
+            console.log(marcaDefinida[0].id);
+        
+            const productNew = await Product.create({
+                name: req.body.nombre_producto,
+                category: req.body.categoria,
+                description: req.body.descripcion,
+                price: Number(req.body.precio),
+                active: req.body.active ? 1 : 0,
+                brand: marcaEncontrada[0].Brand.dataValues.id
+            });
+
+            return res.redirect('/productos/' + productNew.id)
+        }
+        catch (error) {
+            res.status(500).send({message: error.message})
+        }
+        
+        
+    }
+
+}
 
 
 // const productController = {
@@ -31,15 +83,3 @@ const {Product} = require('../database/models')
 //         return res.redirect('/productos')
 //     }
 // }
-
-
-module.exports = {
-    productAll:(req, res) => {
-        Product.findAll()
-            .then(Product => {
-                console.log(Product.dataValues)
-                res.render('product/allProducts', {productos: Product})
-            })
-    },
-
-}

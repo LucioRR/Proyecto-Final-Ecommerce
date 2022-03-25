@@ -30,20 +30,21 @@ module.exports = (sequelize, DataTypes) => {
                type: DataTypes.BOOLEAN,
                allowNull: false,
           }
-    }
+     }
 
-    let config = {
-         tableName: 'products',
-         timestamps: false
-    }
-    const Product = sequelize.define(alias, cols, config);
+     let config = {
+          tableName: 'products',
+          timestamps: false
+     }
+     const Product = sequelize.define(alias, cols, config);
     
-    Product.associate = function(models) {
+     Product.associate = function(models) {
           Product.belongsToMany(models.Image, {
                as: 'images',
                through: 'imagesProducts',
                foreignKey: 'product',
-               otherKey: 'image'
+               otherKey: 'image',
+               timestamps: false
           })
 
           Product.belongsTo(models.Category, {
@@ -56,5 +57,5 @@ module.exports = (sequelize, DataTypes) => {
                foreignKey: 'brand',
           })
      }
-    return Product;
+     return Product;
 }

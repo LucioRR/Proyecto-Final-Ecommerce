@@ -8,13 +8,21 @@ const upload = multer({storage: folder('product')});
 
 
 
-
+// Muestra todos los productos
 router.get('/', productAll)
-// router.get('/crear', productCreate);
+
+// Crea un nuevo producto
+router.get('/crear', productCreate);
+router.post('/guardar', upload.array('imagen'), productStorage);
+
+//Edita un producto
 // router.get('/editar/:id', update);
 // router.put('/update',upload.array('imagen'), modify);
-// router.post('/guardar', upload.array('imagen'), productStorage);
-// router.get('/:id', productDetail);
+
+//Elimina un producto
 // router.delete('/borrar',trash);
+
+// Muestra un producto por id
+// router.get('/:id', productDetail);
 
 module.exports = router;
