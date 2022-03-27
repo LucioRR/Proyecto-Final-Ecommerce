@@ -1,5 +1,5 @@
 // const {all, match, generate, create, update, trash} = require('../models/product')
-const {Product, Brand} = require('../database/models')
+const {Product, Brand, Color, Stock} = require('../database/models')
 
 
 module.exports = {
@@ -14,33 +14,46 @@ module.exports = {
         }
     },
     productCreate: (req, res) => res.render('product/productCreate'),
-
     productStorage: async (req, res) => {
-        
-        const sizeData = req.body.talle
-        try {
-            let marcaEncontrada = await Brand.findAll({ where : {
-                name: req.body.marca,
-                }
-            });
-
-            // res.send(marcaEncontrada);
-
-            if (marcaEncontrada.length == 0) {
-                marcaEncontrada = await Brand.create({name: req.body.marca})
-            }
-
-            let marcaDefinida = JSON.parse(marcaEncontrada, null, 2);
-
-            console.log(marcaDefinida[0].id);
-        
-            const productNew = await Product.create({
+        try{
+            //Se crea la marca o se le obtine si ya existe.
+            let marcaEncontrada = await Brand.findOrCreate({ where :
+                    { name: req.body.marca}
+                });
+            //Se crea el producto y se carga las imágenes
+            let productNew = await Product.create({
                 name: req.body.nombre_producto,
                 category: req.body.categoria,
                 description: req.body.descripcion,
                 price: Number(req.body.precio),
-                active: req.body.active ? 1 : 0,
-                brand: marcaEncontrada[0].Brand.dataValues.id
+                active: req.body.activo == "activo" ? true : false,
+                brand: marcaEncontrada[0].dataValues.id,
+                images: [
+                    {
+                        url: req.files[0].filename
+                    },
+                    {
+                        url: req.files[1].filename
+                    },
+                    {
+                        url: req.files[2].filename
+                    }
+                ]},{
+                    include: 'images'
+                });
+            //Se Crea o se modifica el color, según corresponda.
+            let colorNew = await Color.findOrCreate({
+                where: 
+                    {name: req.body.nombreColor}, 
+                defaults: 
+                    {value: req.body.color}
+            });
+            //Se crea la tabla intermedia de Stock
+            let stockNew = await Stock.create({
+                size: req.body.talle,
+                stock: req.body.stock,
+                product: productNew.id,
+                color: colorNew[0].dataValues.id
             });
 
             return res.redirect('/productos/' + productNew.id)
@@ -48,8 +61,76 @@ module.exports = {
         catch (error) {
             res.status(500).send({message: error.message})
         }
-        
-        
+    },
+    update: async (req, res) => {
+        const id = Number(req.params.id);
+        try {
+            res.render('product/productEdit', {product_id: await Product.findByPk(id)});
+        } catch (error) {
+            res.status(500).send({message: error.message})
+        }
+    },
+    modify: async (req, res) => {
+        req.body.files = req.files;
+        //Se busca en la base de datos el producto a modificador
+        try{
+            let id = Number(req.body.id);
+            //Se busca en la BD el producto a modificar
+            let productToModify = await Product.findByPk(id);
+            //Se busca el stock correspondiente al producto a modificar
+            let stockToModify = await Stock.findAll({where: {'product': id}});
+            console.log(stockToModify)
+            //Se crea la marca o se le obtine si ya existe.
+            let marcaEncontrada = await Brand.findOrCreate({ where :
+                {name: req.body.marca}
+            });
+            // Se Modifica el producto
+            let productModificated = await productToModify.update({
+                name: req.body.nombre_producto,
+                category: req.body.categoria,
+                description: req.body.descripcion,
+                price: Number(req.body.precio),
+                active: req.body.activo == "activo" ? true : false,
+                brand: marcaEncontrada[0].dataValues.id,
+                images: [
+                    {
+                        url: req.files[0].filename
+                    },
+                    {
+                        url: req.files[1].filename
+                    },
+                    {
+                        url: req.files[2].filename
+                    }
+                ]},{
+                    include: 'images'
+                });
+                //Se Crea o se modifica el color, según corresponda.
+                let color = await Color.findOrCreate({
+                    where: 
+                        {name: req.body.nombreColor}, 
+                    defaults: 
+                        {value: req.body.color}
+                });
+                //Se modifica el stock encontrado.
+                let stockModificated = await stockToModify.update({
+                    size: req.body.talle,
+                    stock: req.body.stock,
+                    product: req.params.id,
+                    color: color[0].dataValues.id
+                })
+            return res.redirect('/productos/' + req.body.id);
+        } catch (error) {
+            res.status(500).send({message: error.message})
+        }
+    },
+    productDetail: async (req, res) => {
+        let id = Number(req.params.id);
+        try {
+            res.render('product/productDetail', {producto_id: await Product.findByPk(id)});
+        } catch (error) {
+            res.status(500).send({message: error.message})
+        }
     }
 
 }
