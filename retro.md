@@ -79,3 +79,20 @@ Retrospectiva Sprint 4:
 
 * Procastinar o no avanzar a la velocidad necesaria para el grupo.
 * Pretender hacer o preocuparnos por cuestiones no solicitadas en el sprint.
+
+
+----------------------------------------------------------------
+Retrospectiva Sprint 5:
+
+¿Qué deberíamos empezar a hacer en el siguiente sprint?
+* Repartirnos las tareas  ni bien se libera el sprint, para no retrasarnos con la entrega.
+* Realizar una weekly en donde podamos estar todos y comunicar al grupo sobre cómo venimos trabajando.
+* Mayor trabajo en equipo, consultarnos cuando tenemos dudas o no entendemos algo.
+
+¿Qué deberíamos seguir haciendo?
+* Informar en el grupo a medida que avanzamos con una tarea, actualizar al grupo si se hizo algún cambio o si algo no funciona y no sabemos cómo solucionarlo.
+* Pedir ayuda a los profes cuando se nos dificulta una tarea y eso implica un retraso o impedimentos para poder seguir avanzando en el proyecto.
+
+¿Qué deberíamos dejar de hacer?
+* Retrasarnos con el plazo de entrega de la tarea que nos fue asignada.
+* Distribuir las tareas de manera desigual.
