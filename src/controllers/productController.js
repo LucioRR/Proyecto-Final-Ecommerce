@@ -6,8 +6,7 @@ module.exports = {
     productAll: async (req, res) => {
         try {
             const products = await Product.findAll({include: {all: true}});
-            const brand = await Brand.findAll({include: {all: true}});
-            res.send(products);
+            res.render('product/productDetail', {products: products});;
         }
         catch (error) {
             res.status(500).send({message: error.message});
@@ -72,14 +71,13 @@ module.exports = {
     },
     modify: async (req, res) => {
         req.body.files = req.files;
-        //Se busca en la base de datos el producto a modificador
         try{
             let id = Number(req.body.id);
             //Se busca en la BD el producto a modificar
             let productToModify = await Product.findByPk(id);
             //Se busca el stock correspondiente al producto a modificar
-            let stockToModify = await Stock.findAll({where: {'product': id}});
-            console.log(stockToModify)
+            let stockToModify = await Stock.findOne({where: {product: id}});
+            console.log('Esto; ------>',stockToModify)
             //Se crea la marca o se le obtine si ya existe.
             let marcaEncontrada = await Brand.findOrCreate({ where :
                 {name: req.body.marca}
@@ -105,20 +103,20 @@ module.exports = {
                 ]},{
                     include: 'images'
                 });
-                //Se Crea o se modifica el color, según corresponda.
-                let color = await Color.findOrCreate({
-                    where: 
-                        {name: req.body.nombreColor}, 
-                    defaults: 
-                        {value: req.body.color}
-                });
-                //Se modifica el stock encontrado.
-                let stockModificated = await stockToModify.update({
-                    size: req.body.talle,
-                    stock: req.body.stock,
-                    product: req.params.id,
-                    color: color[0].dataValues.id
-                })
+            //Se Crea o se modifica el color, según corresponda.
+            let color = await Color.findOrCreate({
+                where: 
+                    {name: req.body.nombreColor}, 
+                defaults: 
+                    {value: req.body.color}
+            });
+            //Se modifica el stock encontrado.
+            let stockModificated = await stockToModify.update({
+                size: req.body.talle,
+                stock: req.body.stock,
+                product: req.params.id,
+                color: color[0].dataValues.id
+            })
             return res.redirect('/productos/' + req.body.id);
         } catch (error) {
             res.status(500).send({message: error.message})
@@ -128,6 +126,15 @@ module.exports = {
         let id = Number(req.params.id);
         try {
             res.render('product/productDetail', {producto_id: await Product.findByPk(id)});
+        } catch (error) {
+            res.status(500).send({message: error.message})
+        }
+    },
+    trash: async (req, res) => {
+        try {
+            let productToDelete = await Product.findByPk(req.body.id);
+            await productToDelete.destroy();
+            return res.redirect('/productos')
         } catch (error) {
             res.status(500).send({message: error.message})
         }

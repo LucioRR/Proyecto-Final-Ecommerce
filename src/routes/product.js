@@ -20,7 +20,7 @@ router.get('/editar/:id', update);
 router.put('/update',upload.array('imagen'), modify);
 
 //Elimina un producto
-// router.delete('/borrar',trash);
+router.delete('/borrar',trash);
 
 // Muestra un producto por id
 router.get('/:id', productDetail);
