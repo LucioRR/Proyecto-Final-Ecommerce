@@ -21,8 +21,8 @@
         <a href="/" class="link-logo">
             <img src="/assets/iconos/logo/logo-02.svg" alt="Logo Maria Cielo">
         </a>
-        <form action="">
-            <input type="search" id="search-bar" placeholder="Buscar">
+        <form action="buscar" method="get">
+            <input type="search" id="search-bar" placeholder="Buscar" name="q">
         </form>
         <% if(!locals.isLogged) { %>
         <a href="/users/login" class="iconos-menu icono-persona">

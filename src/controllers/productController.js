@@ -1,12 +1,14 @@
 // const {all, match, generate, create, update, trash} = require('../models/product')
 const {Product, Brand, Color, Stock} = require('../database/models')
+const { Op } = require("sequelize");
 
 
 module.exports = {
     productAll: async (req, res) => {
         try {
             const products = await Product.findAll({include: {all: true}});
-            res.render('product/productDetail', {products: products});;
+            console.log(products);
+            res.render('product/productDetail', {producto_id: products});;
         }
         catch (error) {
             res.status(500).send({message: error.message});
@@ -135,6 +137,21 @@ module.exports = {
             let productToDelete = await Product.findByPk(req.body.id);
             await productToDelete.destroy();
             return res.redirect('/productos')
+        } catch (error) {
+            res.status(500).send({message: error.message})
+        }
+    },
+    search: async(req, res) => {
+        try {
+            const word = req.query.q
+            let productsList = await Product.findAll({
+                where: {
+                    name:{
+                        [Op.like]: '%' + word + '%'
+                    }
+                }
+            })
+            res.render('product/allProducts', {productos: productsList});
         } catch (error) {
             res.status(500).send({message: error.message})
         }
