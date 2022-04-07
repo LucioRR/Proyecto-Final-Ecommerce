@@ -8,7 +8,7 @@ module.exports = {
         try {
             const products = await Product.findAll({include: {all: true}});
             console.log(products);
-            res.render('product/productDetail', {producto_id: products});;
+            res.render('product/allProducts', {productos: products});;
         }
         catch (error) {
             res.status(500).send({message: error.message});
@@ -145,6 +145,7 @@ module.exports = {
         try {
             const word = req.query.q
             let productsList = await Product.findAll({
+                include: {all: true},
                 where: {
                     name:{
                         [Op.like]: '%' + word + '%'
