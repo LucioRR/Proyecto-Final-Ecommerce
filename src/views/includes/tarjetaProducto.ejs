@@ -8,7 +8,7 @@
             <% } %> 
 
             
-            <img src="/assets/images/<%= producto.imagesUrl %>" alt="Imagen de producto 1">
+            <img src="/product/<%= producto.imagesUrl %>" alt="Imagen de producto 1">
         </a>
     </figure>
     <form class="btn-favorito" action="">
@@ -23,7 +23,7 @@
             <label for="precio">Precio:</label>
             <h2>$ <%= producto.price %>  </h2>
             <label for="marca">Marca:</label>
-            <h2> <%= producto.brand %>  </h2>
+            <h2> <%= producto.brand_id.name %>  </h2>
         </hgroup>
         <form class="btn-comprar" action="./<%= producto.id %>">
             <button>

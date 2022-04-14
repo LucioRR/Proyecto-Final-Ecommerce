@@ -21,6 +21,13 @@ module.exports = {
             let marcaEncontrada = await Brand.findOrCreate({ where :
                     { name: req.body.marca}
                 });
+                //Se Crea o se modifica el color, según corresponda.
+            let colorNew = await Color.findOrCreate({
+                where: 
+                    {name: req.body.nombreColor}, 
+                defaults: 
+                    {value: req.body.color}
+            });
             //Se crea el producto y se carga las imágenes
             let productNew = await Product.create({
                 name: req.body.nombre_producto,
@@ -29,6 +36,7 @@ module.exports = {
                 price: Number(req.body.precio),
                 active: req.body.activo == "activo" ? true : false,
                 brand: marcaEncontrada[0].dataValues.id,
+                color: colorNew[0].dataValues.id,
                 images: [
                     {
                         url: req.files[0].filename
@@ -42,13 +50,7 @@ module.exports = {
                 ]},{
                     include: 'images'
                 });
-            //Se Crea o se modifica el color, según corresponda.
-            let colorNew = await Color.findOrCreate({
-                where: 
-                    {name: req.body.nombreColor}, 
-                defaults: 
-                    {value: req.body.color}
-            });
+            
             //Se crea la tabla intermedia de Stock
             let stockNew = await Stock.create({
                 size: req.body.talle,
@@ -127,7 +129,7 @@ module.exports = {
     productDetail: async (req, res) => {
         let id = Number(req.params.id);
         try {
-            res.render('product/productDetail', {producto_id: await Product.findByPk(id)});
+            res.render('product/productDetail', {producto_id: await Product.findByPk(id, {include: {all: true}}) });
         } catch (error) {
             res.status(500).send({message: error.message})
         }
