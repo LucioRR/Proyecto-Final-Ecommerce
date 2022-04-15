@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         avatar:{
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         admin: {

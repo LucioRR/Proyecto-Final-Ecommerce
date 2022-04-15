@@ -1,8 +1,7 @@
-/*const path = require('path');
+const path = require('path');
 const {body} = require('express-validator');
 
 const valitations = [
-    body('nombre').notEmpty().withMessage('Tenes que escibrir un nombre'),
     body('email')
     .notEmpty().withMessage('Tenes que escibrir un email').bail()
     .isEmail().withMessage('Tenes que escribir un correo válido'),
@@ -19,8 +18,8 @@ const valitations = [
 ]
 
 module.exports = valitations;
-*/
 
+/*
 const { check } = require('express-validator');
 
 module.exports = [
@@ -60,4 +59,5 @@ module.exports = [
           .withMessage('Por favor, sube una imagen de extensión jpg, jpeg, png o gif')
       
 ]
-    
+
+*/

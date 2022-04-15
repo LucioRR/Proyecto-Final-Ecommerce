@@ -29,6 +29,11 @@ module.exports = (sequelize, DataTypes) => {
             otherKey: 'product',
             timestamps: false
         });
+
+        Image.hasMany(models.User, {    
+            as: 'avatar', 
+            foreignKey: 'avatar',
+            })
         
     }
     return Image;

@@ -22,7 +22,7 @@
                 <section class="register">
                     <h4>Regístrate para crear una cuenta</h4>
                     <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
-                            <label for="nombre-apellido"></label>
+                            <!-- <label for="nombre-apellido"></label>
                             <input id="nombreApellido" type="text" name="nombre" placeholder="Nombre y apellido"
                             value="<%= locals.oldData ? oldData.nombre : null %>">
                             <% if (locals.errors && errors.nombre) { %>
@@ -30,7 +30,7 @@
                                     <%= errors.nombre.msg %> 
                                 </p>
                             <% } %>
-                            
+                             -->
                             <label for="email"></label>
                             <input for="email" type="email" name="email" placeholder="E-mail"
                             value="<%= locals.oldData ? oldData.email : null %>" >
