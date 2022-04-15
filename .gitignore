@@ -80,4 +80,4 @@ recursos/
 
 
 #Carpeta de configuración de la DB
-database/config
+src/database/config
