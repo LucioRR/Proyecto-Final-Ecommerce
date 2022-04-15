@@ -12,16 +12,21 @@ const authMiddleware = require('../middlewares/authMiddleware')
 
 //Muestra la pantalla de login
 router.get('/login', guestMiddleware, login);
-// router.post('/login', processLogin);
+//Procesa el Login
+router.post('/login', processLogin);
 
 //Muestra la pantalla de registro
 router.get('/register', guestMiddleware, register);
 //Procesa el registro.
 router.post('/register', [upload.single('avatar')], valitations,  processRegister);
 
-//router.get('profile/edit/:userId', edit)
-// router.get('/profile', authMiddleware, profile)
 
-// router.get('/logout', logout)
+//Perfil de usuario
+router.get('/profile', authMiddleware, profile)
+// Editar el perfil de Usuario
+//router.get('profile/edit/:userId', edit)
+
+// Deslogueo
+router.get('/logout', logout)
 
 module.exports = router;

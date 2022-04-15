@@ -43,6 +43,48 @@ const userController = {
         }
     },
     login: (req, res) => res.render('users/login'),
+    processLogin: async (req, res) => {
+        try {
+            let userToLogin = await User.findOne({where: {email: req.body.email}});
+            if (userToLogin != null) {
+                let okPassword = bcryptjs.compareSync(req.body.password, userToLogin.hash);
+                if (okPassword){
+                    delete userToLogin.hash;
+                    req.session.userLogged = userToLogin;
+                    if (req.body.remember_user){
+                        res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2});
+                    }
+                    return res.redirect('/users/profile');
+                }
+                return res.render('users/login', {
+                    errors: {
+                        email: {
+                            msg: 'Las credenciales no son válidas'
+                        }
+                    }
+                });
+            }
+            return res.render('users/login', {
+                errors: {
+                    email: {
+                        msg: 'El usuario no se encuentra registrado.'
+                    }
+                }
+            });
+        } catch (errors) {
+            res.status(500).send({message: errors.message})
+        } 
+    },
+    profile: (req, res) => {
+        return res.render('users/userProfile', {   
+        user: req.session.userLogged
+        })
+    },
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/')    
+    }
 }
 
 // const userController = {
@@ -79,37 +121,37 @@ const userController = {
 //         return res.render('users/login')
 //     },
 //     login: (req, res) => res.render('users/login'),
-//     processLogin: (req, res) => {
-//         let userToLogin = user.findByField('email', req.body.email);
-//         if (userToLogin){
-//             let okPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-//             if (okPassword){
-//                 delete userToLogin.password;
-//                 delete userToLogin.confirm_password            
-//                 req.session.userLogged = userToLogin; 
+    // processLogin: (req, res) => {
+    //     let userToLogin = user.findByField('email', req.body.email);
+    //     if (userToLogin){
+    //         let okPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+    //         if (okPassword){
+    //             delete userToLogin.password;
+    //             delete userToLogin.confirm_password            
+    //             req.session.userLogged = userToLogin; 
 
-//                 if(req.body.remember_user){
-//                     res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
-//                 }
+    //             if(req.body.remember_user){
+    //                 res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
+    //             }
                 
-//                 return res.redirect('/users/profile')
-//             }
-//             return res.render('users/login', {
-//                 errors:{
-//                     email:{
-//                         msg: 'Las credenciales no son validas'
-//                     }
-//                 }
-//             });
-//         } 
-//         return res.render('users/login', {
-//             errors:{
-//                 email:{
-//                     msg: 'El email no se encuentra en nuestra bases de datos'
-//                 }
-//             }
-//         });
-//     },
+    //             return res.redirect('/users/profile')
+    //         }
+    //         return res.render('users/login', {
+    //             errors:{
+    //                 email:{
+    //                     msg: 'Las credenciales no son validas'
+    //                 }
+    //             }
+    //         });
+    //     } 
+    //     return res.render('users/login', {
+    //         errors:{
+    //             email:{
+    //                 msg: 'El email no se encuentra en nuestra bases de datos'
+    //             }
+    //         }
+    //     });
+    // },
     
 //     profile: (req, res) => {
 //         return res.render('users/userProfile', {   
