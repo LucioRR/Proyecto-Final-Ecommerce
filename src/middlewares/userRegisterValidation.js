@@ -35,6 +35,9 @@ module.exports = [
             const user = await User.findOne({where: {email: value }});
             if (user) throw 'El email ingresado ya existe.';
            }),
+    check('email_confirm')
+           .notEmpty().withMessage('El email debe ser igual al anterior.')
+           .isEmail().withMessage('Ingrese un email válido.'),
     check('password')
         .isLength({min:8}).withMessage('La contraseña debe contener al menos 8 caracteres'),
     check('confirm_password')
@@ -61,5 +64,3 @@ module.exports = [
           .withMessage('Por favor, sube una imagen de extensión jpg, jpeg, png o gif')
       
 ]
-
-
