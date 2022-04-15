@@ -1,3 +1,4 @@
+/*
 const path = require('path');
 const {body} = require('express-validator');
 
@@ -18,18 +19,20 @@ const valitations = [
 ]
 
 module.exports = valitations;
+*/
 
-/*
 const { check } = require('express-validator');
+const {User} = require('../database/models')
+const path = require('path');
 
 module.exports = [
-    check('nombre')
-        .notEmpty().withMessage('Ingrese nombre y apellido'),
+    // check('nombre')
+    //     .notEmpty().withMessage('Ingrese nombre y apellido'),
     check('email')
         .notEmpty().withMessage('Ingrese un email.')
         .isEmail().withMessage('Ingrese un email válido.')
         .custom(async (value, { req }) => {
-            const user = await User.findOne({ email: value });
+            const user = await User.findOne({where: {email: value }});
             if (user) throw 'El email ingresado ya existe.';
            }),
     check('password')
@@ -38,11 +41,10 @@ module.exports = [
         .isLength({min:8}).withMessage('La contraseña debe ser igual a la anterior'),
     check('avatar')
         .custom((value, {req}) => {
-            if(!(req.files.hasOwnProperty('image'))){
+            if(!(req.file.hasOwnProperty('filename'))){
               return false;
             }
-            var extension = (path.extname(req.files.image.name)).toLowerCase();
-            console.log(extension);
+            let extension = path.extname(req.file.filename);
             switch (extension) {
                 case  '.jpg':
                     return '.jpg';
@@ -52,7 +54,7 @@ module.exports = [
                     return '.png';
                 case  '.gif':
                     return '.gif';
-              default:
+                default:
                     return false;
             }
           })
@@ -60,4 +62,4 @@ module.exports = [
       
 ]
 
-*/
+

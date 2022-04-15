@@ -4,7 +4,7 @@ const multer = require('multer');
 const {register, processRegister, login, processLogin, profile, edit, logout} = require('../controllers/userController');
 const folder = require('../middlewares/storage');
 const upload = multer({storage: folder('user')});
-const valitations = require('../middlewares/userRegisterValidation')
+const validations = require('../middlewares/userRegisterValidation')
 const guestMiddleware = require('../middlewares/guestMiddleware')
 const authMiddleware = require('../middlewares/authMiddleware')
 
@@ -18,7 +18,7 @@ router.post('/login', processLogin);
 //Muestra la pantalla de registro
 router.get('/register', guestMiddleware, register);
 //Procesa el registro.
-router.post('/register', [upload.single('avatar')], valitations,  processRegister);
+router.post('/register', [upload.single('avatar')], validations,  processRegister);
 
 
 //Perfil de usuario
