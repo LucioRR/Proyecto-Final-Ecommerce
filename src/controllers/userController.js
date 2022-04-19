@@ -33,7 +33,7 @@ const userController = {
             let userCeated = await User.create({
                 email: req.body.email,
                 hash: bcryptjs.hashSync(req.body.password, 10),
-                avatar:  userAvatarCreated.id,
+                avatar: userAvatarCreated.id,
                 admin: false,
                 active: true,
             });
