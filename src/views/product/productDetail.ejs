@@ -57,7 +57,7 @@
             <!-- DETALLES -->
             <section class="contenedorDetalles">
                 <nav class="categorias">
-                    <a href="../productos">Inicio</a> - <a href="#"><%= producto_id.category_id.name %></a><p> - Amely | Cookie</p>
+                    <a href="../productos">Inicio</a> - <a href="#"><%= producto_id.category_id.name %></a><p> - <%= producto_id.brand_id.name %></p>
                 </nav>
                     <h2 class="tituloProducto"> <%= producto_id.name %>  </span></h2>
                     <h1 class="precio"> $ <%= producto_id.price %> <span style="font-size: 0.4em; color: black; text-decoration:line-through;">$8.000</span></h1>
@@ -85,13 +85,18 @@
                         </ul>
                     </fieldset>
                     <fieldset class="talle">
-                        <label for="talle">TALLE:</label>
-                        <select id="talle" name="eleccionTalle">
+                        <legend>TALLE:</legend>
+                        <label id="talle" name="eleccionTalle"> <%= stock.size_id.size %> </label>
+                        <!-- <select id="talle" name="eleccionTalle">
                             <option value="ochoCinco" selected>85</option>
                             <option value="nueveCero">90</option>
                             <option value="nueveCinco">95</option>
                             <option value="cien">100</option>
-                        </select>
+                        </select> -->
+                    </fieldset>
+                    <fieldset class="stock">
+                        <legend>DISPONIBLE:</legend>
+                        <label id="stock" name="stock"> <%= stock.stock %> unidades</label>
                     </fieldset>
                     <fieldset class="botonAgregar">
                         <button type="submit">Agregar al Carrito</button>

@@ -133,6 +133,7 @@ module.exports = {
             const product = await Product.findByPk(id, {include: {all: true}});
             const stock = await Stock.findOne({where: {product: id}});
             const stockCompleto = await Stock.findByPk(stock.id, {include: {all: true}});
+            //res.send({product})
             res.render('product/productDetail', {producto_id: product, stock: stockCompleto});
         } catch (error) {
             res.status(500).send({message: error.message})

@@ -19,10 +19,10 @@
     </form>
         <hgroup>
             
-            <h1> <%= producto.name %>  </h1>
-            <label for="precio">Precio:</label>
+            <h3> <%= producto.name %>  </h1>
+            <!-- <label for="precio">Precio:</label> -->
             <h2>$ <%= producto.price %>  </h2>
-            <label for="marca">Marca:</label>
+            <!-- <label for="marca">Marca:</label> -->
             <h2> <%= producto.brand_id.name %>  </h2>
         </hgroup>
         <form class="btn-comprar" action="./<%= producto.id %>">

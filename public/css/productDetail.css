@@ -80,6 +80,11 @@
   height: auto;
   font-size: 0.8em;
 }
+.tituloProducto {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--chocolate);
+}
 .categorias {
   display: flex;
   margin: 10px 0px;
@@ -91,7 +96,7 @@
 }
 .precio {
   color: var(--chocolate);
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .elecciones {
   display: flex;
@@ -106,10 +111,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
+    text-align: center;
+    width: 30%;
 }
-.elecciones fieldset label, .elecciones fieldset legend {
-  margin: 8px;
+.elecciones fieldset label {
+  margin: 8px 0px;
+} 
+.elecciones fieldset legend {
+  color: var(--camel);
+  margin: 8px 0px;
 }
 #color {
 	display: flex;
@@ -228,6 +238,7 @@ input[type="radio"][name="color"][value="color"] ~ label span {
   .elecciones {
     justify-content: space-around;
     font-size: 1em;
+    text-align: center;
   }
   .color {
     display: flex;
