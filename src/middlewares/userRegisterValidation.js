@@ -34,10 +34,10 @@ module.exports = [
         .custom(async (value, { req }) => {
             const user = await User.findOne({where: {email: value }});
             if (user) throw 'El email ingresado ya existe.';
-           }),
+            }),
     check('email_confirm')
-           .notEmpty().withMessage('El email debe ser igual al anterior.')
-           .isEmail().withMessage('Ingrese un email válido.'),
+            .notEmpty().withMessage('El email debe ser igual al anterior.')
+            .isEmail().withMessage('Ingrese un email válido.'),
     check('password')
         .isLength({min:8}).withMessage('La contraseña debe contener al menos 8 caracteres'),
     check('confirm_password')
@@ -45,7 +45,7 @@ module.exports = [
     check('avatar')
         .custom((value, {req}) => {
             if(!(req.file.hasOwnProperty('filename'))){
-              return false;
+                return false;
             }
             let extension = path.extname(req.file.filename);
             switch (extension) {
@@ -60,7 +60,6 @@ module.exports = [
                 default:
                     return false;
             }
-          })
-          .withMessage('Por favor, sube una imagen de extensión jpg, jpeg, png o gif')
-      
+        })
+        .withMessage('Por favor, sube una imagen de extensión jpg, jpeg, png o gif')
 ]

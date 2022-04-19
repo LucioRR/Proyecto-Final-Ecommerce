@@ -7,8 +7,9 @@ module.exports = {
     productAll: async (req, res) => {
         try {
             const products = await Product.findAll({include: {all: true}});
-            console.log(products);
-            res.render('product/allProducts', {productos: products});;
+            const stock = await Stock.findAll({include: {all: true}})
+            // res.send({products: products, stock: stock});
+            res.render('product/allProducts', {productos: products, stock: stock});
         }
         catch (error) {
             res.status(500).send({message: error.message});
@@ -129,7 +130,10 @@ module.exports = {
     productDetail: async (req, res) => {
         let id = Number(req.params.id);
         try {
-            res.render('product/productDetail', {producto_id: await Product.findByPk(id, {include: {all: true}}) });
+            const product = await Product.findByPk(id, {include: {all: true}});
+            const stock = await Stock.findOne({where: {product: id}});
+            const stockCompleto = await Stock.findByPk(stock.id, {include: {all: true}});
+            res.render('product/productDetail', {producto_id: product, stock: stockCompleto});
         } catch (error) {
             res.status(500).send({message: error.message})
         }

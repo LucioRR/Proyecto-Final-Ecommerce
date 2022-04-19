@@ -80,4 +80,4 @@ recursos/
 
 
 #Carpeta de configuración de la DB
-src/database/config
+src/database/config/config.js
