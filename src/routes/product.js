@@ -5,7 +5,7 @@ const multer = require('multer');
 const {productDetail, productCreate, productAll, productStorage, update, modify, trash, search} = require('../controllers/productController');
 const folder = require('../middlewares/storage');
 const upload = multer({storage: folder('product')});
-const validations = require('../middlewares/productCreateValidation')
+const validations = require('../middlewares/productCreateValidation');
 
 
 
@@ -14,7 +14,7 @@ router.get('/', productAll)
 
 // Crea un nuevo producto
 router.get('/crear', productCreate);
-router.post('/guardar', upload.array('imagen'), validations, productStorage);
+router.post('/crear', [upload.array('imagen')], validations, productStorage);
 
 //Edita un producto
 router.get('/editar/:id', update);

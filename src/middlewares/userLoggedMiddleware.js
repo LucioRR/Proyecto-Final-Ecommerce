@@ -4,7 +4,7 @@ module.exports = async (req, res, next) => {
     let user = null
     if(req.cookie && req.cookie.user){
         user = await User.findOne({where: {user: req.cookie.user}})
-        req. session.user = user;
+        req.session.user = user;
     }
 
     if(req.session.user){

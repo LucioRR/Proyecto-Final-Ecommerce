@@ -9,7 +9,7 @@
     <section class="newProduct">
     <img class="logo" src="/assets/iconos/logo/logo-02.svg " alt="Logo">
     <h1>CREAR PRODUCTO</h1>
-    <form id="createForm" action="/productos/guardar" enctype="multipart/form-data" target="_self" method="post" name="createForm">
+    <form id="createForm" action="/productos/crear" enctype="multipart/form-data" target="_self" method="post" name="createForm">
         <label for="categoria">Categoría:</label>
         <select id="categoria" name="categoria">
             <option value="1">BIKINIS</option>
@@ -19,33 +19,63 @@
             <option value="5">ACCESORIOS</option>
         </select>
         <label for="nombre_producto">Nombre del Producto:</label>
-        <input type="text" id="nombre_producto" name="nombre_producto">
+        <input type="text" id="nombre_producto" name="nombre_producto" 
+        value="<%= locals.oldData ? oldData.nombre_producto : null %>" >
+        <% if (locals.errors && errors.nombre_producto) { %>
+            <p>
+                <%= errors.nombre_producto.msg %> 
+            </p>
+        <% } %>
         <label for="marca">Marca:</label>
-        <input type="text" id="marca" name="marca">
+        <input type="text" id="marca" name="marca" 
+        value="<%= locals.oldData ? oldData.marca : null %>" >
+        <% if (locals.errors && errors.marca) { %>
+            <p>
+                <%= errors.marca.msg %> 
+            </p>
+        <% } %>
         <label for="descripcion">Descripción:</label>
-        <textarea name="descripcion" id="descripcion" rows="6"></textarea>
+        <textarea name="descripcion" id="descripcion" required rows="6" 
+        value="<%= locals.oldData ? oldData.descripcion : null %>" >
+            <% if (locals.errors && errors.descripcion) { %>
+                <p>
+                    <%= errors.descripcion.msg %> 
+                </p>
+            <% } %></textarea>
         <label for="precio">Precio final:</label>
-        <input type="text" id="precio" name="precio">
+        <input type="text" id="precio" name="precio" 
+        value="<%= locals.oldData ? oldData.precio : null %>" >
+        <% if (locals.errors && errors.precio) { %>
+            <p>
+                <%= errors.precio.msg %> 
+            </p>
+        <% } %>
         <label for="talle">Talle:</label>
         <select name="talle" id="talle">
             <option value="1"> S </option>
             <option value="2"> M </option>
             <option value="3"> L </option>
-            <option value="4"> Único </option>
+            <option value="4" selected> Único </option>
         </select>
         <label for="color">Color:</label>
-        <input type="color" id="color" name="color">
+        <input type="color" id="color" name="color" 
+        value="<%= locals.oldData ? oldData.color : null %>" >
         <label for="nombreColor">Nombre del Color:</label>
-        <input type="text" id="nombreColor" name="nombreColor">
+        <input type="text" id="nombreColor" name="nombreColor" 
+        value="<%= locals.oldData ? oldData.nombreColor : null %>" >
         <label for="stock">Stock Disponible:</label>
-        <input type="number" id="stock" name="stock" min="0" max="100">
+        <input type="number" id="stock" name="stock" min="0" max="100" 
+        value="<%= locals.oldData ? oldData.stock : null %>" >
+        <% if (locals.errors && errors.stock) { %>
+            <p>
+                <%= errors.stock.msg %> 
+            </p>
+        <% } %>
         <label for="imagen">Elige la Imagen Principal:</label>
         <input type="file"  id="imagen" name="imagen" accept="image/png, image/jpeg" multiple>
-<!--         <label for="imagenes">Elige las Imagenes Secundarias:</label>
-        <input type="file"  id="imagenes" name="imagenes" accept="image/png, image/jpeg" > -->
         <fieldset id="estado">
             <label for="estado">Estado:</label><br>
-            <input type="radio" id="activo" name="activo" value="activo">
+            <input type="radio" id="activo" name="activo" value="activo" checked>
             <label for="activo">Activo</label><br>
             <input type="radio" id="inactivo" name="activo" value="inactivo">
             <label for="inactivo">Inactivo</label>

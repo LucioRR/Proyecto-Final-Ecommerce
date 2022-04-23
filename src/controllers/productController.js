@@ -1,5 +1,6 @@
 // const {all, match, generate, create, update, trash} = require('../models/product')
 const {Product, Brand, Color, Stock} = require('../database/models')
+const {validationResult} = require('express-validator');
 const { Op } = require("sequelize");
 
 
@@ -18,6 +19,13 @@ module.exports = {
     productCreate: (req, res) => res.render('product/productCreate'),
     productStorage: async (req, res) => {
         try{
+            const resultValidation = validationResult(req);
+            if (resultValidation.errors.length > 0) {
+                return res.render('product/productCreate', {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body
+                });
+            };
             //Se crea la marca o se le obtine si ya existe.
             let marcaEncontrada = await Brand.findOrCreate({ where :
                     { name: req.body.marca}
