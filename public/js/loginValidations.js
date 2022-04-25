@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
     let form = document.querySelector('#login-form');
 
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", (event) => {
         let errors = new Map();
         let username = document.querySelector('#login-user');
         let password = document.querySelector('#login-password');
@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
 
         // Insercción de errores en el DOM
         if (errors.size > 0){
-            e.preventDefault();
+            event.preventDefault();
             if (errors.has('shortUser')){
                 userError.innerText = errors.get('shortUser');
                 username.style.backgroundColor = 'pink';
@@ -44,6 +44,5 @@ window.addEventListener('load', () => {
                 password.style.backgroundColor = 'pink';
             }
         }
-        
     });
 });

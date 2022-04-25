@@ -4,6 +4,7 @@
     <%- include ('../includes/head.ejs') %>
     <!-- CSS PARTICULAR -->
     <link rel="stylesheet" href="/css/productCreateEdit.css">
+    <!-- <script src="/js/productCreateValidations.js"></script> -->
 </head>
 <body>
     <section class="newProduct">
@@ -21,14 +22,16 @@
         <label for="nombre_producto">Nombre del Producto:</label>
         <input type="text" id="nombre_producto" name="nombre_producto" 
         value="<%= locals.oldData ? oldData.nombre_producto : null %>" >
+        <span id="nameError" class="error"></span>
         <% if (locals.errors && errors.nombre_producto) { %>
             <p>
                 <%= errors.nombre_producto.msg %> 
             </p>
         <% } %>
-        <label for="marca">Marca:</label>
-        <input type="text" id="marca" name="marca" 
+        <label for="marca" class="toHide">Marca:</label>
+        <input type="text" class="toHide" id="marca" name="marca" 
         value="<%= locals.oldData ? oldData.marca : null %>" >
+        <span id="brandError" class="error"></span>
         <% if (locals.errors && errors.marca) { %>
             <p>
                 <%= errors.marca.msg %> 
@@ -42,30 +45,34 @@
                     <%= errors.descripcion.msg %> 
                 </p>
             <% } %></textarea>
+        <span id="descriptionError" class="error"></span>
         <label for="precio">Precio final:</label>
         <input type="text" id="precio" name="precio" 
         value="<%= locals.oldData ? oldData.precio : null %>" >
+        <span id="priceError" class="error"></span>
         <% if (locals.errors && errors.precio) { %>
             <p>
                 <%= errors.precio.msg %> 
             </p>
         <% } %>
-        <label for="talle">Talle:</label>
-        <select name="talle" id="talle">
+        <label for="talle" class="toHide">Talle:</label>
+        <select name="talle" class="toHide" id="talle">
             <option value="1"> S </option>
             <option value="2"> M </option>
             <option value="3"> L </option>
             <option value="4" selected> Único </option>
         </select>
-        <label for="color">Color:</label>
-        <input type="color" id="color" name="color" 
+        <label for="color" class="toHide">Color:</label>
+        <input type="color" class="toHide" id="color" name="color" 
         value="<%= locals.oldData ? oldData.color : null %>" >
-        <label for="nombreColor">Nombre del Color:</label>
-        <input type="text" id="nombreColor" name="nombreColor" 
+        <label for="nombreColor" class="toHide">Nombre del Color:</label>
+        <input type="text" id="nombreColor" class="toHide" name="nombreColor" 
         value="<%= locals.oldData ? oldData.nombreColor : null %>" >
-        <label for="stock">Stock Disponible:</label>
-        <input type="number" id="stock" name="stock" min="0" max="100" 
+        <span id="colorError" class="error"></span>
+        <label for="stock" class="toHide">Stock Disponible:</label>
+        <input type="number" id="stock" class="toHide" name="stock" min="0" max="100" 
         value="<%= locals.oldData ? oldData.stock : null %>" >
+        <span id="stockError" class="error"></span>
         <% if (locals.errors && errors.stock) { %>
             <p>
                 <%= errors.stock.msg %> 
@@ -75,11 +82,13 @@
         <input type="file"  id="imagen" name="imagen" accept="image/png, image/jpeg" multiple>
         <fieldset id="estado">
             <label for="estado">Estado:</label><br>
-            <input type="radio" id="activo" name="activo" value="activo" checked>
+            <input type="radio" class="status" id="activo" name="activo" value="activo" checked>
             <label for="activo">Activo</label><br>
-            <input type="radio" id="inactivo" name="activo" value="inactivo">
+            <input type="radio" class="status" id="inactivo" name="activo" value="inactivo">
             <label for="inactivo">Inactivo</label>
-        </fieldset><br><br>
+        </fieldset><br>
+        <span id="statusError" class="error"></span>
+        <br>
         <input type="submit" id="guardar" value="Guardar">
     </form>
 </section>

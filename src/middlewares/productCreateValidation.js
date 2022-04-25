@@ -11,7 +11,7 @@ module.exports = [
         .notEmpty().withMessage('Ingrese una descripción del producto.')
         .isLength({min:20}).withMessage('La descripción debe contener al menos 20 caracteres.'),
     check('precio')
-        .isInt().withMessage('El precio debe ser un número.'),
+        .isFloat().withMessage('El precio debe ser un número.'),
     check('stock')
         .notEmpty().withMessage('Ingrese un número de stock.')
     // check('imagen')

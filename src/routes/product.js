@@ -14,7 +14,7 @@ router.get('/', productAll)
 
 // Crea un nuevo producto
 router.get('/crear', productCreate);
-router.post('/crear', [upload.array('imagen')], validations, productStorage);
+router.post('/crear', [upload.array('imagen')], validations ,productStorage);
 
 //Edita un producto
 router.get('/editar/:id', update);
