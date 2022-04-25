@@ -1,10 +1,34 @@
 window.addEventListener('load', () => {
     let form = document.querySelector('#createForm');
+    let category = document.querySelector('#categoria');
+    let toHide = document.querySelectorAll('.toHide');
+
+    // Modifica el front dependieno de la categoría.
+    category.addEventListener('change', () => {
+        if (category.value == '4'){
+            toHide.forEach(element => {
+                if (element.name == 'stock'){
+                    element.value = 0;
+                    console.log(element.name, element.value);
+                } else if (element.name == 'talle'){
+                    element.value = 4;
+                    console.log(element.name, element.value);
+                } else {
+                    element.value = 'N/A'
+                    console.log(element.name, element.value);
+                }
+                element.classList.add('disable');
+            })
+        } else {
+            toHide.forEach(element => {
+                element.classList.remove('disable');
+                element.value = ''
+            });
+        }
+    });
     
     form.addEventListener('submit', (event) => {
         let errors = new Map();
-        let category = document.querySelector('#categoria');
-        let toHide = document.querySelectorAll('.toHide');
         let productName = document.querySelector('#nombre_producto');
         let brand = document.querySelector('#marca');
         let description = document.querySelector('#descripcion');
@@ -14,29 +38,6 @@ window.addEventListener('load', () => {
         let status = document.querySelectorAll('.status');
         let flag = false;
 
-        // Modifica el front dependieno de la categoría.
-        category.addEventListener('change', () => {
-            if (category.value == '4'){
-                toHide.forEach(element => {
-                    if (element.name == 'stock'){
-                        element.value = 0;
-                        console.log(element.name, element.value);
-                    } else if (element.name == 'talle'){
-                        element.value = 4;
-                        console.log(element.name, element.value);
-                    } else {
-                        element.value = 'N/A'
-                        console.log(element.name, element.value);
-                    }
-                    element.classList.add('disable');
-                })
-            } else {
-                toHide.forEach(element => {
-                    element.classList.remove('disable');
-                    element.value = ''
-                });
-            }
-        });
 
         // Validaciones del producto.
         if (productName.value.length == 0) {

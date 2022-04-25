@@ -20,7 +20,6 @@ module.exports = {
     productStorage: async (req, res) => {
         try{
             const resultValidation = validationResult(req);
-            console.log(resultValidation.errors);
             if (resultValidation.errors.length > 0) {
                 return res.render('product/productCreate', {
                     errors: resultValidation.mapped(),
