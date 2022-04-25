@@ -1,5 +1,5 @@
 // const {all, match, generate, create, update, trash} = require('../models/product')
-const {Product, Brand, Color, Stock} = require('../database/models')
+const {Product, Brand, Color, Stock, Category} = require('../database/models')
 const {validationResult} = require('express-validator');
 const { Op } = require("sequelize");
 
@@ -77,7 +77,16 @@ module.exports = {
     update: async (req, res) => {
         const id = Number(req.params.id);
         try {
-            res.render('product/productEdit', {product_id: await Product.findByPk(id)});
+            const resultValidation = validationResult(req);
+            if (resultValidation.errors.length > 0) {
+                return res.render('product/productEdit', {
+                    errors: resultValidation.mappeeatd(),
+                    oldData: req.body
+                });
+            };
+            const products = await Product.findByPk(id, {include: {all: true}});
+            const stock = await Stock.findOne({where: {product: id}, include: {all: true}})
+            res.render('product/productEdit', {product_id: products, stock: stock});
         } catch (error) {
             res.status(500).send({message: error.message})
         }
@@ -121,7 +130,7 @@ module.exports = {
                 where: 
                     {name: req.body.nombreColor}, 
                 defaults: 
-                    {value: req.body.color}
+                    {value: req.body.pcolor}
             });
             //Se modifica el stock encontrado.
             let stockModificated = await stockToModify.update({
