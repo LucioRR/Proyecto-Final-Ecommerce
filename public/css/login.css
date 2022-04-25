@@ -75,3 +75,7 @@ border-radius: 24px;
 }
 
 
+.error{
+    color: red;
+    display: block;
+}
