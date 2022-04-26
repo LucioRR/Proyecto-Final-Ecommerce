@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
             errors.set('invalidPass', 'La contraña debe tener al menos un número, un símbolo, una mayúscula y una minuscula.')
         }
 
-        // Insercción de errores en el DOM
+        // Inserción de errores en el DOM
         if (errors.size > 0){
             event.preventDefault();
             if (errors.has('shortUser')){

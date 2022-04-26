@@ -21,7 +21,7 @@
                 </section>
                 <section class="register">
                     <h4>Regístrate para crear una cuenta</h4>
-                    <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
+                    <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data" id="register-form">
                             <!-- <label for="nombre-apellido"></label>
                             <input id="nombreApellido" type="text" name="nombre" placeholder="Nombre y apellido"
                             value="<%= locals.oldData ? oldData.nombre : null %>">
@@ -32,7 +32,7 @@
                             <% } %>
                              -->
                             <label for="email"></label>
-                            <input for="email" type="email" name="email" placeholder="E-mail"
+                            <input for="email" type="email" name="email" placeholder="E-mail" id="email"
                             value="<%= locals.oldData ? oldData.email : null %>" >
                             <% if (locals.errors && errors.email) { %>
                                 <p>
@@ -40,8 +40,9 @@
                                 </p>
                             <% } %>
                             <label for="email_confirm"></label>
-                            <input for="email_confirm" type="email" name="email_confirm" placeholder="Confirmá tu E-mail"
+                            <input for="email_confirm" type="email" name="email_confirm" placeholder="Confirmá tu E-mail" id="email_confirm"
                             value="<%= locals.oldData ? oldData.email_confirm : null %>">
+                            <span id="email-error" class="error"></span>
                             <% if (locals.errors && errors.email_confirm) { %>
                                 <p>
                                     <%= errors.email_confirm.msg %> 
