@@ -5,10 +5,13 @@
     <%- include('../includes/head.ejs') %>
     
     <!-- NORMALIZE CSS -->
-    <link rel="stylesheet" href="/css/normalize.css">
+    <!--<link rel="stylesheet" href="/css/normalize.css">-->
 
     <!-- CSS PARTICULAR -->
     <link rel="stylesheet" href="/css/register.css">
+    <script src='/js/userRegisterValidation.js'></script>
+
+    
 
 </head>
 <body>
@@ -21,7 +24,7 @@
                 </section>
                 <section class="register">
                     <h4>Regístrate para crear una cuenta</h4>
-                    <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data" id="register-form">
+                    <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data" id="registerForm">
                             <!-- <label for="nombre-apellido"></label>
                             <input id="nombreApellido" type="text" name="nombre" placeholder="Nombre y apellido"
                             value="<%= locals.oldData ? oldData.nombre : null %>">
@@ -34,15 +37,16 @@
                             <label for="email"></label>
                             <input for="email" type="email" name="email" placeholder="E-mail" id="email"
                             value="<%= locals.oldData ? oldData.email : null %>" >
+                            <span id="errorEmail" class="errors"></span>
                             <% if (locals.errors && errors.email) { %>
                                 <p>
                                     <%= errors.email.msg %> 
                                 </p>
                             <% } %>
                             <label for="email_confirm"></label>
-                            <input for="email_confirm" type="email" name="email_confirm" placeholder="Confirmá tu E-mail" id="email_confirm"
+                            <input for="email_confirm" type="email" name="email_confirm" placeholder="Confirmá tu E-mail" id="emailConfirm"
                             value="<%= locals.oldData ? oldData.email_confirm : null %>">
-                            <span id="email-error" class="error"></span>
+                            <span id="emailConfirmError" class="errors"></span>
                             <% if (locals.errors && errors.email_confirm) { %>
                                 <p>
                                     <%= errors.email_confirm.msg %> 
@@ -50,13 +54,15 @@
                             <% } %>
                             <label for="contraseña"></label>
                             <input id= "contraseña" type="password" name="password" placeholder="Elegí tu contraseña">
+                            <span id="passwordError" class="errors"></span>
                             <% if (locals.errors && errors.password) { %>
                                 <p>
                                     <%= errors.password.msg %> 
                                 </p>
                             <% } %>
                             <label for="contraseña_confirmar"></label>
-                            <input id="contraseña_confirmar" type="password" name="confirm_password" placeholder="Confirmá tu contraseña">
+                            <input id="contraseñaConfirmar" type="password" name="confirm_password" placeholder="Confirmá tu contraseña">
+                            <span id="passwordConfirmError" class="errors"></span>
                             <% if (locals.errors && errors.confirm_password) { %>
                                 <p>
                                     <%= errors.confirm_password.msg %> 
@@ -64,6 +70,7 @@
                             <% } %>
                             <label for="avatar"></label>
                             <input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg">
+                            <span id="avatarError"></span>
                             <% if (locals.errors && errors.avatar) { %>
                                 <p>
                                     <%= errors.avatar.msg %> 

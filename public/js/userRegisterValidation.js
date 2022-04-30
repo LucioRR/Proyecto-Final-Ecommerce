@@ -1,50 +1,82 @@
 window.addEventListener('load', () => {
-    let form = document.querySelector('#register-form');
+    let form = document.querySelector('#registerForm');
+    let errors = {};
+    let email = document.querySelector('#email');
+    let emailConfirm = document.querySelector('#emailConfirm');
+    let emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    let passRegex = /(?=^.{6,}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*/;
+    let password = document.querySelector('#contraseña');
+    let confirmPassword = document.querySelector('#contraseñaConfirmar');
+    let avatar = document.querySelector('#avatar');
+    let errorEmail = document.querySelector('#errorEmail');
+    let emailConfirmError = document.querySelector('#emailConfirmError');
+    let passwordError = document.querySelector('#passwordError');
+    let passwordConfirmError = document.querySelector('#passwordConfirmError');
+    let avatarError = document.querySelector('#avatarError');
 
-    form.addEventListener("submit", (event) => {
-        let errors = new Map();
-        let email = document.querySelector('#email');
-        let email_confirm = document.querySelector('#email-confirm');
-        let emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-        let passRegex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,})$/;
-        let password = document.querySelector('#contraseña');
-        let confirmPassword = document.querySelector('#contraseña_confirmar');
-        let emailError = document.querySelector('#email-error');
-        let passwordError = document.querySelector('#password-error');
-        //let avatar = document.querySelector('#avatar');
 
-        // Validador de email
-        if ( !emailRegex.test(email.value)) {
-            errors.set('invalidEmail', 'Ingrese un email válido')
-        } else if (email != email_confirm) {
-            errors.set('differentEmail', 'El email no coincide')
+    // Validador del campo email
+    email.addEventListener('blur', function(e){
+        if (email.value.length == 0){
+            errorEmail.innerHTML = 'Debe ingresar un email';
+            errors.email = 'Error al ingresar el email';
         }
+        else if( !emailRegex.test(e.target.value)){
+            errorEmail.innerHTML = 'Email Inválido';
+            errors.email = 'Error al ingresar el email';
+        } else {errorEmail.innerHTML = ''}
+    })
 
-        // Validador de campo de Password
-        if (password.value.length < 8) {
-            errors.set('shortPassword', 'Contraseña muy corta');
-        } else if (!emailRegex.test(password.value)) {
-            errors.set('invalidPassword', 'La contraseña debe contener al menos un número, un símbolo, una mayúscula y una minuscula.');
-        } else if (password != confirmPassword) {
-            errors.set('diferrentPassword', 'Las contraseñas no coinciden')
+    // Validador del campo confirmacion email
+    emailConfirm.addEventListener('blur', function(e){
+        if (emailConfirm.value.length == 0){
+            emailConfirmError.innerHTML = 'Debe ingresar un email';
+            errors.emailConfirmError = 'Error al ingresar el email';
         }
-
-        // Inserción de errores en el DOM
-        if (errors.size > 0){
-            event.preventDefault();
-            if (errors.has('invalidEmail')){
-                userError.innerText = errors.get('invalidEmail');
-                username.style.backgroundColor = 'camel';
-            }
-            if (errors.has('shortPassword')){
-                passwordError.innerText = errors.get('shortPassword');
-                password.style.backgroundColor = 'camel';
-            }
-            if (errors.has('invalidPassword')){
-                passwordError.innerText = errors.get('invalidPassword');
-                password.style.backgroundColor = 'camel';
-            }
+        else if( !emailRegex.test(e.target.value)){
+            emailConfirmError.innerHTML = 'Email Inválido';
+            errors.emailConfirmError = 'Error al ingresar el email';
         }
+        else if (emailConfirm.value != email.value){
+            emailConfirmError.innerHTML = 'El email ingresado debe ser igual al anterior';
+            errors.emailConfirmError = 'El email ingresado no coincide';
+        } else {emailConfirmError.innerHTML = ''}
+    })
 
-    });    
+    // Validador de campo de Password
+    password.addEventListener('blur', function(e){
+        if (password.value.length == 0){
+            passwordError.innerHTML = 'Debe ingresar una contraseña';
+            errors.password = 'Error al ingresar la contraseña';
+        }
+        else if( !passRegex.test(e.target.value)){
+            passwordError.innerHTML = 'Contraseña Inválido';
+            errors.password = 'Error al ingresar la contraseña';
+        } else {passwordError.innerHTML = ''}
+    })
+
+    // Validador del campo confirmacion Password
+    confirmPassword.addEventListener('blur', function(e){
+        if (confirmPassword.value.length == 0){
+            passwordConfirmError.innerHTML = 'Debe ingresar una contraseña';
+            errors.passwordConfirmError = 'Error al ingresar la contraseña';
+        }
+        else if( !passRegex.test(e.target.value)){
+            passwordConfirmError.innerHTML = 'Contraseña Inválida';
+            errors.passwordConfirmError = 'Error al ingresar la contraseña';
+        }
+        else if (confirmPassword.value != password.value){
+            passwordConfirmError.innerHTML = 'La contraseña ingresada debe ser igual a la anterior';
+            errors.passwordConfirmError = 'La contraseña ingresada no coincide';
+        } else {passwordConfirmError.innerHTML = ''}
+    })
+    
+
+    //Inserción de errores en el DOM
+    
+    if (Object.keys(errors).length > 0) {
+        e.preventDefault();
+    }
+
 });
+;
