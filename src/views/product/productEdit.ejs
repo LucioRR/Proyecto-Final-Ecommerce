@@ -23,23 +23,38 @@
         </select>
         <label for="nombre_producto">Nombre del Producto:</label>
         <input type="text" id="nombre_producto" name="nombre_producto" 
-        value="<%= locals.oldData ? oldData.product_id.name : product_id.name %>" >
+        value="<%= locals.oldData ? oldData.nombre_producto: product_id.name %>" >
         <span id="nameError" class="error"></span>
         <% if (locals.errors && errors.nombre_producto) { %>
             <p>
                 <%= errors.nombre_producto.msg %> 
             </p>
         <% } %>
-        <!-- value="<%= product_id.name %>" -->
         <label for="marca" class="toHide">Marca:</label>
-        <input type="text" id="marca" class="toHide" name="marca" value="<%= product_id.brand_id.name %>">
+        <input type="text" id="marca" class="toHide" name="marca" 
+        value="<%= locals.oldData ? oldData.marca: product_id.brand_id.name %>" >
         <span id="brandError" class="error"></span>
+        <% if (locals.errors && errors.marca) { %>
+            <p>
+                <%= errors.marca.msg %> 
+            </p>
+        <% } %>
         <label for="descripcion">Descripción:</label>
-        <textarea name="descripcion" id="descipcion" rows="6"><%= product_id.description %></textarea>
+        <textarea name="descripcion" id="descipcion" rows="6" value="<%= locals.oldData ? oldData.descripcion: product_id.description %>" ></textarea>
         <span id="descriptionError" class="error"></span>
+        <% if (locals.errors && errors.descripcion) { %>
+            <p>
+                <%= errors.descripcion.msg %> 
+            </p>
+        <% } %>
         <label for="precio">Precio final:</label>
-        <input type="text" id="precio" name="precio" value="<%= product_id.price %>">
+        <input type="text" id="precio" name="precio" value="<%= locals.oldData ? oldData.precio: product_id.price %>" >
         <span id="priceError" class="error"></span>
+        <% if (locals.errors && errors.price) { %>
+            <p>
+                <%= errors.price.msg %> 
+            </p>
+        <% } %>
         <label for="talle" class="toHide">Talle:</label>
         <select name="talle" class="toHide" id="talle">
             <option value="<%= stock.size %>" selected><%= stock.size_id.size %></option>
@@ -54,10 +69,15 @@
         <input type="text" id="nombreColor" class="toHide" name="nombreColor" value="<%= stock.color_id.name %>">
         <span id="colorError" class="error"></span>
         <label for="stock" class="toHide">Stock Disponible:</label>
-        <input type="number" id="stock" class="toHide" name="stock" min="0" max="100" value="<%= stock.stock %>">
+        <input type="number" id="stock" class="toHide" name="stock" min="0" max="100" value="<%= locals.oldData ? oldData.stock: stock.stock %>" >
         <span id="stockError" class="error"></span>
+        <% if (locals.errors && errors.stock) { %>
+            <p>
+                <%= errors.stock.msg %> 
+            </p>
+        <% } %>
         <label for="imagen">Elige las Imagenes:</label>
-        <input type="file"  id="imagen" name="imagen" accept="image/png, image/jpeg" multiple>       
+        <input type="file"  id="imagen" name="imagen" accept="image/png, image/jpeg" multiple required>       
         <fieldset id="estado">
             <label for="estado">Estado:</label><br>
             <input type="radio" class="status" id="activo" name="activo" value="activo" checked>

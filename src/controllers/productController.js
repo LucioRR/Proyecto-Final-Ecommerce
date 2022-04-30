@@ -80,7 +80,7 @@ module.exports = {
             const resultValidation = validationResult(req);
             if (resultValidation.errors.length > 0) {
                 return res.render('product/productEdit', {
-                    errors: resultValidation.mappeeatd(),
+                    errors: resultValidation.mapped(),
                     oldData: req.body
                 });
             };
@@ -92,6 +92,13 @@ module.exports = {
         }
     },
     modify: async (req, res) => {
+        const resultValidation = validationResult(req);
+            if (resultValidation.errors.length > 0) {
+                return res.render('product/productCreate', {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body
+                });
+            };
         req.body.files = req.files;
         try{
             let id = Number(req.body.id);
@@ -99,7 +106,6 @@ module.exports = {
             let productToModify = await Product.findByPk(id);
             //Se busca el stock correspondiente al producto a modificar
             let stockToModify = await Stock.findOne({where: {product: id}});
-            console.log('Esto; ------>',stockToModify)
             //Se crea la marca o se le obtine si ya existe.
             let marcaEncontrada = await Brand.findOrCreate({ where :
                 {name: req.body.marca}
@@ -150,7 +156,6 @@ module.exports = {
             const product = await Product.findByPk(id, {include: {all: true}});
             const stock = await Stock.findOne({where: {product: id}});
             const stockCompleto = await Stock.findByPk(stock.id, {include: {all: true}});
-            //res.send({product})
             res.render('product/productDetail', {producto_id: product, stock: stockCompleto});
         } catch (error) {
             res.status(500).send({message: error.message})

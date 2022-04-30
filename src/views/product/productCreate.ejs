@@ -79,7 +79,13 @@
             </p>
         <% } %>
         <label for="imagen">Elige la Imagen Principal:</label>
-        <input type="file"  id="imagen" name="imagen" accept="image/png, image/jpeg" multiple>
+        <input type="file"  id="imagen" name="imagen" accept="image/png, image/jpeg" multiple 
+        value="<%= locals.oldData ? oldData.imagen : null %>" >
+        <% if (locals.errors && errors.imagen) { %>
+            <p>
+                <%= errors.imagen.msg %> 
+            </p>
+        <% } %>
         <fieldset id="estado">
             <label for="estado">Estado:</label><br>
             <input type="radio" class="status" id="activo" name="activo" value="activo" checked>
