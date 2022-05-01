@@ -1,7 +1,14 @@
 <article class="producto producto-foco">
     <figure>
         <a href="./<%= producto.id %>">
-            <img src="/product/<%= producto.imagen %>" alt="Imagen de producto 1">
+            <% if (producto.images[0] == undefined) { %>
+                <% producto.imagesUrl = null %>  
+            <% } else { %>
+                <% producto.imagesUrl = producto.images[0].url %>  
+            <% } %> 
+
+            
+            <img src="/product/<%= producto.imagesUrl %>" alt="Imagen de producto 1">
         </a>
     </figure>
     <form class="btn-favorito" action="">
@@ -12,11 +19,11 @@
     </form>
         <hgroup>
             
-            <h1> <%= producto.nombre_producto %>  </h1>
-            <label for="precio">Precio:</label>
-            <h2>$ <%= producto.precio %>  </h2>
-            <label for="marca">Marca:</label>
-            <h2> <%= producto.marca %>  </h2>
+            <h3> <%= producto.name %>  </h1>
+            <!-- <label for="precio">Precio:</label> -->
+            <h2>$ <%= producto.price %>  </h2>
+            <!-- <label for="marca">Marca:</label> -->
+            <h2> <%= producto.brand_id.name %>  </h2>
         </hgroup>
         <form class="btn-comprar" action="./<%= producto.id %>">
             <button>

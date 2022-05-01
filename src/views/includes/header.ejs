@@ -21,12 +21,19 @@
         <a href="/" class="link-logo">
             <img src="/assets/iconos/logo/logo-02.svg" alt="Logo Maria Cielo">
         </a>
-        <form action="">
-            <input type="search" id="search-bar" placeholder="Buscar">
+        <form action="/productos/buscar" method="get">
+            <input type="search" id="search-bar" placeholder="Buscar" name="q">
         </form>
-        <a href="/register" class="iconos-menu icono-persona">
+        <% if(!locals.isLogged) { %>
+        <a href="/users/login" class="iconos-menu icono-persona">
             <img src="/assets/iconos/usuario/person.svg" alt="Icono Usuario">
         </a>
+        <% } %>
+        <% if(locals.isLogged) { %>
+            <a href="/users/logout" class="iconos-menu icono-persona">
+                <img src="/user/<%= user.avatar %>" alt="Icono Usuario">
+            </a>
+            <% } %>  
         <a href="#search" class="iconos-menu icono-search">
             <img src="/assets/iconos/search/search.svg" alt="Icono Buscar">
         </a>

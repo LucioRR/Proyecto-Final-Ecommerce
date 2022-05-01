@@ -16,9 +16,9 @@
     <!-- CSS PARTICULAR -->
     <link rel="stylesheet" href="css/userProfile.css">
         <main>
-            <h1 class="bienvenida">Hola <%= user.fullName %>
+            <h1 class="bienvenida">Hola <%= user.email %>
             </h1>
-            <img src="/upload/user<%= user.avatar %> ">
+            <img src="/user/<%= user.avatar.url %>">
             <br>
             <br>
             <div class="alert alert-succes">
@@ -26,6 +26,9 @@
             </div>
             <form>
                 <button class="btn" type="submit">EDITAR PERFIL</button>
+            </form>
+            <form action="/users/logout" method="GET">
+                <button class="btn" type="submit">CERRAR SESIÓN</button>
             </form>
         </main>
         <!-- Footer -->

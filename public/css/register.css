@@ -46,6 +46,10 @@ main h4{
     display: none;
   }
 
+.errors {
+  color: red;
+}
+
 @media (min-width: 769px) {
   .container {
       display: flex;

@@ -1,8 +1,14 @@
+.todo-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
 .producto {
     text-align: center;
     position: relative;
     opacity: 0.3;
-    min-width: 70%;
+    width: 45%;
 }
 
 .producto-foco{
@@ -10,7 +16,6 @@
 }
 
 .producto figure {
-    width: 40%;
     height: auto;
     border-radius: 20px;
     overflow: hidden;
@@ -52,8 +57,8 @@
 
 .producto hgroup h3 {
     margin: 0 auto 10px;
-    letter-spacing: -1px;
-    font-size: 14px;
+    font-size: 2em;
+    color: #663333
 }
 
 .btn-comprar {
@@ -76,4 +81,9 @@
 .btn-comprar button img {
     margin-right: 5px;
     width: 15px;
+}
+@media (max-width: 769px) {
+ .producto {
+     width: 90%;
+ }
 }

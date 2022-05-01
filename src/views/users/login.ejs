@@ -4,19 +4,24 @@
 <head>
     <%- include ("../includes/head.ejs")  %> 
     <link rel="stylesheet" href="/css/login.css">
+    <script src='/js/loginValidations.js'></script>
 </head>
 
 <body>
     <%- include ("../includes/header.ejs") %> 
-    <form action="/users/login" method="POST" class="form-box">
+    <form action="/users/login" method="POST" class="form-box" id="login-form">
         <h1 class="form-title">Login</h1>
-        <input type="text" placeholder="Username" name='email' autofocus>
+        <input type="text" placeholder="Username" name='email' autofocus id="login-user">
+        <span id="user-error" class="error"></span>
         <% if (locals.errors && errors.email) { %>
          <p> 
              <%= errors.email.msg %> 
          </p>
         <% } %>
-        <input type="password" name='password' placeholder="Password">
+        <input type="password" name='password' placeholder="Password" id="login-password">
+        <span id="password-error" class="error"></span>
+        <label for = " ">Recordarme</label>
+        <input type="checkbox" name="remember_user">
         <button type="submit">
             Sing Login
         </button>
