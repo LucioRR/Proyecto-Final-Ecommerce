@@ -5,6 +5,7 @@ module.exports = {
     index: async (req, res) => {
         try {
             let allUsers = await User.findAll({include: {all: true}});
+            let lastUser = await User.findAll({order: [['id', 'DESC']], limit: 1});
 
             return res.status(200).json({
                 count: allUsers.length,
@@ -13,7 +14,8 @@ module.exports = {
                     email: user.email,
                     detail: 'localhost:3000/api/users/' + user.id,
                     })
-                )
+                ),
+                lastUser: lastUser
             }
             );
         } catch (error) {

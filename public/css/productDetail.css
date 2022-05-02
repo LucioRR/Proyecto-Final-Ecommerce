@@ -114,16 +114,20 @@
     text-align: center;
     width: 30%;
 }
+
 .elecciones fieldset label {
   margin: 8px 0px;
-} 
+}
+
 .elecciones fieldset legend {
   color: var(--camel);
   margin: 8px 0px;
 }
+
 #color {
 	display: flex;
 }
+
 #color li {
 	display: flex;
 	flex-wrap: wrap;
@@ -137,52 +141,60 @@
 	border-radius: 2rem;
   cursor: pointer;
 }
+
 input[type="radio"][name="color"]:checked ~ label span {
 	border: 1px solid #000;
 }
-input[type="radio"][name="color"][value="color"] ~ label span {
 
+input[type="radio"][name="color"][value="color"] ~ label span {
 	width: 2rem;
 	height: 2rem;
 	display: flex;
 }
+
 .color{
   text-align: center;
 }
 .color input {
   box-shadow: 1px 1px 2px 1px rgb(0 0 0 / 20%);
   border-radius: 5px;
-  }
+}
+
 .talle select {
   box-shadow: 1px 1px 2px 1px rgb(0 0 0 / 20%);
   border-radius: 5px;
-  }
-  .botonAgregar {
-    display: flex;
-    justify-content: center;
-  }
-  .botonAgregar button {
-    border: 2px solid var(--camel);
-    background-color: var(--camel);
-    color: white;
-    border-radius: 10px;
-    padding: 5px;
-    margin: 10px;
-    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
-    transition:all;
-    cursor: pointer;
-  }
-  .botonAgregar button:hover{
-    background-color: var(--chocolate);
-    border: 2px solid var(--chocolate);
-  }
+}
+
+.botonAgregar {
+  display: flex;
+  justify-content: center;
+}
+
+.botonAgregar button {
+  border: 2px solid var(--camel);
+  background-color: var(--camel);
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+  transition:all;
+  cursor: pointer;
+}
+
+.botonAgregar button:hover{
+  background-color: var(--chocolate);
+  border: 2px solid var(--chocolate);
+}
 
 
 /* DESCRIPCIÓN */
 .descripcion {
   font-size: 0.8em;
   margin: 10px;
-  color: var(--chocolate);}
+  color: var(--chocolate);
+}
+
 .descripcion summary {
   font-size: 1.2em;
 }

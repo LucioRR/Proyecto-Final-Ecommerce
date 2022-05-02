@@ -72,30 +72,32 @@
                 <img src="/assets/images/black-friday.jpg" alt="Black Friday Banner" class="separador">
                 <h2 class="titulo-seccion">SALE! SALE! SALE!</h2>
                 <section class="seccion-productos">
-                    <article class="producto prod-1">
-                        <figure>
-                            <a href="/producto">
-                                <img src="/assets/images/img2.jpg" alt="Imagen de producto 1">
-                            </a>
-                        </figure>
-                        <form class="btn-favorito" action="">
-                            <input type="checkbox" name="favorito" id="favorito" value="true">
-                            <label for="favorito">
-                                <img src="/assets/iconos/corazones/corazones-04-rosa.svg" alt="Corazón Favorito">
-                            </label>
-                        </form>
-                        <hgroup>
-                            <h2>MARCA</h2>
-                            <h3>Nombre de Producto</h3>
-                            <h2>$10.000</h2>
-                        </hgroup>
-                        <form class="btn-comprar" action="">
-                            <button>
-                                <img src="/assets/iconos/bag/bag-plus-blco.svg" alt="Icono de Carrito +">
-                                COMPRAR
-                            </button>
-                        </form>
-                    </article>
+                    <% sales.forEach(producto => { %>
+                        <article class="producto prod-1">
+                            <figure>
+                                <a href="/producto">
+                                    <img src="/assets/images/img2.jpg" alt="Imagen de producto 1">
+                                </a>
+                            </figure>
+                            <form class="btn-favorito" action="">
+                                <input type="checkbox" name="favorito" id="favorito" value="true">
+                                <label for="favorito">
+                                    <img src="/assets/iconos/corazones/corazones-04-rosa.svg" alt="Corazón Favorito">
+                                </label>
+                            </form>
+                            <hgroup>
+                                <h2>MARCA</h2>
+                                <h3>Nombre de Producto</h3>
+                                <h2>$10.000</h2>
+                            </hgroup>
+                            <form class="btn-comprar" action="">
+                                <button>
+                                    <img src="/assets/iconos/bag/bag-plus-blco.svg" alt="Icono de Carrito +">
+                                    COMPRAR
+                                </button>
+                            </form>
+                        </article>
+                    <% }) %>
 
                     <article class="producto producto-foco">
                         <figure>

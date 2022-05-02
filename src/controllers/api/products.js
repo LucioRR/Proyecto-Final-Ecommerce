@@ -6,15 +6,17 @@ module.exports = {
         try {
             let allProducts = await Product.findAll();
             let allCategories = await Category.findAll({include: {all: true}});
+            let lastProduct = await Product.findAll({order: [['id', 'DESC']], limit: 1});
 
             return res.status(200).json({
                 count: allProducts.length,
                 countByCategory: allCategories.map(category => Object({
                     id: category.id, 
                     name: category.name, 
-                    count: category.products.length
+                    count: category.products.length,
                 })),
                 products: allProducts,
+                lastProduct: lastProduct,
                 status: 200
             });
             
