@@ -47,3 +47,5 @@ app.use(require('./routes/main'));
 app.use('/productos', require('./routes/product'));
 app.use('/users', require('./routes/user'));
 app.use(require('./routes/cart'));
+app.use('/api/products', require('./routes/apiProduct'));
+app.use('/api/users', require('./routes/apiUser'));
