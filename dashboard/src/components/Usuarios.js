@@ -18,6 +18,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const Usuarios = () => {
     
     const [cantidad, setCantidad] = useState(null)
+    const [nuevo, setNuevo] = useState([])
     
     
 
@@ -31,6 +32,7 @@ const Usuarios = () => {
         console.log("datos", usuarios)
         
         setCantidad(usuarios.count)
+        setNuevo(usuarios.lastUser)
         
         
     }
@@ -43,7 +45,17 @@ const Usuarios = () => {
                     <Grid item xs={5}>
                         <Item><h2>Cantidad de Usuarios: <br />{cantidad}</h2></Item>
                     </Grid>
-                    
+                    <Grid item xs={5}>
+                        <Item>
+                            <h2>Ultimo Usuario Creado: 
+                            {
+                                nuevo.map(item => (
+                                    <li key={item.id}>Email: {item.email}</li>
+                                ))
+                            }
+                            </h2>
+                        </Item>
+                    </Grid>
                 </Grid>
             </Box>
 
