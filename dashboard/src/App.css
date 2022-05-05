@@ -1,5 +1,6 @@
 body{
     text-align: center;
+    background-color: lavender;
 }
 .title{
     font-weight: bolder;
@@ -15,17 +16,13 @@ nav a {
     width: 30px;
 }
 .botonNav {
-    background-color: #663333;
-    width: 20%;
     text-align: center;
-    font-size: 2rem;
-    color: #cb997e;
-    border-radius: 20px;
-    border: 1px solid #663333; 
+    font-size: 1rem;
+    color: white;
 }
-/* .products {
-    background-color: yellow
+h1 {
+    color:midnightblue
 }
-.users {
-    background-color: rebeccapurple
-} */
+li, h2{
+ color:darkslategray
+}
