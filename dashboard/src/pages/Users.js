@@ -1,11 +1,10 @@
+import Usuarios from '../components/Usuarios';
+
 function Users() {
     return(
         <>
-            <h1>
-                USUARIOS
-            </h1>
             <p>
-                Total de Usuarios: ¿?
+                <Usuarios />
             </p>
         </>
     );
