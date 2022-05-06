@@ -8,17 +8,22 @@
 .producto {
     text-align: center;
     position: relative;
-    opacity: 0.3;
+    opacity: 1;
     width: 45%;
     margin-right: 20px;
+    height: 360px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.producto-foco{
-    opacity: 1;
+.producto-desenfoco{
+    opacity: 0.3;
 }
 
 .producto figure {
-    height: auto;
+    height: 200px;
     border-radius: 20px;
     overflow: hidden;
     margin: 0 auto;
@@ -26,12 +31,9 @@
     box-sizing: border-box;
 }
 
-.producto figure a {
-    margin-left: -3px;
-}
-
 .producto figure a img {
     width: 103%;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -54,12 +56,13 @@
 }
 
 .producto hgroup h2 {
-    font-weight: bold;
+    font-weight: lighter;
+    font-size:0.8rem;
 }
 
 .producto hgroup h3 {
     margin: 0 auto 10px;
-    font-size: 2em;
+    font-size: 1em;
     color: #663333
 }
 

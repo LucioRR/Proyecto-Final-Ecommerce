@@ -1,5 +1,5 @@
 const path = require('path');
-const {Product, Brand, Color, Stock, Category} = require('../database/models')
+const {Product} = require('../database/models')
 
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
             }
             return rValue;
         }
-
+        
         try {
             const allProducts = await Product.findAll({include: {all: true}});
             const sales = await Product.findAll({order: [['price', 'ASC']],
@@ -27,7 +27,7 @@ module.exports = {
                                                     });
             const loveIt = randomList(allProducts, 5);
             
-            res.send({
+            res.render('main/index', {
                 sales: sales,
                 forYou: forYou,
                 newArrivals: newArrivals,

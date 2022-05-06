@@ -48,7 +48,6 @@ footer{
 }
 
 .secciones-footer nav a{
-    width: 100%;
     display: flex;
     flex-direction: row;
     text-transform: uppercase;
@@ -100,6 +99,9 @@ footer{
     height: 100%;
 }
 
+.contact-email{
+    font-size: 0.7rem;
+}
 
 @media (min-width: 769px) {
     footer{

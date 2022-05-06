@@ -45,7 +45,7 @@ const userController = {
     login: (req, res) => res.render('users/login'),
     processLogin: async (req, res) => {
         try {
-            let userToLogin = await User.findOne({where: {email: req.body.email}});
+            let userToLogin = await User.findOne({where: {email: req.body.email}, include: {all: true}});
             if (userToLogin != null) {
                 let okPassword = bcryptjs.compareSync(req.body.password, userToLogin.hash);
                 if (okPassword){
@@ -76,6 +76,7 @@ const userController = {
         } 
     },
     profile: (req, res) => {
+
         return res.render('users/userProfile', {   
         user: req.session.userLogged
         })
