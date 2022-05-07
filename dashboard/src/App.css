@@ -1,6 +1,6 @@
 body{
     text-align: center;
-    background-color: lavender;
+    background-color: white;
 }
 .title{
     font-weight: bolder;
@@ -18,11 +18,20 @@ nav a {
 .botonNav {
     text-align: center;
     font-size: 1rem;
-    color: white;
+    color:white ;
 }
 h1 {
-    color:midnightblue
+    color:black;
+    margin-bottom: 75px
 }
-li, h2{
- color:darkslategray
+li {
+    color:#fbe9e7;
+    text-align: justify;
+    margin-bottom: 12px
+}
+h2{
+ color:#fbe9e7
+}
+.grid {
+    background-color: #d0ada7
 }

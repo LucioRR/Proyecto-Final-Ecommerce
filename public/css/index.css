@@ -175,6 +175,7 @@ a{
     margin: 50px auto 20px;
     text-align: center;
     font-weight: lighter;
+    overflow: hidden;
 }
 
 .seccion-productos {
@@ -186,6 +187,7 @@ a{
 
 .los-mas-vendidos{
     text-align: center;
+    overflow: hidden;
 }
 
 /* SEPARADORES */

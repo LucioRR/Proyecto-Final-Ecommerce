@@ -1,4 +1,4 @@
-const {User, Image} = require('../../database/models')
+const {User} = require('../../database/models')
 
 
 module.exports = {
