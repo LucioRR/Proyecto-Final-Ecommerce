@@ -182,7 +182,8 @@ module.exports = {
                     }
                 }
             })
-            res.render('product/allProducts', {productos: productsList});
+            const categories = await Category.findAll()
+            res.render('product/allProducts', {productos: productsList, categories: categories});
         } catch (error) {
             res.status(500).send({message: error.message})
         }

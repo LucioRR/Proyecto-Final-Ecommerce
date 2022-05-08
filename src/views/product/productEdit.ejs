@@ -40,7 +40,7 @@
             </p>
         <% } %>
         <label for="descripcion">Descripción:</label>
-        <textarea name="descripcion" id="descipcion" rows="6" value="<%= locals.oldData ? oldData.descripcion: product_id.description %>" ></textarea>
+        <textarea name="descripcion" id="descipcion" rows="6" value="<%= locals.oldData ? oldData.descripcion: product_id.description %>" ><%= locals.oldData ? oldData.descripcion: product_id.description %></textarea>
         <span id="descriptionError" class="error"></span>
         <% if (locals.errors && errors.descripcion) { %>
             <p>

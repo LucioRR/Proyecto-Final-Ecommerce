@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
         if(password.value.length < 8){
             errors.set('shortPass','Contraseña muy corta');
         }else if(!passRegex.test(password.value)){
-            errors.set('invalidPass', 'La contraña debe tener al menos un número, un símbolo, una mayúscula y una minuscula.')
+            errors.set('invalidPass', 'La contraña debe tener al menos un número, un símbolo y una minuscula.')
         }
 
         // Inserción de errores en el DOM

@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
             errorEmail.innerHTML = 'Debe ingresar un email';
             errors.email = 'Error al ingresar el email';
         }
-        else if( !emailRegex.test(e.target.value)){
+        else if(!emailRegex.test(e.target.value)){
             errorEmail.innerHTML = 'Email Inválido';
             errors.email = 'Error al ingresar el email';
         } else {errorEmail.innerHTML = ''}
@@ -49,8 +49,8 @@ window.addEventListener('load', () => {
             passwordError.innerHTML = 'Debe ingresar una contraseña';
             errors.password = 'Error al ingresar la contraseña';
         }
-        else if( !passRegex.test(e.target.value)){
-            passwordError.innerHTML = 'Contraseña Inválido';
+        else if(!passRegex.test(e.target.value)){
+            passwordError.innerHTML = 'Contraseña Inválida';
             errors.password = 'Error al ingresar la contraseña';
         } else {passwordError.innerHTML = ''}
     })

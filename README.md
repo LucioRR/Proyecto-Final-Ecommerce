@@ -10,7 +10,7 @@ sitio. También agregar una breve descripción del público al que apunta el sit
 
 Enlace al tablero de trabajo: https://trello.com/grupo7dgecommercecelestial
 
-Nuestro sitio es para la reconocida empresa “Maria Cielo” de accesorios y lencería, la cual tiene como objetivo ofrecer  los mejores productos, con diseños exclusivos que reflejan y resaltan la personalidad de mujeres soñadoras, auténticas, apasionadas, libres, extrovertidas e independientes.
+Nuestro sitio es para la reconocida empresa “Maria Cielo” de accesorios y lencería, la cual tiene como objetivo ofrecer los mejores productos, con diseños exclusivos que reflejan y resaltan la personalidad de mujeres soñadoras, auténticas, apasionadas, libres, extrovertidas e independientes.
 El sitio web va destinado:
 -Mujeres
 -Principalmente jóvenes(15-40)
