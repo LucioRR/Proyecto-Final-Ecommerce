@@ -10,6 +10,12 @@
 
         <!-- CSS TARJETAS DE PRODUCTO -->
         <link rel="stylesheet" href="/css/tarjetaProducto.css">
+
+        <link rel="stylesheet" href="/css/lightslider.css">
+
+        <script type="text/javascript" src="/js/jquery.js"></script>
+
+        <script type="text/javascript" src="/js/lightslider.js"></script>
 </head>
 
 <body>
@@ -72,39 +78,13 @@
                 <img src="/assets/images/black-friday.jpg" alt="Black Friday Banner" class="separador">
                 <h2 class="titulo-seccion">SALE! SALE! SALE!</h2>
                 <section class="seccion-productos">
-                    <div class="btn-slider btn-slider-left">&#60;</div>
-                    <% sales.forEach(product => { %>
-                        <% if (product.images[0] == undefined) { %>
-                            <% product.imagesUrl = null %>  
-                        <% } else { %>
-                            <% product.imagesUrl = product.images[0].url %>  
-                        <% } %> 
-                        <article class="producto producto-foco">
-                            <figure>
-                                <a href="/productos/<%= product.id %>">
-                                    <img src="/product/<%= product.imagesUrl %>" alt="Imagen de <%= product.name %> ">
-                                </a>
-                            </figure>
-                            <form class="btn-favorito" action="">
-                                <input type="checkbox" name="favorito" id="favorito" value="true">
-                                <label for="favorito">
-                                    <img src="/assets/iconos/corazones/corazones-04-rosa.svg" alt="Corazón Favorito">
-                                </label>
-                            </form>
-                            <hgroup>
-                                <h2><%= product.brand_id.name %> </h2>
-                                <h3><%= product.name %> </h3>
-                                <h2>$ <%= product.price %> </h2>
-                            </hgroup>
-                            <form class="btn-comprar" action="">
-                                <button>
-                                    <img src="/assets/iconos/bag/bag-plus-blco.svg" alt="Icono de Carrito +">
-                                    COMPRAR
-                                </button>
-                            </form>
-                        </article>
-                    <% }) %>
-                    <div class="btn-slider btn-slider-rigth">&#62;</div>
+                    <ul id="autoWidth" class="cs-hidden">
+                        <% sales.forEach(product => { %>
+                        <li class="item-<%= product.id %> ">
+                            <%- include ('../includes/tarjetaProducto.ejs', {producto: product})  %>
+                        </li>
+                        <% }) %>
+                    </ul>
                 </section>
             </section>
 
@@ -118,37 +98,13 @@
                 <img src="/assets/images/fashion-store.jpg" alt="Black Friday Banner" class="separador">
                 <h2 class="titulo-seccion">FOR YOU FOR YOU FOR YOU</h2>
                 <section class="seccion-productos">
-                    <% forYou.forEach(product => { %>
-                        <% if (product.images[0] == undefined) { %>
-                            <% product.imagesUrl = null %>  
-                        <% } else { %>
-                            <% product.imagesUrl = product.images[0].url %>  
-                        <% } %> 
-                        <article class="producto prod-1">
-                            <figure>
-                                <a href="/productos/<%= product.id %>">
-                                    <img src="/product/<%= product.imagesUrl %>" alt="Imagen de <%= product.name %>">
-                                </a>
-                            </figure>
-                            <form class="btn-favorito" action="">
-                                <input type="checkbox" name="favorito" id="favorito" value="true">
-                                <label for="favorito">
-                                    <img src="/assets/iconos/corazones/corazones-04-rosa.svg" alt="Corazón Favorito">
-                                </label>
-                            </form>
-                            <hgroup>
-                                <h2><%= product.brand_id.name %> </h2>
-                                <h3><%= product.name %> </h3>
-                                <h2>$ <%= product.price %> </h2>
-                            </hgroup>
-                            <form class="btn-comprar" action="">
-                                <button>
-                                    <img src="/assets/iconos/bag/bag-plus-blco.svg" alt="Icono de Carrito +">
-                                    COMPRAR
-                                </button>
-                            </form>
-                        </article>
-                    <% }) %>
+                    <ul id="autoWidth2" class="cs-hidden">
+                        <% forYou.forEach(product => { %>
+                        <li class="item-<%= product.id %> ">
+                            <%- include ('../includes/tarjetaProducto.ejs', {producto: product})  %>
+                        </li>
+                        <% }) %>
+                    </ul>
                 </section>
             </section>
 
@@ -157,37 +113,13 @@
                 <p class="subtitulo-especial">Descubrí las nuevas colecciones de esta tempoda</p>
 
                 <section class="seccion-productos">
-                    <% newArrivals.forEach(product => { %>
-                        <% if (product.images[0] == undefined) { %>
-                            <% product.imagesUrl = null %>  
-                        <% } else { %>
-                            <% product.imagesUrl = product.images[0].url %>  
-                        <% } %> 
-                        <article class="producto">
-                            <figure>
-                                <a href="/productos/<%= product.id %>">
-                                    <img src="/product/<%= product.imagesUrl %>" alt="Imagen de <%= product.name %>">
-                                </a>
-                            </figure>
-                            <form class="btn-favorito" action="">
-                                <input type="checkbox" name="favorito" id="favorito" value="true">
-                                <label for="favorito">
-                                    <img src="/assets/iconos/corazones/corazones-04-rosa.svg" alt="Corazón Favorito">
-                                </label>
-                            </form>
-                            <hgroup>
-                                <h2><%= product.brand_id.name %> </h2>
-                                <h3><%= product.name %> </h3>
-                                <h2>$ <%= product.price %> </h2>
-                            </hgroup>
-                            <form class="btn-comprar" action="">
-                                <button>
-                                    <img src="/assets/iconos/bag/bag-plus-blco.svg" alt="Icono de Carrito +">
-                                    COMPRAR
-                                </button>
-                            </form>
-                        </article>
-                    <% }) %>
+                    <ul id="autoWidth3" class="lanzamientosFlex cs-hidden">
+                        <% newArrivals.forEach(product => { %>
+                        <li class="item-<%= product.id %> ">
+                            <%- include ('../includes/tarjetaProducto.ejs', {producto: product})  %> 
+                        </li>
+                        <% }) %>
+                    </ul>
                 </section>
             </section>
 
@@ -195,37 +127,13 @@
                 <img src="/assets/images/summer-sale.jpg" alt="Black Friday Banner" class="separador">
                 <h2 class="titulo-seccion">YOU'LL LOVE IT!</h2>
                 <section class="seccion-productos">
-                    <% loveIt.forEach(product => { %>
-                        <% if (product.images[0] == undefined) { %>
-                            <% product.imagesUrl = null %>  
-                        <% } else { %>
-                            <% product.imagesUrl = product.images[0].url %>  
-                        <% } %> 
-                        <article class="producto">
-                            <figure>
-                                <a href="/productos/<%= product.id %>">
-                                    <img src="/product/<%= product.imagesUrl %>" alt="Imagen de <%= product.name %>">
-                                </a>
-                            </figure>
-                            <form class="btn-favorito" action="">
-                                <input type="checkbox" name="favorito" id="favorito" value="true">
-                                <label for="favorito">
-                                    <img src="/assets/iconos/corazones/corazones-04-rosa.svg" alt="Corazón Favorito">
-                                </label>
-                            </form>
-                            <hgroup>
-                                <h2><%= product.brand_id.name %> </h2>
-                                <h3><%= product.name %> </h3>
-                                <h2>$ <%= product.price %> </h2>
-                            </hgroup>
-                            <form class="btn-comprar" action="">
-                                <button>
-                                    <img src="/assets/iconos/bag/bag-plus-blco.svg" alt="Icono de Carrito +">
-                                    COMPRAR
-                                </button>
-                            </form>
-                        </article>
-                    <% }) %>
+                    <ul id="loveItSlider" class="cs-hidden">
+                        <% loveIt.forEach(product => { %>
+                        <li class="item-<%= product.id %> ">
+                            <%- include ('../includes/tarjetaProducto.ejs', {producto: product})  %>
+                        </li>
+                        <% }) %>
+                    </ul>
                 </section>
             </section>
 
@@ -293,6 +201,8 @@
             });
         </script>
 
+        <!-- JS Slider de productos -->
+        <script src="/js/slider.js"></script>
 </body>
 
 </html>

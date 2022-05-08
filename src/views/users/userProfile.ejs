@@ -14,22 +14,26 @@
     <%- include('../includes/header.ejs') %>
 
     <!-- CSS PARTICULAR -->
-    <link rel="stylesheet" href="css/userProfile.css">
+    <link rel="stylesheet" href="/css/userProfile.css">
         <main>
-            <h1 class="bienvenida">Hola <%= user.email %>
+        <article class = "container">
+            <h1 class="bienvenida">Bienvenido/a <%= user.email %>
             </h1>
-            <img src="/user/<%= user.avatar_id.url %>">
+            <img src="/user/<%= user.avatar_id.url %>" class="circleImage">
             <br>
             <br>
-            <div class="alert alert-succes">
-                <%= user.email %>
-            </div>
-            <form>
-                <button class="btn" type="submit">EDITAR PERFIL</button>
-            </form>
+            <!--<div class="alert alert-succes">
+                <%= user.email %> 
+            </div> -->
+            <br>
+            <article class="containerBtn">
+            <form class="userProfileRegister">
+                    <button class="btn" type="submit">EDITAR PERFIL</button>
+            </form> 
             <form action="/users/logout" method="GET">
-                <button class="btn" type="submit">CERRAR SESIÓN</button>
+                    <button class="btn" type="submit">CERRAR SESIÓN</button>    
             </form>
+        </article>
         </main>
         <!-- Footer -->
         <%- include('../includes/footer.ejs') %>

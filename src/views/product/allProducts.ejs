@@ -36,7 +36,18 @@
             </section>
 
             <section id="filtro">
-                <details>
+                <!-- <details> -->
+                    <summary class="categoryTitle">Categorías</summary>
+                    <form>
+                        <% categories.forEach(category => { %>
+                            <label for="check<%= category.id %>"><%= category.name %></label>
+                            <input type="checkbox" name="check<%= category.id %>" id="check<%= category.id %>">
+                        <% }) %>
+                        <label for="checkTodos">TODOS</label>
+                        <input type="checkbox" name="checkTodos" id="checkTodos">
+                    </form>
+                <!-- </details> -->
+                <!-- <details>
                     <summary>Ordenar por</summary>
                     <form>
                         <label for="precio-bajo">Precio más bajo</label>
@@ -64,17 +75,10 @@
                 <details>
                     <summary>Marca</summary>
                     <form>
-                        <label for="marca-1">Marca 1</label>
-                        <input type="checkbox" name="marca-1" id="marca-1">
-
-                        <label for="marca-2">Marca 2</label>
-                        <input type="checkbox" name="marca-2" id="marca-2">
-
-                        <label for="marca-3">Marca 3</label>
-                        <input type="checkbox" name="marca-3" id="marca-3">
-
-                        <label for="marca-4">Marca 4</label>
-                        <input type="checkbox" name="marca-4" id="marca-4">
+                        <% productos.forEach(product => { %>
+                            <label for="<%= product.brand_id.name %> "><%= product.brand_id.name %></label>
+                            <input type="checkbox" name="<%= product.brand_id.name %>" id="<%= product.brand_id.name %>">
+                        <% }) %>
                     </form>
                 </details>
                 <details>
@@ -86,7 +90,7 @@
                         <label for="501-inf">Mas de $500</label>
                         <input type="checkbox" name="501-inf" id="501-inf">
                     </form>
-                </details>
+                </details> -->
                 <a href="#" class="btn-cerrar btn-cerrar-izq">
                     <img src="/assets/iconos/cerrar/x-bca.svg" alt="Icono de cerrar">
                 </a>
@@ -101,6 +105,8 @@
 
         <!-- FOOTER -->
         <%- include ('../includes/footer.ejs') %>
+
+        <script src="/js/filters.js"></script>
 </body>
 
 </html>

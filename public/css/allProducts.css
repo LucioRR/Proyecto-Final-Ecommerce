@@ -87,5 +87,26 @@
 
 #filtro form label {
     padding: 12px 20px;
+    cursor: pointer;
 }
 
+#filtro form label:hover{
+    background-color: var(--camel);
+    color: white;
+    font-weight: bolder;
+}
+
+.todo-productos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+
+.categoryTitle {
+    font-weight: bolder;
+    color: white;
+    background-color: var(--chocolate);
+    text-align: center;
+    text-transform: uppercase;
+}
