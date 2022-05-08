@@ -115,5 +115,23 @@ Retrospectiva Sprint 6:
 ¿Qué deberíamos dejar de hacer?
 * Postergar la distribución de las tareas o hacer la misma cuando no estamos todos presentes.
 
+---------------------------------------------------------------------
 
+Retrospectiva Sprint 7:
 
+¿Qué deberíamos empezar a hacer en el siguiente sprint?
+
+* Retomar la comunicación entre los miembros del equipo. 
+* Volver a reunirnos semanalmente para conocer el estado y avance de las tareas.
+* Aceptar las responsabilidades de las tareas y el compromiso de resolverlas a tiempo por parte de todos los miembros del equipo.
+
+¿Qué deberíamos seguir haciendo?
+
+* Lograr un concenso a la hora de tomar decisiones.
+
+¿Qué deberíamos dejar de hacer?
+
+* Centralizar las tareas mas complejas en los mismos integrantes del equipo.
+* No priorizar la realización de una tarea que se encuentra atrasada.
+* No buscar soluciones con tiempo para destrabar el inconveniente que obtaculiza la realización de una tarea.
+* Postergar la distribución de las tareas y la actualización de Trello.
