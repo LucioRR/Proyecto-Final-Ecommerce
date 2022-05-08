@@ -1,95 +1,148 @@
-.todo-productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
+@font-face {
+    font-family: 'Century';
+    src: url("../fonts/century/century.ttf") format("truetype");
 }
 
-.producto {
-    text-align: center;
-    position: relative;
-    opacity: 1;
-    width: 45%;
-    margin-right: 20px;
-    height: 360px;
-    min-height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+@font-face {
+    font-family: 'Museo-Sans';
+    src: url("../fonts/museo/museo-sans-100.otf") format("truetype");
 }
 
-.producto-desenfoco{
-    opacity: 0.3;
+@font-face {
+    font-family: 'Montserrt Light';
+    src: url("../fonts/montserrat/Montserrat-Light.ttf") format("truetype");
 }
 
-.producto figure {
-    height: 200px;
-    border-radius: 20px;
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url("../fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+
+:root{
+    --chocolate: #663333; 
+    --camel: #cb997e; 
+    --piel: #ddbea9; 
+    --rosaViejo: #d0ada7; 
+    --verde: #b7b7a4; 
+    --celeste: #e2eafc;
+    --gris: #b6b6b6;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.box {
+    width: 300px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    border-radius: 10px;
     overflow: hidden;
-    margin: 0 auto;
-    border: 2px solid var(--gris);
+    margin: 25px;
+}
+
+.slider-img{
+    height: 450px;
+    position: relative;
+}
+
+.slider-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     box-sizing: border-box;
 }
 
-.producto figure a img {
-    width: 103%;
-    height: 250px;
-    object-fit: cover;
+.detail-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-family: calibri;
+    background-color:var(--rosaViejo);
+    
 }
 
-#favorito {
-    display: none;
+.type {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.btn-favorito label {
-    position: absolute;
-    top: 10px;
-    right: 30px;
-}
-
-.btn-favorito label img {
-    width: 25px;
-}
-
-.producto hgroup {
-    margin-top: 10px;
-}
-
-.producto hgroup h2 {
-    font-weight: lighter;
-    font-size:0.8rem;
-}
-
-.producto hgroup h3 {
-    margin: 0 auto 10px;
-    font-size: 1em;
-    color: #663333
-}
-
-.btn-comprar {
-    margin: 10px;
-}
-
-.btn-comprar button {
-    padding: 5px 14px;
+.type h2 {
     color: white;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--camel);
+    margin: 5px 0px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+}
+
+.type h3 {
+    color: rgba(26,26,25,0.5);
+}
+
+.price {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: poppins;
+    letter-spacing: 0.5px;
+}
+
+.overlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(203, 153, 126, 0.5);
     display: flex;
     justify-content: center;
-    align-content: center;
-    margin: 0 auto;
-    font-weight: bold;
+    align-items: center;
 }
 
-.btn-comprar button img {
-    margin-right: 5px;
-    width: 15px;
+.buy-btn {
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    color: #252525;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: calibri;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
 }
-@media (min-width: 769px) {
 
- .producto {
-     width: 90%;
- }
+.buy-btn:hover {
+    color: #FFFFFF;
+    background-color: var(--camel);
+    transition: all ease 0.3s;
+}
+
+.overlay {
+    visibility: hidden;
+}
+
+.slider-img:hover .overlay{
+    visibility: visible;
+    animation: fade 0.5s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
 }

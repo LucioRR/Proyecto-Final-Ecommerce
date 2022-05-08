@@ -1,34 +1,20 @@
-<article class="producto producto-foco">
-    <figure>
-        <a href="./<%= producto.id %>">
-            <% if (producto.images[0] == undefined) { %>
-                <% producto.imagesUrl = null %>  
-            <% } else { %>
-                <% producto.imagesUrl = producto.images[0].url %>  
-            <% } %> 
-
-            
-            <img src="/product/<%= producto.imagesUrl %>" alt="Imagen de producto 1">
-        </a>
-    </figure>
-    <form class="btn-favorito" action="">
-        <input type="checkbox" name="favorito" id="favorito" value="true">
-        <label for="favorito">
-            <img src="/assets/iconos/corazones/corazones-04-rosa.svg" alt="Corazón Favorito">
-        </label>
-    </form>
-        <hgroup>
-            
-            <h3> <%= producto.name %>  </h1>
-            <!-- <label for="precio">Precio:</label> -->
-            <h2>$ <%= producto.price %>  </h2>
-            <!-- <label for="marca">Marca:</label> -->
-            <h2> <%= producto.brand_id.name %>  </h2>
-        </hgroup>
-        <form class="btn-comprar" action="./<%= producto.id %>">
-            <button>
-                <img src="/assets/iconos/bag/bag-plus-blco.svg" alt="Icono de Carrito +">
-                COMPRAR
-            </button>
+<article class="box category<%= producto.category %>">
+    <% if (producto.images[0] == undefined) { %>
+        <% producto.imagesUrl = null %>  
+    <% } else { %>
+        <% producto.imagesUrl = producto.images[0].url %>  
+    <% } %> 
+    <figure class="slider-img">
+        <img src="/product/<%= producto.imagesUrl %>" alt="Imagen de <%= producto.name %>">
+        <form class="overlay">
+            <a href="/productos/<%= producto.id %>" class="buy-btn">Comprar</a>
         </form>
+    </figure>
+    <href class="detail-box">
+        <div class="type">
+            <h2><%= producto.name %></h2>
+            <h3><%= producto.brand_id.name %></h3>
+        </div>
+        <h2 class="price"><%= producto.price %></>
+    </href>
 </article>

@@ -178,10 +178,16 @@ a{
     overflow: hidden;
 }
 
+.lanzamientosFlex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    list-style: none;
+}
+
 .seccion-productos {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
     position: relative;
 }
 
@@ -323,8 +329,7 @@ a{
     }
 
     .seccion-productos{
-        width: 45%;
-        z-index: -1;
+        width: 50%;
     }
 
     .prod-1{
@@ -356,3 +361,4 @@ a{
         flex-direction: row;
     }
 }
+

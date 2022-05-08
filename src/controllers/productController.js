@@ -9,8 +9,9 @@ module.exports = {
         try {
             const products = await Product.findAll({include: {all: true}});
             const stock = await Stock.findAll({include: {all: true}})
-            // res.send({products: products, stock: stock});
-            res.render('product/allProducts', {productos: products, stock: stock});
+            const categories = await Category.findAll()
+            // res.send({categories: categories, products: products, stock: stock});
+            res.render('product/allProducts', {productos: products, stock: stock, categories: categories});
         }
         catch (error) {
             res.status(500).send({message: error.message});
