@@ -22,7 +22,7 @@ module.exports = {
                                             });
             const forYou = randomList(allProducts, 5);
             const newArrivals = await Product.findAll({order: [['id', 'DESC']],
-                                                    limit: 5,
+                                                    limit: 8,
                                                     include: {all: true}
                                                     });
             const loveIt = randomList(allProducts, 5);

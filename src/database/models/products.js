@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
                allowNull: false
           },
           price:{
-               type: DataTypes.DECIMAL(5, 2),
+               type: DataTypes.DECIMAL,
                allowNull: false
           },
           active:{

@@ -10,24 +10,31 @@ let checkMU = document.querySelector('#check4');
 let checkAcc = document.querySelector('#check5');
 let checkTodos = document.querySelector('#checkTodos');
 let query = new URLSearchParams(location.search);
+let rutaProductos = document.querySelector('.rutaProductos');
+
 
 if (query.has('cat')){
     let category = query.get('cat')
     if (category == 1) {
         checkBikini.checked = true;
-        changeBikiniStatus()
+        changeBikiniStatus();
+        rutaProductos.innerHTML = '/ BIKINIS';
     }else if (category == 2) {
         checkPP.checked = true;
         changePPStatus()
+        rutaProductos.innerHTML = '/ PRIMERAS PIELES';
     } else if (category == 3) {
         checkSP.checked = true;
         changeSPStatus()
+        rutaProductos.innerHTML = '/ SEGUNDAS PIELES';
     } else if (category == 4) {
         checkMU.checked = true;
+        rutaProductos.innerHTML = '/ MAKE UP';
         changeMUStatus()
     } else if (category == 5) {
         checkAcc.checked = true;
         changeAccStatus()
+        rutaProductos.innerHTML = '/ ACCESORIOS';
     }
 }
 
@@ -191,6 +198,7 @@ checkBikini.addEventListener('change', () => {
     changeMUStatus();
     changeAccStatus();
     changeBikiniStatus();
+    rutaProductos.innerHTML = '/ BIKINIS';
 })
 
 checkPP.addEventListener('change', () => {
@@ -203,6 +211,7 @@ checkPP.addEventListener('change', () => {
     changeMUStatus();
     changeAccStatus();
     changePPStatus();
+    rutaProductos.innerHTML = '/ PRIMERAS PIELES';
 })
 
 checkSP.addEventListener('change', () => {
@@ -215,6 +224,7 @@ checkSP.addEventListener('change', () => {
     changeMUStatus();
     changeAccStatus();
     changeSPStatus();
+    rutaProductos.innerHTML = '/ SEGUNDAS PIELES';
 })
 
 checkMU.addEventListener('change', () => {
@@ -227,6 +237,7 @@ checkMU.addEventListener('change', () => {
     changeSPStatus();
     changeAccStatus();
     changeMUStatus();
+    rutaProductos.innerHTML = '/ MAKE UP';
 })
 
 checkAcc.addEventListener('change', () => {
@@ -239,6 +250,7 @@ checkAcc.addEventListener('change', () => {
     changeSPStatus();
     changeMUStatus();
     changeAccStatus();
+    rutaProductos.innerHTML = '/ ACCESORIOS';
 })
 
 checkTodos.addEventListener('change', () => {
@@ -252,4 +264,5 @@ checkTodos.addEventListener('change', () => {
     changeSPStatus();
     changeMUStatus();
     changeAccStatus();
+    rutaProductos.innerHTML = '';
 })

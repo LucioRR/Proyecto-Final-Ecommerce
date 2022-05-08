@@ -1,0 +1,240 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+
+TRUNCATE TABLE `brands`;
+INSERT INTO `brands` (`id`, `name`) VALUES
+(21, 'F´EVER Classics '),
+(22, 'DEMI'),
+(23, 'Love Moon'),
+(24, 'CHARMS'),
+(25, 'Make Up By Gri'),
+(26, 'Red Stone'),
+(27, 'Almond'),
+(28, 'Hipster'),
+(29, 'Brillos'),
+(30, 'Abalorios'),
+(31, 'Loreal'),
+(32, 'Dior'),
+(33, 'Leg Bob'),
+(34, 'FULL COVERAGE'),
+(35, 'Euro'),
+(36, 'Black Ribbed'),
+(37, 'Vouge');
+
+TRUNCATE TABLE `categories`;
+INSERT INTO `categories` (`id`, `name`) VALUES
+(1, 'Bikinis'),
+(2, 'Primeras Pieles'),
+(3, 'Segundas Pieles'),
+(4, 'Make Up'),
+(5, 'Accesorios');
+
+TRUNCATE TABLE `colors`;
+INSERT INTO `colors` (`id`, `name`, `value`) VALUES
+(17, 'Blanco', '#ffffff'),
+(18, 'Negro', '#000000'),
+(19, 'Dorado', '#fefb00'),
+(20, 'Magenta', '#ff40ff'),
+(21, 'Rojo', '#ff2600'),
+(22, 'Camel', '#aa7941'),
+(23, 'Verde', '#00f900'),
+(24, 'Rosa Pálido', '#ff89d8'),
+(25, 'Aqua', '#0096ff'),
+(26, 'Verde Pálido', '#d4fb78'),
+(27, 'Melón', '#ffd478'),
+(28, 'Hielo', '#73fdff'),
+(29, 'Cielo', '#75d5ff'),
+(30, 'Rosa', '#eb3d92'),
+(31, 'Lata', '#919191');
+
+TRUNCATE TABLE `images`;
+INSERT INTO `images` (`id`, `url`) VALUES
+(119, 'imagen-1652013371197-.png'),
+(120, 'imagen-1652013371212-.png'),
+(121, 'imagen-1652013371219-.png'),
+(122, 'imagen-1652014323759-.png'),
+(123, 'imagen-1652014323770-.png'),
+(124, 'imagen-1652014323778-.png'),
+(125, 'imagen-1652014588812-.png'),
+(126, 'imagen-1652014588829-.png'),
+(127, 'imagen-1652014588837-.png'),
+(128, 'imagen-1652015388272-.png'),
+(129, 'imagen-1652015388286-.png'),
+(130, 'imagen-1652015388306-.png'),
+(131, 'imagen-1652016071342-.png'),
+(132, 'imagen-1652016071349-.png'),
+(133, 'imagen-1652016071356-.png'),
+(134, 'imagen-1652016593847-.png'),
+(135, 'imagen-1652016593869-.png'),
+(136, 'imagen-1652016593923-.png'),
+(137, 'imagen-1652016929269-.png'),
+(138, 'imagen-1652016929283-.png'),
+(139, 'imagen-1652016929286-.png'),
+(140, 'imagen-1652017111025-.png'),
+(141, 'imagen-1652017111043-.png'),
+(142, 'imagen-1652017111033-.png'),
+(143, 'imagen-1652017754650-.png'),
+(144, 'imagen-1652017754662-.png'),
+(145, 'imagen-1652017754668-.png'),
+(146, 'imagen-1652018040111-.png'),
+(147, 'imagen-1652018040128-.png'),
+(148, 'imagen-1652018040135-.png'),
+(149, 'imagen-1652018304448-.png'),
+(150, 'imagen-1652018304433-.png'),
+(151, 'imagen-1652018304457-.png'),
+(152, 'imagen-1652018589440-.png'),
+(153, 'imagen-1652018589456-.png'),
+(154, 'imagen-1652018589469-.png'),
+(155, 'imagen-1652018883794-.png'),
+(156, 'imagen-1652018883804-.png'),
+(157, 'imagen-1652018883828-.png'),
+(158, 'imagen-1652019203761-.png'),
+(159, 'imagen-1652019203854-.png'),
+(160, 'imagen-1652019203887-.png'),
+(161, 'imagen-1652019659648-.png'),
+(162, 'imagen-1652019659660-.png'),
+(163, 'imagen-1652019659665-.png'),
+(164, 'imagen-1652019939601-.png'),
+(165, 'imagen-1652019939612-.png'),
+(166, 'imagen-1652019939616-.png'),
+(167, 'imagen-1652020493372-.png'),
+(168, 'imagen-1652020493389-.png'),
+(169, 'imagen-1652020493400-.png'),
+(170, 'imagen-1652020949578-.png'),
+(171, 'imagen-1652020949603-.png'),
+(172, 'imagen-1652020949633-.png'),
+(173, 'imagen-1652021157594-.png'),
+(174, 'imagen-1652021157603-.png'),
+(175, 'imagen-1652021157627-.png'),
+(176, 'imagen-1652021423815-.png'),
+(177, 'imagen-1652021423851-.png'),
+(178, 'imagen-1652021423832-.png');
+
+TRUNCATE TABLE `imagesProducts`;
+INSERT INTO `imagesProducts` (`id`, `image`, `product`) VALUES
+(97, 119, 52),
+(99, 120, 52),
+(98, 121, 52),
+(100, 122, 53),
+(101, 123, 53),
+(102, 124, 53),
+(103, 125, 54),
+(105, 126, 54),
+(104, 127, 54),
+(106, 128, 55),
+(107, 129, 55),
+(108, 130, 55),
+(109, 131, 56),
+(110, 132, 56),
+(111, 133, 56),
+(112, 134, 57),
+(113, 135, 57),
+(114, 136, 57),
+(115, 137, 58),
+(116, 138, 58),
+(117, 139, 58),
+(118, 140, 59),
+(119, 141, 59),
+(120, 142, 59),
+(121, 143, 60),
+(122, 144, 60),
+(123, 145, 60),
+(124, 146, 61),
+(125, 147, 61),
+(126, 148, 61),
+(128, 149, 62),
+(127, 150, 62),
+(129, 151, 62),
+(131, 152, 63),
+(130, 153, 63),
+(132, 154, 63),
+(133, 155, 64),
+(134, 156, 64),
+(135, 157, 64),
+(136, 158, 65),
+(138, 159, 65),
+(137, 160, 65),
+(139, 161, 66),
+(140, 162, 66),
+(141, 163, 66),
+(143, 164, 67),
+(142, 165, 67),
+(144, 166, 67),
+(145, 167, 68),
+(146, 168, 68),
+(147, 169, 68),
+(148, 170, 69),
+(149, 171, 69),
+(150, 172, 69),
+(151, 173, 70),
+(153, 174, 70),
+(152, 175, 70),
+(154, 176, 71),
+(156, 177, 71),
+(155, 178, 71);
+
+TRUNCATE TABLE `products`;
+INSERT INTO `products` (`id`, `name`, `category`, `brand`, `description`, `price`, `active`) VALUES
+(52, 'Vanila Ribbed', 1, 21, 'Triángulo con bajo busto movible, embolsado (es decir sin costuras) con tiras para atar en el cuello y en espalda. Está todo forrado para que no se trasluzca nada. Viene con taza soft desmontable!!​​​​ Modelo súper cómodo, se amolda a tu medida al tener el bajo busto regulable lo agrandas o achicas como te guste! Refe de talle: La modelo tiene talle 1. ', '3280', 1),
+(53, 'Sujetador con aros', 2, 22, 'Sujetador con aros y relleno de encaje de flores elástico con lazo de adorno en centro del escote. Tirantes de cinta de canalé de largo ajustable y cierre de broche para regular el ancho.', '1499', 1),
+(54, 'Top Drink', 3, 23, 'Top de microfibra elastizada gruesa, con cadena plateada para ajustar en cuello.', '2750', 1),
+(55, 'Pulseras Girasoles', 5, 24, 'Pack de dos pulseras metálicas:\r\n\r\n-Pulsera de eslabones metálicos. Cierre con mosquetón.\r\n-Pulsera de eslabones metálicos con colgantes en', '1295', 1),
+(56, 'A Solas', 4, 25, 'Miren ese makeup por Dios !!!\r\n', '12543', 1),
+(57, 'Bombacha Marie', 1, 26, 'Bombacha colaless, embolsada (es decir sin costuras) con tiras para atar en laterales. Está toda forrada para que no se trasluzca nada (En caso de colores claros, tiene forrería doble por esta razón). Viene con protector higiénico, donde se detallan los cuidados al lavar tu bikini!!​​​​ Modelo súper cómodo, de tiro medio!!', '2400', 1),
+(58, 'Top Aria', 3, 23, 'Top de Jersey de Algodón. Corte asimétrico, con una manga, y cuellito tipo chocker. Bomba!', '1350', 1),
+(59, 'Corpiño Elena', 1, 27, 'Top entero con breteles regulables. En la parte trasera es para atar, así se puede regular a la medida deseada. Está todo forrado para que no se trasluzca nada. Tanto las argollas y reguladores son color plata (no queman al exponerse al sol y no se oxidan al tomar contacto con el agua). Viene con taza soft desmontable!!​​​​', '3700', 1),
+(60, 'Bombacha Verde', 2, 28, 'Hipsters en mezcla de materiales elásticos. Parte delantera de encaje floral, parte trasera de punto liso. Orillos y lazo de adorno en la cintura.', '1499', 1),
+(61, 'Body con Relleno', 2, 28, 'Body de encaje elástico con relleno extraíble y tirantes de largo ajustable. Banda elástica bajo el pecho y tapeta de press studs en la entrepierna.', '1999', 1),
+(62, 'Pendientes Largos', 5, 29, 'Pendientes largos colgantes con aplicación multicolor y brillos. Cierre con tuerca y clip.', '1295', 1),
+(63, 'Collar Multicolor', 5, 30, 'Collar con piezas redondas de abalorios multicolor. Cierre con mosquetón.', '2299', 1),
+(64, 'Color Sutil', 4, 31, 'Que opinan de este color tan sutil? Se lo harían? El rebote de la Luz en él es de ensueños', '15900', 1),
+(65, 'Diseño de Uñas', 4, 32, 'Este nuevo estilo de uñas propone una estética diferente a las líneas minimalistas que venimos viendo\r\n\r\nLo que vemos es un diseño de uñas que nos remiten a las piedras energéticas como las amatistas o cuarzos rosas', '3000', 1),
+(66, 'Jeans Wide', 3, 33, 'Denim rigido celeste claro, tiro alto, con ruedo desflecado.', '4725', 1),
+(67, 'Vestido Sabri', 3, 23, 'Hermoso vestido mangas largas con detalle metalico en cintura. tela: Seda Fria.', '5250', 1),
+(68, 'Sujetador con Aros', 2, 34, 'Sujetador con relleno y aros de encaje elástico tejido. Tirantes de largo ajustable y cierre con broche para ajustar el ancho por detrás.', '1599', 1),
+(69, 'Pendientes Flor', 5, 35, 'Pendientes metálicos colgantes con aplicación de abalorios en forma de flor. Cierre con tuerca.', '1295', 1),
+(70, 'Corpiño Elena', 1, 36, 'Top entero con breteles regulables. En la parte trasera es para atar, así se puede regular a la medida deseada. Está todo forrado para que no se trasluzca nada. Tanto las argollas y reguladores son color plata (no queman al exponerse al sol y no se oxidan al tomar contacto con el agua).  Viene con taza soft desmontable!', '3040', 1),
+(71, 'Make up Natural', 4, 37, 'Make Up Natural para una noche soñada.', '7400', 1);
+
+TRUNCATE TABLE `sizes`;
+INSERT INTO `sizes` (`id`, `size`) VALUES
+(1, 'Small'),
+(2, 'Medium'),
+(3, 'Large'),
+(4, 'Unique');
+
+TRUNCATE TABLE `stock`;
+INSERT INTO `stock` (`id`, `size`, `stock`, `product`, `color`) VALUES
+(24, 1, 15, 52, 17),
+(25, 2, 12, 53, 17),
+(26, 3, 12, 54, 18),
+(27, 4, 7, 55, 19),
+(28, 4, 7, 56, 20),
+(29, 2, 5, 57, 21),
+(30, 3, 8, 58, 22),
+(31, 1, 6, 59, 22),
+(32, 2, 9, 60, 23),
+(33, 1, 12, 61, 24),
+(34, 4, 15, 62, 25),
+(35, 4, 7, 63, 26),
+(36, 4, 3, 64, 27),
+(37, 4, 3, 65, 28),
+(38, 2, 5, 66, 29),
+(39, 1, 3, 67, 18),
+(40, 2, 9, 68, 30),
+(41, 4, 4, 69, 31),
+(42, 1, 22, 70, 18),
+(43, 4, 1, 71, 30);
+
+TRUNCATE TABLE `users`;COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

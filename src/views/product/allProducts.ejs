@@ -19,19 +19,11 @@
         <main>
             <nav class="navegacion-productos">
                 <a href="/">HOME</a>
-                <a href="/productos/all" class="ultimo">PRODUCTOS</a>
+                <a href="/productos" class="ultimo">PRODUCTOS</a>
+                <span class="rutaProductos"></span>
             </nav>
 
             <section class="visualizacion-filtro">
-                <nav class="visializacion">
-                    <a href="#filtro">
-                        <img src="/assets/iconos/visualizacion/columns-gap.svg" alt="Visualizacion en Grilla">
-                    </a>
-                    <a href="#filtro">
-                        <img src="/assets/iconos/visualizacion/crop_portrait_black_24dp.svg"
-                            alt="Visualizacion Individual">
-                    </a>
-                </nav>
                 <a href="#filtro" class="btn-filtro">FILTRAR/ORDENAR</a>
             </section>
 
@@ -43,7 +35,7 @@
                             <label for="check<%= category.id %>"><%= category.name %></label>
                             <input type="checkbox" name="check<%= category.id %>" id="check<%= category.id %>">
                         <% }) %>
-                        <label for="checkTodos">TODOS</label>
+                        <label for="checkTodos">Todos</label>
                         <input type="checkbox" name="checkTodos" id="checkTodos">
                     </form>
                 <!-- </details> -->

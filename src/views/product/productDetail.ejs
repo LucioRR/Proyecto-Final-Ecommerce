@@ -57,10 +57,10 @@
             <!-- DETALLES -->
             <section class="contenedorDetalles">
                 <nav class="categorias">
-                    <a href="../productos">Inicio</a> - <a href="#"><%= producto_id.category_id.name %></a><p> - <%= producto_id.brand_id.name %></p>
+                    <a href="../productos"> Productos </a> - <a href="/productos?cat=<%= producto_id.category %> " style="text-transform: capitalize"> <%= producto_id.category_id.name %> </a> <p> - <%= producto_id.brand_id.name %></p>
                 </nav>
                     <h2 class="tituloProducto"> <%= producto_id.name %>  </span></h2>
-                    <h1 class="precio"> $ <%= producto_id.price %> <span style="font-size: 0.4em; color: black; text-decoration:line-through;">$8.000</span></h1>
+                    <h1 class="precio"> $ <%= producto_id.price %> <span style="font-size: 0.4em; color: black; text-decoration:line-through;">$<%= producto_id.price*1.2 %></span></h1>
                 <hgroup class="pagos">
                     <h2>
                         <img src="/assets/iconos/pago/credit-card-fill.svg" alt="Medio de pago">
